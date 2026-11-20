@@ -44,6 +44,11 @@ class ContentValidationTests(unittest.TestCase):
         self.assertIn('<bdi>5′→3′</bdi>', esc('جهت 5′→3′ است'))
         self.assertIn('<bdi>ΔG &lt; 0</bdi>', esc('شرط ΔG < 0'))
         self.assertNotIn('&<bdi>', esc('شرط ΔG < 0'))
+        self.assertIn('<bdi>Güttler &amp; Görlich</bdi>', esc('منبع: Güttler & Görlich'))
+        self.assertIn('<bdi>۲۰ ÷ (۰٫۰۵ × ۱۰⁻³) = ۴ × ۱۰⁵ PFU/mL</bdi>',
+                      esc('پاسخ ۲۰ ÷ (۰٫۰۵ × ۱۰⁻³) = ۴ × ۱۰⁵ PFU/mL'))
+        self.assertIn('<bdi>(HIV)</bdi>', esc('ویروس (HIV)'))
+        self.assertIn('<bdi>P(N≥2) = 1−e⁻ᵐ(1+m)</bdi>', esc('احتمال P(N≥2) = 1−e⁻ᵐ(1+m)'))
 
 
 if __name__ == '__main__':

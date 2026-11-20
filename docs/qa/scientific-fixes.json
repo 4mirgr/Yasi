@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-20",
+  "fixed_records": [
+    "V12-R42",
+    "V12-E2-Q21",
+    "V13-S24-diagram",
+    "V13-E1-Q23",
+    "V13-E2-Q01",
+    "V13-S01-diagram",
+    "Y1403-Q44-source",
+    "Y1405-Q149",
+    "V13-S04-example",
+    "V13-S34-example",
+    "V13-S40-inference-scope",
+    "V13-R45",
+    "V12-R07",
+    "V12-E2-Q19",
+    "Y1405-Q7",
+    "Y1405-Q17-conditional",
+    "Y1405-Q20-conditional",
+    "Y1405-Q27-conditional",
+    "Y1405-Q36-conditional",
+    "Y1405-Q140-ambiguous",
+    "Y1403-Q21-option3",
+    "Y1403-Q1-image",
+    "Y1403-Q42-image"
+  ],
+  "basis": "Independent scientific and image reviews; see accompanying review reports."
+}

@@ -1,0 +1,96 @@
+{
+  "volume": 13,
+  "part": "a",
+  "accessed": "2026-11-20",
+  "sources": [
+    {
+      "id": "R13A1",
+      "title": "Parker et al. — OpenStax Microbiology، بخش 6.1 Viruses",
+      "url": "https://openstax.org/books/microbiology/pages/6-1-viruses",
+      "section": "Learning Objectives; Hosts and Viral Transmission; Viral Structures; Classification and Taxonomy of Viruses",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های نام‌برده خوانده شدند؛ جدول تاریخی رده‌بندی مبنای نام‌گذاری روز نیست."
+    },
+    {
+      "id": "R13A2",
+      "title": "Parker et al. — OpenStax Microbiology، بخش 6.2 The Viral Life Cycle",
+      "url": "https://openstax.org/books/microbiology/pages/6-2-the-viral-life-cycle",
+      "section": "مقدمه؛ Life Cycle of Viruses with Animal Hosts؛ Viral Growth Curve؛ مقایسه جایگاه چرخه DNA و RNA",
+      "accessed": "2026-11-20",
+      "coverage": "متن بخش‌های مرتبط با چرخه و رشد خوانده شد؛ مطالب درمانی تاریخی به درس منتقل نشد."
+    },
+    {
+      "id": "R13A3",
+      "title": "ICTV — About Virus Taxonomic Classification",
+      "url": "https://ictv.global/about/taxonomy",
+      "section": "Taxonomic Classification; Virus Classification; The ICTV; Developing new taxonomy",
+      "accessed": "2026-11-20",
+      "coverage": "متن صفحه خوانده شد؛ برای اصول مرزبندی و تصویب رده‌ها، نه تثبیت نام مثال‌های تاریخی صفحه."
+    },
+    {
+      "id": "R13A4",
+      "title": "McInnes et al. — ICTV Report، Poxviridae (2023)",
+      "url": "https://ictv.global/report/chapter/poxviridae/poxviridae",
+      "section": "Summary; Virion/Proteins; Genome organization and replication؛ چرخه شکل 3 و متن رونویسی زودرس، میانی و دیررس",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های نام‌برده با متن کامل خوانده شدند؛ شمار گونه‌ها در درس به‌عنوان وضعیت ۲۰۲۶ نقل نشده است."
+    },
+    {
+      "id": "R13A5",
+      "title": "ICTV Report — Picornaviridae",
+      "url": "https://ictv.global/report/chapter/picornaviridae/picornaviridae",
+      "section": "Genome organization and replication; Biology؛ پردازش پلی‌پروتئین، IRES، اندامک همانندسازی و RNA عفونت‌زا",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های نام‌برده با متن کامل خوانده شدند؛ عفونتزایی RNA به دسترسی و محیط مناسب محدود شده است."
+    },
+    {
+      "id": "R13A6",
+      "title": "ICTV Report — Parvoviridae",
+      "url": "https://ictv.global/report/chapter/parvoviridae/parvoviridae",
+      "section": "Summary; Nucleic acid; Genome organization and replication؛ نقش NS1، DNA پلیمراز میزبان و rolling hairpin",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های نام‌برده با متن کامل خوانده شدند؛ استثناهای میان جنس‌ها به قانون مطلق تبدیل نشده‌اند."
+    },
+    {
+      "id": "R13A7",
+      "title": "ICTV Report — Coronaviridae",
+      "url": "https://ictv.global/report/chapter/coronaviridae/coronaviridae",
+      "section": "Genome organization and replication; Table 2؛ replicase polyproteins، زیرژنومی‌ها، nsp14 و خروج آرتوکروناویروس",
+      "accessed": "2026-11-20",
+      "coverage": "متن بخش مربوط و جدول کارکرد پروتئین‌ها خوانده شد؛ نام و تعداد گونه‌ها موضوع استناد نیست."
+    },
+    {
+      "id": "R13A8",
+      "title": "De Vlugt, Sikora & Pelchat (2018) — Insight into Influenza: A Virus Cap-Snatching، Viruses 10:641",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6266781/",
+      "section": "Abstract; sections 1–5، به‌ویژه The Viral RNA-Dependent RNA Polymerase؛ DOI: 10.3390/v10110641",
+      "accessed": "2026-11-20",
+      "coverage": "متن کامل بخش‌های ۱ تا ۵ بازیابی و خوانده شد؛ بحث‌های ساختاری و وضعیت درمان در تاریخ مقاله به روز معرفی نشده است."
+    },
+    {
+      "id": "R13A9",
+      "title": "ICTV Report — Adenoviridae",
+      "url": "https://ictv.global/report/chapter/adenoviridae/adenoviridae",
+      "section": "Genome organization and replication؛ ورود، انتقال هسته‌ای، RNA پلیمراز II و برنامه زمانی بیان",
+      "accessed": "2026-11-20",
+      "coverage": "بخش نام‌برده با متن کامل خوانده شد؛ رفتار یک نوع به تمام اعضای خانواده تعمیم نشده است."
+    },
+    {
+      "id": "R13A10",
+      "title": "Matthijnssens et al. — ICTV Report، Sedoreoviridae (2022; صفحه برخط خوانده‌شده ۲۰۲۶)",
+      "url": "https://ictv.global/report/chapter/sedoreoviridae/sedoreoviridae",
+      "section": "Summary; Table 1; Genome organisation and replication؛ ناوبری رده Reovirales و تفکیک Sedoreoviridae/Spinareoviridae",
+      "accessed": "2026-11-20",
+      "coverage": "متن بخش‌های نام‌برده خوانده شد؛ روتاویروس و دستگاه رونویسی مجموعه درونی موضوع استناد است، نه شمار ثابت گونه‌ها."
+    }
+  ],
+  "notes": [
+    "تمام درس‌ها، مثال‌ها، تست‌ها و طرح شکل‌ها تألیف مستقل آموزشی‌اند و نقل یا ترجمه متن/شکل منابع نیستند.",
+    "جدول قدیمی OpenStax 6.1 شامل موارد ناسازگار، از جمله Reovirus در سطر dsDNA و نام‌های رده‌بندی قدیمی، بود؛ به متن منتقل نشد. تعداد رده‌های آن مبنای وضعیت روز نیست.",
+    "در متن گزارش Poxviridae، زیرنویس چرخه در یک موضع DNA polymerase را برای early gene expression نوشته، اما متن اصلی به‌صراحت RNA polymerase را توضیح می‌دهد؛ درس مطابق متن اصلی و سازوکار رونویسی تنظیم شد.",
+    "نام تاریخی Reoviridae در پرسش‌های قدیمی با تفکیک Sedoreoviridae و Spinareoviridae در Reovirales توضیح داده شده است.",
+    "نشانی‌های حدسی گزارش Orthomyxoviridae و گزارش قدیمی Herpesviridae به صفحه یافت‌نشدن رسیدند و هیچ ادعای خواندن یا استناد علمی به آنها نشده است.",
+    "هیچ ادعای دسترسی به Alberts، Lodish یا Fields و هیچ شماره صفحه حدس‌زده‌ای وارد منابع نشده است.",
+    "پنجاه سؤال آزمون این نیمه شامل ده سؤال برای هر فصل است؛ والد آنها را با نیمه دوم میان چهار آزمون جامع بازتوزیع می‌کند."
+  ]
+}

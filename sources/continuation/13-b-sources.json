@@ -1,0 +1,100 @@
+{
+  "sources": [
+    {
+      "id": "R13B1",
+      "title": "OpenStax Microbiology — 6.2 The Viral Life Cycle",
+      "url": "https://openstax.org/books/microbiology/pages/6-2-the-viral-life-cycle",
+      "section": "The Lytic Cycle; The Lysogenic Cycle; Transduction; Life Cycle of Viruses with Animal Hosts; Persistent Infections",
+      "coverage": "متن بخش‌های نام‌برده خوانده شد؛ برخی تعمیم‌های شکل و زیرنویس منبع در تألیف تکرار نشده‌اند.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "R13B2",
+      "title": "OpenStax Microbiology — 6.3 Isolation, Culture, and Identification of Viruses",
+      "url": "https://openstax.org/books/microbiology/pages/6-3-isolation-culture-and-identification-of-viruses",
+      "section": "Cultivation of Viruses; Detection of a Virus; Hemagglutination Assay; Nucleic Acid Amplification Test",
+      "coverage": "متن بخش‌های آموزشی نام‌برده خوانده شد.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "R13B3",
+      "title": "Hu WS, Hughes SH. HIV-1 Reverse Transcription. Cold Spring Harbor Perspectives in Medicine (2012).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3475395/",
+      "section": "The Process of Reverse Transcription; The Genesis, Structure, and Enzymatic Functions of HIV-1 RT; discussion of template switching",
+      "coverage": "چکیده و متن بخش‌های مکانیزمی نام‌برده خوانده شد؛ آمار قدیمی درمانی استفاده نشده است.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "R13B4",
+      "title": "Beck J, Nassal M. Hepatitis B virus replication. World Journal of Gastroenterology (2007).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4065876/",
+      "section": "Overview over the Hepadnaviral Genome Replication Cycle; RC-DNA to cccDNA Conversion; From cccDNA to Pregenomic RNA; Capsid-Assisted Reverse Transcription of pgRNA",
+      "coverage": "چکیده و متن بخش‌های نام‌برده خوانده شد؛ جزئیات حل‌نشده تاریخی به‌عنوان دانش قطعی روز معرفی نشده‌اند.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "R13B5",
+      "title": "Lee S, Lewis DEA, Adhya S. The Developmental Switch in Bacteriophage λ: A Critical Role of the Cro Protein (2017).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7984726/",
+      "section": "Abstract; Introduction; Discussion; Figure 1 explanation",
+      "coverage": "بخش‌های نام‌برده خوانده شد؛ تفاوت مدل ساده آموزشی با نقش وابسته به غلظت Cro ثبت شده است.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "R13B6",
+      "title": "Zhu J, Chiang C, Gack MU. Viral evasion of the interferon response at a glance (2023).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10411950/",
+      "section": "Antiviral interferon response and immune surveillance pathways; RLR family of RNA helicases; cGAS and IFI16; Tactics of viral immune escape; IFNAR signal inhibition",
+      "coverage": "متن بخش‌های مکانیزمی نام‌برده خوانده شد.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "R13B7",
+      "title": "Shao W et al. Evolution of Influenza A Virus by Mutation and Re-Assortment (2017).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5578040/",
+      "section": "IAV Evolution and Underlying Mechanism: Mutations; Re-Assortment; Recombination",
+      "coverage": "چکیده و متن بخش‌های تکامل خوانده شد؛ رده‌بندی و آمار تاریخی منبع به روز تعمیم داده نشده‌اند.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "R13B8",
+      "title": "Yim EK, Park JS. The Role of HPV E6 and E7 Oncoproteins in HPV-associated Cervical Carcinogenesis (2005).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2785934/",
+      "section": "Introduction; Host Proteins Associated with HPV E6 Oncoprotein; Host Proteins Associated with HPV E7 Oncoprotein",
+      "coverage": "متن بخش‌های مکانیزمی نام‌برده خوانده شد؛ درصدهای جمعیتی قدیمی نقل نشده‌اند.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "R13B9",
+      "title": "Cresta D et al. Time to revisit the endpoint dilution assay and to replace the TCID50 as a measure of a virus sample’s infection concentration. PLOS Computational Biology (2021).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8553042/",
+      "section": "Introduction; Key features of midSIN’s output; Comparing SIN to TCID50 and PFU virus sample concentrations; Comparing midSIN’s performance to the RM and SK methods; Methods — The mathematics of the dose-response assay",
+      "coverage": "متن بخش‌های آماری نام‌برده خوانده شد؛ درس محاسباتی از مدل صریح پواسون استفاده می‌کند و تبدیل تجربی ثابت ادعا نمی‌کند.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "R13B10",
+      "title": "Abedon ST, Herschler TD, Stopar D. Bacteriophage Latent-Period Evolution as a Response to Resource Availability (2001).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC93152/",
+      "section": "Abstract; Introduction; Phage Growth Models — Simulating phage growth; Calculating optimal latent period explicitly",
+      "accessed": "2026-11-20",
+      "coverage": "متن بخش‌های تعریف دوره اختفا، دوره نهفتگی و بلوغ خوانده شد؛ مثال‌های محاسباتی گام تألیفی‌اند."
+    },
+    {
+      "id": "R13B11",
+      "title": "Bustin SA et al. MIQE précis: Practical implementation of minimum standard guidelines for fluorescence-based quantitative real-time PCR experiments (2010).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2955025/",
+      "section": "Assay optimisation/validation; Reverse transcription qPCR; Data analysis; Table 1",
+      "accessed": "2026-11-20",
+      "coverage": "متن بخش‌های کنترل بدون الگو، کنترل DNA، کارایی واکنش، مقایسه اجراها و جدول الزامات خوانده شد؛ فقط منطق تفسیر و کنترل در کتاب آمده است."
+    }
+  ],
+  "notes": [
+    "تألیف متن، مثال‌ها، سؤال‌ها و طرح شکل‌ها مستقل است؛ تصویر یا تمرین منبع کپی نشده است.",
+    "تعداد ثابت PFU به TCID50 رابطه‌ای همگانی نیست؛ در درس فقط مدل تک‌ضربه‌ای و فرض‌های آن به کار رفته است.",
+    "صفحه OpenStax 17.5 با نشانی آزموده‌شده محتوای معتبر نداد و استفاده نشد.",
+    "مطالب درمانی فقط برای فهم مرحله هدف دارو آمده‌اند، نه توصیه درمان.",
+    "تعریف تفکیکی eclipse و latent period با منبع تخصصی Abedon و همکاران کنترل شد؛ زیرنویس ساده‌شده OpenStax مبنای این تمایز نیست.",
+    "منبع تکمیلی MIQE برای تفسیر Ct، کنترل بدون الگو، کنترل بدون RT و کفایت واکنش افزوده شد."
+  ]
+}

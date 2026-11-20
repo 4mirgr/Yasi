@@ -1,0 +1,67 @@
+{
+  "educational": {
+    "12": {
+      "chapters": 10,
+      "steps": 40,
+      "figures": 40,
+      "worked_examples": 40,
+      "step_questions": 120,
+      "review_questions": 50,
+      "exam_questions": 100,
+      "total_questions": 270,
+      "answer_distribution": [
+        69,
+        74,
+        73,
+        54
+      ],
+      "sources": 28
+    },
+    "13": {
+      "chapters": 10,
+      "steps": 40,
+      "figures": 40,
+      "worked_examples": 40,
+      "step_questions": 120,
+      "review_questions": 50,
+      "exam_questions": 100,
+      "total_questions": 270,
+      "answer_distribution": [
+        69,
+        86,
+        77,
+        38
+      ],
+      "sources": 21
+    }
+  },
+  "exams": {
+    "1403": {
+      "questions": 20,
+      "tracks": {
+        "common": 8,
+        "cell-molecular": 6,
+        "microbiology": 6
+      }
+    },
+    "1404": {
+      "questions": 20,
+      "tracks": {
+        "common": 8,
+        "cell-molecular": 6,
+        "microbiology": 6
+      }
+    },
+    "1405": {
+      "questions": 20,
+      "tracks": {
+        "common": 8,
+        "cell-molecular": 6,
+        "microbiology": 6
+      }
+    }
+  },
+  "limitations": [
+    "Structural checks do not certify scientific accuracy or official answer keys."
+  ]
+}

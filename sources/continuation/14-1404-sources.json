@@ -1,0 +1,192 @@
+{
+  "year": 1404,
+  "sources": [
+    {
+      "id": "R14-1404-1",
+      "title": "Thermo Fisher Scientific — Protein Denaturing and Reducing Agents",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-labeling-crosslinking/protein-modification/reducing-agents-protein-disulfides.html",
+      "section": "What are protein reducing agents?",
+      "accessed": "2026-11-20",
+      "coverage": "بخش تعریف عوامل احیاکننده و نام DTT خوانده شد؛ فهرست محصول مبنای توصیه آزمایشگاهی نیست."
+    },
+    {
+      "id": "R14-1404-2",
+      "title": "Hunter & Ferreira — 5-Aminolevulinate synthase: catalysis of the first step of heme biosynthesis",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2864774/",
+      "section": "Abstract; Introduction",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه، شامل واکنش گلیسین/سوکسینیل‌کوآ، وابستگی به PLP و استثنای مسیر گلوتامات خوانده شد."
+    },
+    {
+      "id": "R14-1404-3",
+      "title": "OpenStax Biology 2e — 6.2 Potential, Kinetic, Free, and Activation Energy",
+      "url": "https://openstax.org/books/biology-2e/pages/6-2-potential-kinetic-free-and-activation-energy",
+      "section": "Endergonic Reactions and Exergonic Reactions",
+      "accessed": "2026-11-20",
+      "coverage": "بخش تعریف علامت ΔG و واکنش انرژی‌زا/انرژی‌خواه خوانده شد."
+    },
+    {
+      "id": "R14-1404-4",
+      "title": "OpenStax Biology 2e — 3.4 Proteins",
+      "url": "https://openstax.org/books/biology-2e/pages/3-4-proteins",
+      "section": "Amino Acids; Protein Structure",
+      "accessed": "2026-11-20",
+      "coverage": "بخش زنجیره جانبی آب‌گریز، پرولین و ساختار پروتئین خوانده شد."
+    },
+    {
+      "id": "R14-1404-5",
+      "title": "OpenStax Biology 2e — 16.5 Eukaryotic Post-transcriptional Gene Regulation",
+      "url": "https://openstax.org/books/biology-2e/pages/16-5-eukaryotic-post-transcriptional-gene-regulation",
+      "section": "RNA Stability and microRNAs",
+      "accessed": "2026-11-20",
+      "coverage": "تمام زیربخش پایداری RNA و miRNA خوانده شد."
+    },
+    {
+      "id": "R14-1404-6",
+      "title": "Humphries et al. — Vinculin controls focal adhesion formation by direct interactions with talin and actin",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2099183/",
+      "section": "Abstract; Introduction",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه، شامل اتصال وینکولین/تالین و اسکلت اکتینی خوانده شد؛ داده‌های تمام شکل‌های مقاله بازتحلیل نشده‌اند."
+    },
+    {
+      "id": "R14-1404-7",
+      "title": "OpenStax Biology 2e — 9.1 Signaling Molecules and Cellular Receptors",
+      "url": "https://openstax.org/books/biology-2e/pages/9-1-signaling-molecules-and-cellular-receptors",
+      "section": "Cell-Surface Receptors; G-protein-linked receptors; Figure 9.7",
+      "accessed": "2026-11-20",
+      "coverage": "زیربخش گیرنده‌های متصل به پروتئین G، مسیر آنزیم غشایی و آدنیلیل سیکلاز خوانده شد."
+    },
+    {
+      "id": "R14-1404-8",
+      "title": "OpenStax Biology 2e — 10.4 Cancer and the Cell Cycle",
+      "url": "https://openstax.org/books/biology-2e/pages/10-4-cancer-and-the-cell-cycle",
+      "section": "Tumor Suppressor Genes; Figure 10.16",
+      "accessed": "2026-11-20",
+      "coverage": "بخش p53، آسیب DNA و آغاز آپوپتوز خوانده شد."
+    },
+    {
+      "id": "R14-1404-9",
+      "title": "Czech et al. — piRNA-Guided Genome Defense: From Biogenesis to Silencing",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10784713/",
+      "section": "PIRNA-GUIDED SILENCING; Concepts in Cotranscriptional Gene Silencing",
+      "accessed": "2026-11-20",
+      "coverage": "بخش خاموش‌سازی رونویسی و پسارونویسی و شرح شکل ۳ خوانده شد؛ تمام متن طولانی مرور خوانده نشده است."
+    },
+    {
+      "id": "R14-1404-10",
+      "title": "Xu et al. — Functions and Regulation of Translation Elongation Factors",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8807479/",
+      "section": "Factors Involved in Ribosome Translocation; eEF2",
+      "accessed": "2026-11-20",
+      "coverage": "زیربخش eEF2 و همتایی آن با EF-G خوانده شد."
+    },
+    {
+      "id": "R14-1404-11",
+      "title": "Jones et al. — How Pol α-primase is targeted to replisomes to prime eukaryotic DNA replication",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10501992/",
+      "section": "Introduction; Figure 1A",
+      "accessed": "2026-11-20",
+      "coverage": "مقدمه، ساختمان چهارزیرواحدی و تفکیک فعالیت پریماز از پلیمراز خوانده شد."
+    },
+    {
+      "id": "R14-1404-12",
+      "title": "Tian, Kang & Benovic — β-arrestins and G Protein-Coupled Receptor Trafficking",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4513654/",
+      "section": "Abstract; β-arrestins and GPCR trafficking; Figure 1",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و بخش آغازین تنظیم و ترافیک گیرنده خوانده شد."
+    },
+    {
+      "id": "R14-1404-13",
+      "title": "OpenStax Biology 2e — 9.2 Propagation of the Signal",
+      "url": "https://openstax.org/books/biology-2e/pages/9-2-propagation-of-the-signal",
+      "section": "Methods of Intracellular Signaling; Phosphorylation",
+      "accessed": "2026-11-20",
+      "coverage": "زیربخش فسفریلاسیون سرین، ترئونین و تیروزین و پیام‌رسان دوم خوانده شد."
+    },
+    {
+      "id": "R14-1404-14",
+      "title": "Lillo & Beuve — NO- and S-nitrosothiols-dependent relaxation in large and small resistance blood vessels",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13111478/",
+      "section": "Introduction; Different endothelium-dependent relaxations in blood vessels",
+      "accessed": "2026-11-20",
+      "coverage": "مقدمه و تفکیک مسیر NO–sGC–cGMP در عروق بزرگ از مسیرهای عروق مقاومتی خوانده شد."
+    },
+    {
+      "id": "R14-1404-15",
+      "title": "Noell et al. — A Reduction of Transcriptional Regulation in Aquatic Oligotrophic Microorganisms Enhances Fitness in Nutrient-Poor Environments",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10304753/",
+      "section": "Summary; Introduction",
+      "accessed": "2026-11-20",
+      "coverage": "خلاصه و آغاز مقدمه، شامل تعریف الیگوتروف و تفکیک آن از کوپیوتروف خوانده شد."
+    },
+    {
+      "id": "R14-1404-16",
+      "title": "OpenStax Biology 2e — 22.1 Prokaryotic Diversity",
+      "url": "https://openstax.org/books/biology-2e/pages/22-1-prokaryotic-diversity",
+      "section": "Microbes Are Adaptable: Life in Moderate and Extreme Environments; Figure 22.5",
+      "accessed": "2026-11-20",
+      "coverage": "بخش تنوع شرایط زیست و شرح Deinococcus radiodurans و مقاومت تابشی خوانده شد."
+    },
+    {
+      "id": "R14-1404-17",
+      "title": "OpenStax Microbiology — 4.6 Archaea",
+      "url": "https://openstax.org/books/microbiology/pages/4-6-archaea",
+      "section": "Introduction; Euryarchaeota",
+      "accessed": "2026-11-20",
+      "coverage": "بخش تمایز آرکی و باکتری و متانوژنز خوانده شد؛ رده‌بندی قدیمی این فصل به عنوان طبقه‌بندی روز نقل نمی‌شود."
+    },
+    {
+      "id": "R14-1404-18",
+      "title": "OpenStax Microbiology — 11.7 Gene Regulation: Operon Theory",
+      "url": "https://openstax.org/books/microbiology/pages/11-7-gene-regulation-operon-theory",
+      "section": "Prokaryotic Gene Regulation; constitutively expressed housekeeping functions",
+      "accessed": "2026-11-20",
+      "coverage": "پاراگراف بیان پایه، کارکردهای خانه‌بان و تمایز با بیان القایی خوانده شد."
+    },
+    {
+      "id": "R14-1404-19",
+      "title": "Blissenbach et al. — Nuclear RNA Export and Packaging Functions of HIV-1 Rev Revisited",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2903257/",
+      "section": "Abstract; Introduction before Materials and Methods",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه درباره RRE، Rev، Crm1 و افزایش RNA سیتوپلاسمی خوانده شد؛ روش‌های ساخت وکتور مبنای متن آموزشی نیستند."
+    },
+    {
+      "id": "R14-1404-20",
+      "title": "OpenStax Microbiology — 6.2 The Viral Life Cycle",
+      "url": "https://openstax.org/books/microbiology/pages/6-2-the-viral-life-cycle",
+      "section": "Life Cycle of Viruses with Animal Hosts; Figure 6.11",
+      "accessed": "2026-11-20",
+      "coverage": "بخش تفاوت ژنوم RNA مثبت، منفی و دورشته‌ای و نیاز به RdRP خوانده شد."
+    },
+    {
+      "id": "R14-1404-21",
+      "title": "ICTV Report — Family Picornaviridae",
+      "url": "https://ictv.global/report/chapter/picornaviridae/picornaviridae",
+      "section": "Summary; Table 1; Nucleic acid",
+      "accessed": "2026-11-20",
+      "coverage": "خلاصه، جدول ویژگی‌ها و بخش اسیدنوکلئیک خوانده شد؛ ساختار ژنوم و ترجمه مستقیم مبناست، نه شمار روز گونه‌ها."
+    }
+  ],
+  "notes": [
+    "صورت و ترتیب گزینه‌های هر ۲۰ سؤال با تصویر صفحه مربوط تطبیق شد.",
+    "اثر انگشت دفترچه با موجودی دریافت اولیه تطابق دارد.",
+    "تصویر کلید سال و رشته را ذکر می‌کند، اما کد کنترل و اولیه/نهایی بودن یا رسمی بودن آن تأیید نشده است.",
+    "یک اختلاف کلید در سؤال ۵: پاسخ علمی گزینه ۲ و کلید بازنشر گزینه ۱.",
+    "سؤال ۴۵ درباره فعالیت پریمازی است؛ تعبیر علمی دقیق کمپلکس Pol α–primase در پاسخ توضیح داده شد.",
+    "صورت سؤال ۱۶۷ «اکوویروس ـ آفتوویروس» است؛ با تصویر بزرگ‌شده مجدداً کنترل شد.",
+    "درج منابع به معنی بازنشر متن یا شکل آن‌ها نیست؛ تحلیل‌ها مستقل‌اند."
+  ],
+  "validation": {
+    "questions": 20,
+    "common": 8,
+    "cell_molecular": 6,
+    "microbiology": 6,
+    "key_disagreements": [
+      "Y1404-Q5"
+    ],
+    "visual_matching": true
+  }
+}

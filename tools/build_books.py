@@ -27,7 +27,7 @@ OUT = ROOT / 'output'
 TITLES = {12: 'ژنتیک پروکاریوت‌ها', 13: 'ویروس‌شناسی پیشرفته',
           14: 'گزیده آزمون‌های سنوات با پاسخ و تحلیل'}
 NUMBERS = str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹')
-LATIN_RE = re.compile(r"[+−\-]?[A-Za-z0-9\u0370-\u03ff\u06f0-\u06f9][A-Za-z0-9\u0370-\u03ff\u06f0-\u06f9\s._,:;/\\+=<>′’'−–\-→←±×()%\[\]{}^٫٬]*")
+LATIN_RE = re.compile(r"[+−\-]?[A-Za-z0-9\u00b0-\u024f\u0370-\u03ff\u06f0-\u06f9][A-Za-z0-9\u00b0-\u024f\u0370-\u03ff\u06f0-\u06f9\u1d00-\u1dbf\u2070-\u209f\u2200-\u22ff\s._,:;/\\+=<>&!′’'−–\-→←±×()%\[\]{}^٫٬]*")
 STYLE = '''
 @font-face{font-family:Yasi;src:url('../assets/fonts/BNazanin.ttf')}
 @page{size:A4;margin:15mm 15mm 17mm 25mm}
@@ -38,20 +38,20 @@ break-after:avoid;color:#173b5a}h1{font-size:25pt}h2{font-size:20pt;margin:16pt 
 h3{font-size:17pt;margin:14pt 0 8pt}h4{font-size:15pt;margin:9pt 0 4pt}
 p{margin:5pt 0 7pt;orphans:3;widows:3;text-align:justify}bdi,.latin{font-family:'DejaVu Sans',sans-serif;
 font-size:.78em;direction:ltr;unicode-bidi:isolate}a{color:#17628b;text-decoration:none}
-.chapter,.major{break-before:page}.meta,.citation{font-size:11.5pt;color:#526171}
+.chapter,.major{break-before:auto}.exam-start{break-before:page}.meta,.citation{font-size:11.5pt;color:#526171}
 .note{background:#f2f8fb;border-right:3px solid #208a9b;padding:9pt 12pt;margin:10pt 0}
 .example{background:#f7f9fc;border:1px solid #d9e3e9;padding:9pt 12pt;margin:9pt 0;
 break-inside:avoid}.question{break-inside:avoid;margin:10pt 0 12pt}.question p{margin-bottom:4pt}
 .options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3pt 16pt;
 padding:2pt 8pt}.options.long{grid-template-columns:1fr}.option{text-align:right}
 .answer{break-inside:avoid;margin:7pt 0 9pt}.answer p{text-align:justify}
-table{width:100%;border-collapse:collapse;margin:9pt 0;font-size:12.5pt}
+table{width:100%;border-collapse:collapse;margin:9pt 0;font-size:12.5pt;break-inside:avoid}
 thead{display:table-header-group}th{background:#e7f3f8;color:#173b5a}
 td,th{border:1px solid #cddce5;padding:5pt 7pt;text-align:right;vertical-align:top}
 tr{break-inside:avoid}figure{margin:12pt 0;break-inside:avoid;text-align:center}
-figure img{width:100%;max-height:80mm;object-fit:contain}figcaption{font-size:11.5pt;
+figure img{width:100%;max-height:90mm;object-fit:contain}figcaption{font-size:11.5pt;
 line-height:1.4;margin-top:5pt;color:#3d4d5a}.source{break-inside:avoid;margin:9pt 0;
-overflow-wrap:anywhere;font-size:11.5pt}.toc p{margin:6pt 0}.keygrid{font-size:12pt}
+overflow-wrap:anywhere;font-size:11.5pt}.toc{font-size:13pt;line-height:1.2}.toc p{margin:4pt 0}.keygrid{font-size:12pt}
 .cover{width:210mm;height:297mm;position:relative;overflow:hidden;margin:0;
 background:#14b4bd url('../assets/cover-art.png') center/cover no-repeat;
 display:flex;flex-direction:column;align-items:center;text-align:center;padding:22mm 17mm 15mm}
@@ -81,9 +81,13 @@ def esc(value):
     output = []; end = 0
     for match in LATIN_RE.finditer(value):
         token = match.group().rstrip()
-        output.append(html.escape(value[end:match.start()]))
+        start = match.start()
+        if start > end and value[start-1] in '([' and token.endswith({'(':')','[':']'}[value[start-1]]):
+            start -= 1
+            token = value[start] + token
+        output.append(html.escape(value[end:start]))
         output.append('<bdi>' + html.escape(token) + '</bdi>')
-        end = match.start() + len(token)
+        end = start + len(token)
     output.append(html.escape(value[end:]))
     return ''.join(output)
 
@@ -106,7 +110,9 @@ def question_html(q, number=None):
 
 def answer_html(q, number=None):
     label = fa(number) if number is not None else q['id']
-    return (f'<div class="answer"><p><strong>{esc(label)} — گزینه {fa(q["answer"]+1)}.</strong> '
+    qualification = {'ambiguous':' (پاسخ انتظاری؛ صورت دارای ابهام)',
+                     'conditional':' (پاسخ مشروط به فرض‌های شرح)'} .get(q.get('answer_status'), '')
+    return (f'<div class="answer"><p><strong>{esc(label)} — گزینه {fa(q["answer"]+1)}{qualification}.</strong> '
             f'{esc(q["explanation"])}</p><div class="citation">{refs_html(q["sources"])}</div></div>')
 
 
@@ -121,7 +127,8 @@ def make_diagram(volume, step):
     directory.mkdir(parents=True, exist_ok=True)
     base = directory / f'step-{step["number"]:02d}'
     d = step['diagram']
-    lines = ['digraph G {', 'graph [rankdir=LR, bgcolor="white", pad="0.2", nodesep="0.35", ranksep="0.45", size="7,2.7", ratio="compress"];',
+    orientation = 'TB' if len(d['nodes']) >= 4 else 'LR'
+    lines = ['digraph G {', f'graph [rankdir={orientation}, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];',
              'node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];',
              'edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];']
     for i, n in enumerate(d['nodes']):
@@ -133,7 +140,10 @@ def make_diagram(volume, step):
     lines.append('}')
     base.with_suffix('.dot').write_text('\n'.join(lines))
     for fmt in ('svg', 'png'):
-        subprocess.run(['dot', '-T' + fmt, '-Gdpi=180', str(base.with_suffix('.dot')),
+        # Graphviz 2.42 scales the SVG graph transform incorrectly when dpi is
+        # overridden together with size/ratio. SVG is vector; only PNG needs dpi.
+        dpi = ['-Gdpi=180'] if fmt == 'png' else []
+        subprocess.run(['dot', '-T' + fmt, *dpi, str(base.with_suffix('.dot')),
                         '-o', str(base.with_suffix('.' + fmt))], check=True, capture_output=True)
     return base
 
@@ -161,7 +171,7 @@ def teaching_html(volume, book):
          '<h2>پیشگفتار و راهنمای مطالعه</h2>',
          para('این جلد بر استدلال سازوکاری و تفسیر داده تمرکز دارد. مبانی در جلدهای پیشین آمده‌اند؛ اینجا هر گام با درسنامه، مثال حل‌شده، شکل تألیفی و سه تست همراه است. ابتدا سؤال را مستقل حل کنید و سپس پاسخ و منبع را بخوانید. مثال‌های عددی و نمودارهای این جلد مدل آموزشی‌اند و داده تجربی منتشرشده نامیده نمی‌شوند.'),
          para('ساختار: ده فصل و چهل گام، پنجاه سؤال مرور مستقل و چهار آزمون مستقل ۲۵ سؤالی. پاسخ هر گام بلافاصله پس از سؤال‌های آن است؛ پاسخ بانک مرور پس از بانک و پاسخ هر چهار آزمون پس از آزمون چهارم قرار دارد. شکل‌ها شماتیک و دوزبانه‌اند؛ اندازه و فاصله اجزا مقیاس واقعی نیست.'),
-         '<div class="note">نسخه آزمایشی غیرقابل انتشار. مواد و ضرایب رسمی ۱۴۰۶ هنوز با صفحه ۳۳ دفترچه سازمان سنجش تطبیق قطعی نشده‌اند؛ متن این جلد پیش‌بینی سهم سؤال‌ها یا تأیید رسمی آن سازمان نیست.</div>',
+         '<div class="note">نسخه آزمایشی غیرقابل انتشار. طبق صفحه چاپی ۳۳ دو نسخه بازنشرشده دفترچه ۱۴۰۶ و تصویر ارسالی کاربر، در مجموعه ۲۲۲۶ مسیر سلولی‌مولکولی ترکیب ۱ (دروس ۱،۲،۳،۴) و میکروبیولوژی ترکیب ۴ (دروس ۱،۲،۷) است. جلدهای ۱۲ و ۱۳ بخشی از ماده ۷ مسیر میکروبیولوژی‌اند؛ برای مسیر سلولی‌مولکولی، مبانی مشترک را تقویت می‌کنند و جایگزین مواد اختصاصی ۳ و ۴ نیستند. ماده ۷ بوم‌شناسی میکروارگانیسم‌ها را نیز دارد؛ مطالعه آن را جدا کامل کنید. دریافت مستقیم مبدأ سنجش ممکن نشد؛ علامت انتخاب درس، ضریب عددی زیرمبحث نیست. این جزوه پیش‌بینی سهم سؤال‌های آینده نیست.</div>',
          '<h2 id="contents">فهرست پیونددار</h2><div class="toc">']
     for c in book['chapters']:
         h.append(f'<p><a href="#chapter-{c["number"]}">فصل {fa(c["number"])} — {esc(c["title"])}</a></p>')
@@ -192,7 +202,8 @@ def teaching_html(volume, book):
     h.append('<h2 class="major" id="exams">چهار آزمون جامع مستقل — تألیفی</h2>')
     h.append(para('برای خودسنجی، هر آزمون را پیش از دیدن کلید حل کنید. زمان تمرین پیشنهادی ۳۵ دقیقه است و زمان رسمی آزمون نیست. نمره تمرینی با فرض یک نمره صحیح و یک‌سوم نمره منفی برای هر پاسخ غلط محاسبه می‌شود؛ بی‌پاسخ صفر است. این فرض را با مقررات آزمون مقصد تطبیق دهید.'))
     for e in book['exams']:
-        h.append(f'<h2 class="major" id="exam-{e["number"]}">آزمون {fa(e["number"])} — {esc(e["title"])}</h2>')
+        cls = 'exam-start' if e['number'] > 1 else ''
+        h.append(f'<h2 class="{cls}" id="exam-{e["number"]}">آزمون {fa(e["number"])} — {esc(e["title"])}</h2>')
         h.extend(question_html(q, i+1) for i, q in enumerate(e['questions']))
     h.append('<h2 class="major" id="exam-answers">کلید و پاسخ تشریحی چهار آزمون</h2>')
     for e in book['exams']:
@@ -262,7 +273,7 @@ def cover_html(volume, back=False):
         body = (f'<div class="cover"><div class="pill">آمادگی آزمون دکتری ۱۴۰۶</div><div class="pill" style="margin-top:9mm;background:#cf3d52">جلد {fa(volume)}</div>'
                 f'<h1>{TITLES[volume]}</h1><div class="subtitle">{("درسنامه گام‌به‌گام و آزمون" if volume != 14 else "سؤال‌های واقعی؛ پاسخ و تحلیل")}</div>'
                 '<div class="author">دکتر امیر هوشنگ گرامی</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div>')
-    return document_html(TITLES[volume], body, STYLE + '@page{size:A4;margin:0}body{margin:0}html{background:white}')
+    return document_html(TITLES[volume], body, STYLE + '@page{size:A4;margin:0}@page:left{margin:0}@page:right{margin:0}@page:first{margin:0}html,body{margin:0;padding:0;width:210mm;max-width:none;background:white}.cover h1{overflow-wrap:break-word}')
 
 
 def rtl_paragraph(p):
@@ -289,25 +300,66 @@ def docx_build(volume, body, cover_png, back_png):
     doc.add_picture(str(cover_png), width=Cm(17))
     doc.add_page_break()
     tree = lh.fromstring('<div>' + body + '</div>')
+    bookmark_counter = 0
+
+    def bookmark_name(identifier):
+        return ('b_' + re.sub('[^A-Za-z0-9_]', '_', identifier))[:40]
+
+    def rich_runs(container, text, bold=False):
+        end = 0
+        spans = []
+        for match in LATIN_RE.finditer(text):
+            token = match.group().rstrip()
+            start = match.start()
+            if start > end and text[start-1] in '([' and token.endswith({'(':')','[':']'}[text[start-1]]):
+                start -= 1
+                token = text[start] + token
+            spans.append((text[end:start], False))
+            spans.append((token, True))
+            end = start + len(token)
+        spans.append((text[end:], False))
+        for part, latin in spans:
+            if not part: continue
+            run = OxmlElement('w:r'); props = OxmlElement('w:rPr')
+            fonts = OxmlElement('w:rFonts')
+            fonts.set(qn('w:ascii'), 'DejaVu Sans' if latin else 'B Nazanin')
+            fonts.set(qn('w:hAnsi'), 'DejaVu Sans' if latin else 'B Nazanin')
+            fonts.set(qn('w:cs'), 'B Nazanin'); props.append(fonts)
+            rtl = OxmlElement('w:rtl'); rtl.set(qn('w:val'), '0' if latin else '1'); props.append(rtl)
+            if bold: props.append(OxmlElement('w:b'))
+            run.append(props); content = OxmlElement('w:t'); content.set(qn('xml:space'), 'preserve')
+            content.text = ('\u200e' + part + '\u200e') if latin else part
+            run.append(content); container.append(run)
+
+    def inline(container, element, bold=False):
+        if element.text: rich_runs(container, element.text, bold)
+        for child in element:
+            href = child.get('href', '')
+            if child.tag == 'a' and href.startswith('#'):
+                link = OxmlElement('w:hyperlink'); link.set(qn('w:anchor'), bookmark_name(href[1:]))
+                inline(link, child, bold); container.append(link)
+            else:
+                inline(container, child, bold or child.tag == 'strong')
+            if child.tail: rich_runs(container, child.tail, bold)
 
     def ptext(el, style=None):
+        nonlocal bookmark_counter
         p = doc.add_paragraph(style=style)
         rtl_paragraph(p)
-        text = ''.join(el.itertext()).strip()
-        for part in re.split(r'([\x20-\x7e]+)', text):
-            if not part:
-                continue
-            r = p.add_run(part)
-            r.font.name = 'DejaVu Sans' if re.search('[A-Za-z]', part) else 'B Nazanin'
-            rpr = r._r.get_or_add_rPr()
-            rtl = OxmlElement('w:rtl'); rtl.set(qn('w:val'), '0' if re.search('[A-Za-z]', part) else '1'); rpr.append(rtl)
+        if el.get('id'):
+            bookmark_counter += 1
+            start = OxmlElement('w:bookmarkStart'); start.set(qn('w:id'), str(bookmark_counter))
+            start.set(qn('w:name'), bookmark_name(el.get('id'))); p._p.append(start)
+        inline(p._p, el)
+        if el.get('id'):
+            end = OxmlElement('w:bookmarkEnd'); end.set(qn('w:id'), str(bookmark_counter)); p._p.append(end)
         return p
 
     def walk(el):
         tag = el.tag
         if tag in ('h1', 'h2', 'h3', 'h4'):
             p = ptext(el, 'Heading ' + str(min(int(tag[1]), 3)))
-            if 'major' in el.get('class', '') or 'chapter' in el.get('class', ''):
+            if 'exam-start' in el.get('class', ''):
                 p.paragraph_format.page_break_before = True
         elif tag == 'p':
             ptext(el)
@@ -318,14 +370,19 @@ def docx_build(volume, body, cover_png, back_png):
             for i, row in enumerate(rows):
                 cells = t.add_row().cells
                 for cell, element in zip(cells, row):
-                    cell.text = ''.join(element.itertext())
-                    for p in cell.paragraphs: rtl_paragraph(p)
+                    cell.text = ''
+                    for p in cell.paragraphs:
+                        rtl_paragraph(p)
+                        rich_runs(p._p, ''.join(element.itertext()), i == 0)
                 if i == 0:
                     repeat = OxmlElement('w:tblHeader'); t.rows[-1]._tr.get_or_add_trPr().append(repeat)
         elif tag == 'figure':
+            from PIL import Image
             src = el.find('img').get('src')
             path = (OUT / src).resolve().with_suffix('.png')
-            doc.add_picture(str(path), width=Cm(16))
+            with Image.open(path) as im: width, height = im.size
+            scale = min(16/width, 9/height)
+            doc.add_picture(str(path), width=Cm(width*scale), height=Cm(height*scale))
             if el.find('figcaption') is not None: ptext(el.find('figcaption'), 'Caption')
         elif tag == 'div' and 'option' in el.get('class', '').split():
             ptext(el)
@@ -386,7 +443,10 @@ async def build(volumes):
             with fitz.open(main_pdf) as part:
                 toc = part.get_toc()
                 if toc: result.set_toc([[level,title,index+1] for level,title,index in toc])
-            destination = OUT / f'Yasi-{volume}.pdf'; result.save(destination, garbage=4, deflate=True)
+            destination = OUT / f'Yasi-{volume}.pdf'
+            temporary = OUT / f'.Yasi-{volume}-assembled.pdf'
+            result.save(temporary, garbage=4, deflate=True)
+            temporary.replace(destination)
             print(f'Volume {volume}: {len(result)} PDF pages; {destination.stat().st_size:,} bytes', flush=True)
             docx_build(volume, body, OUT / f'Yasi-{volume}-front.png', OUT / f'Yasi-{volume}-back.png')
             for path in (*pdf_parts, main_pdf): path.unlink()

@@ -1,0 +1,166 @@
+{
+  "volume": 12,
+  "part": "b",
+  "accessed": "2026-11-20",
+  "sources": [
+    {
+      "id": "R12B1",
+      "title": "OpenStax Microbiology، بخش 11.7: Gene Regulation: Operon Theory",
+      "url": "https://openstax.org/books/microbiology/pages/11-7-gene-regulation-operon-theory",
+      "section": "Prokaryotic Gene Regulation؛ Regulation by Repression؛ trp؛ lac؛ Activation by CAP",
+      "accessed": "2026-11-20",
+      "coverage": "متن بخش‌های نام‌برده خوانده شد؛ مثال‌های ژنتیکی نیمه‌دیپلوئید، تألیف استنتاجی بر پایه تعریف اجزای سیس و ترانس‌اند."
+    },
+    {
+      "id": "R12B2",
+      "title": "Yanofsky، RNA-based regulation of genes of tryptophan synthesis and degradation, in bacteria (2007)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1924887/",
+      "section": "Regulatory mechanisms controlling transcription of the trp operon of E. coli؛ شکل‌های ۲ تا۵ و مقایسه سازوکار E. coli و B. subtilis در چکیده",
+      "accessed": "2026-11-20",
+      "coverage": "متن توضیح مهار آغاز، RNA رهبر، مکث ترجمه و رقابت ساقه‌های ۲–۳ و۳–۴، همراه زیرنویس شکل‌ها خوانده شد؛ تصویرهای مرجع کپی نشده‌اند."
+    },
+    {
+      "id": "R12B3",
+      "title": "OpenStax Microbiology، بخش 11.3: RNA Transcription",
+      "url": "https://openstax.org/books/microbiology/pages/11-3-rna-transcription",
+      "section": "Transcription in Bacteria: Initiation؛ توضیح نقش سیگما و مقایسه پلی‌مراز آرکی",
+      "accessed": "2026-11-20",
+      "coverage": "بخش آغاز باکتریایی و بند مقایسه آرکی خوانده شد؛ تعمیم نواحی منفی۱۰ و۳۵ به همه سیگماها و عدد عمومی نیمه‌عمر RNA پذیرفته نشده است."
+    },
+    {
+      "id": "R12B4",
+      "title": "Capra و Laub، The Evolution of Two-Component Signal Transduction Systems (2012)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4097194/",
+      "section": "Overview؛ The two-component signal transduction paradigm؛ شکل۱",
+      "accessed": "2026-11-20",
+      "coverage": "متن تعریف His→Asp، دوکارکردی کیناز/فسفاتاز، دامنه‌های خروجی و فسفورله‌گردانی خوانده شد."
+    },
+    {
+      "id": "R12B5",
+      "title": "Mahendran و همکاران، Key players in regulatory RNA realm of bacteria (2022)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9111926/",
+      "section": "بخش‌های ۲، ۲٫۱ و آغاز ۲٫۱٫۱ درباره sRNA؛ بخش۲٫۲ Riboswitches و۲٫۲٫۱؛ شکل۲",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های نام‌برده درباره RNAهای سیس و ترانس، Hfq/ProQ، پایداری/ترجمه و آپتامر/سکوی بیان خوانده شد؛ مثال‌های عددی و جبرانی تألیفی‌اند."
+    },
+    {
+      "id": "R12B6",
+      "title": "Hauryliuk و همکاران، Recent functional insights into the role of (p)ppGpp in bacterial physiology (2015)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4659695/",
+      "section": "Figure1b–c؛ RSHs: (p)ppGpp homeostasis؛ Regulation of transcription by (p)ppGpp؛ Box1",
+      "accessed": "2026-11-20",
+      "coverage": "متن و زیرنویس بخش‌های نام‌برده خوانده شد؛ سنتز ضعیف و هیدرولیز SpoT و تفاوت تنظیم E. coli با B. subtilis از همین بخش‌ها است."
+    },
+    {
+      "id": "R12B7",
+      "title": "OpenStax Microbiology، بخش11.6: How Asexual Prokaryotes Achieve Genetic Diversity",
+      "url": "https://openstax.org/books/microbiology/pages/11-6-how-asexual-prokaryotes-achieve-genetic-diversity",
+      "section": "Conjugation؛ Consequences and Applications of Conjugation؛ Transposition",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های نام‌برده خوانده شد؛ جابه‌جایی جایگاه DNA از انتقال بین سلولی جدا شده و گزاره‌های مطلق درباره همه پلاسمیدها به‌کار نرفته‌اند."
+    },
+    {
+      "id": "R12B8",
+      "title": "Gillings، Integrons: Past, Present, and Future (2014)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4054258/",
+      "section": "Structure of Integrons؛ Evolutionary History of Integrons؛ شکل‌های۱ و۲؛ بند نبود تحرک مستقل",
+      "accessed": "2026-11-20",
+      "coverage": "متن اجزای intI/attI/Pc/attC، گرفتن و آرایش کاست و وابستگی تحرک اینتگرون به عناصر دیگر خوانده شد."
+    },
+    {
+      "id": "R12B9",
+      "title": "Fouqueau و همکاران، The cutting edge of archaeal transcription (2018)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7289017/",
+      "section": "Introduction؛ Architecture and function of archaeal RNAP subunits؛ Factors and mechanisms enabling transcription initiation in archaea؛ شکل۲ و جدول۱",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های نام‌برده و زیرنویس‌های مرتبط با TBP، TFB، TFE و تفاوت سیگما خوانده شد؛ رده‌بندی تاریخی مقاله به‌عنوان رده‌بندی روز بازنشر نشده است."
+    },
+    {
+      "id": "R12B10",
+      "title": "Vasu و Nagaraja، Diverse Functions of Restriction-Modification Systems in Addition to Cellular Defense (2013)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3591985/",
+      "section": "R-M Systems؛ طبقه‌بندی انواع و آنزیم‌های اصلاح‌ویژه؛ بندهای phase variation و phase-varions",
+      "accessed": "2026-11-20",
+      "coverage": "متن تعریف حفاظت اصلاحی، تنوع محدودسازی، نقش‌های غیر‌دفاعی و تغییر فاز خوانده شد؛ عددهای شیوع تاریخی مقاله وارد درس نشده است."
+    },
+    {
+      "id": "R12B11",
+      "title": "Marraffini و Sontheimer، CRISPR interference: RNA-directed adaptive immunity in bacteria and archaea (2010)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2928866/",
+      "section": "Introduction؛ Discovery؛ Mechanisms of CRISPR interference؛ CRISPR transcription and processing؛ Recognition of invading sequences",
+      "accessed": "2026-11-20",
+      "coverage": "متن مراحل حافظه، تولید/پردازش راهنما و شناسایی هدف خوانده شد؛ طبقه‌بندی قدیمی و عددهای شیوع مقاله مبنای رده‌بندی روز نیستند."
+    },
+    {
+      "id": "R12B12",
+      "title": "OpenStax Microbiology، بخش12.1: Microbes and the Tools of Genetic Engineering",
+      "url": "https://openstax.org/books/microbiology/pages/12-1-microbes-and-the-tools-of-genetic-engineering",
+      "section": "Molecular Cloning؛ Plasmids؛ Reporter genes and selection/screening",
+      "accessed": "2026-11-20",
+      "coverage": "متن ابزار ژنتیکی، حامل، گزارشگر و تفکیک شناسایی نامزد از تأیید خوانده شد؛ مثال‌های حذف، مکمل‌سازی و کنترل قطبی تألیف آموزشی استنتاجی‌اند و پروتکل اجرایی نیستند."
+    },
+    {
+      "id": "R12B13",
+      "title": "San Millan و MacLean، Fitness Costs of Plasmids: a Limit to Plasmid Transmission",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11687550/",
+      "section": "INTRODUCTION؛ DISSECTING THE FITNESS COSTS PRODUCED BY PLASMIDS؛ Plasmid Reception/Integration/Replication؛ CHALLENGES: High-Throughput Approaches و Integrative Analysis",
+      "accessed": "2026-11-20",
+      "coverage": "متن بخش‌های نام‌برده درباره هزینه، میزبان، انتشار افقی و جبران خوانده شد؛ تاریخ دسترسی با تاریخ انتشار علمی مقاله اشتباه نشده است."
+    },
+    {
+      "id": "R12B14",
+      "title": "OpenStax Microbiology، بخش12.2: Visualizing and Characterizing DNA, RNA, and Protein",
+      "url": "https://openstax.org/books/microbiology/pages/12-2-visualizing-and-characterizing-dna-rna-and-protein",
+      "section": "Learning Objectives؛ Molecular Analysis of DNA؛ Nucleic Acid Probing؛ Southern Blots and Modifications؛ مقایسه خوانش مولکولی",
+      "accessed": "2026-11-20",
+      "coverage": "متن مقدماتی، روش‌های آشکارسازی و اختصاصیت پروب خوانده شد؛ مدل نمایی RNA، محاسبات و طرح‌های کنترلی تألیف آموزشی با فرض‌های صریح‌اند، نه نقل عدد از متن مرجع."
+    },
+    {
+      "id": "R12B15",
+      "title": "Loureiro و da Silva، CRISPR-Cas: Converting A Bacterial Defence Mechanism into A State-of-the-Art Genetic Manipulation Tool (2019)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6466564/",
+      "section": "بخش۳ Structure of CRISPR Loci؛۴ Steps of Adaptive Immunity؛۴٫۱–۴٫۳؛۸٫۲ Cas13a",
+      "accessed": "2026-11-20",
+      "coverage": "متن مراحل و تنوع ماشین، PAM وابسته به نوع و نمونه RNAهدف خوانده شد؛ هیچ دستور طراحی یا پروتکل دست‌کاری از مقاله اقتباس نشده است."
+    }
+  ],
+  "notes": [
+    "درسنامه، نمودارها، مثال‌ها و تمام سؤال‌ها تألیف آموزشی‌اند. متن و شکل منابع بازتولید نشده است.",
+    "خواندن بخش‌های مشخص ثبت شده، نه ادعای داوری تمام متن منابع یا کتاب‌های نام‌برده بدون دسترسی.",
+    "مدل کلاسیک E. coli به همه باکتری‌ها و آرکی‌ها تعمیم داده نشده است؛ تفاوت trp/TRAP، ppGpp/GTP و آغاز آرکی صریح است.",
+    "خطای تعمیم عدد ثابت نیمه‌عمر همه RNAهای پروکاریوتی در متن پایه تکرار نشده است؛ محاسبات با فرض‌های مدل آمده‌اند.",
+    "پاسخ آموزشی این سؤال‌های تألیفی هیچ‌گاه کلید رسمی سنجش نامیده نمی‌شود.",
+    "والد برای پوشش همه ده فصل در هر آزمون، سؤال‌های آزمون دو نیمه را بازتوزیع کرده است؛ منشأ تألیف در origin_id نگهداری می‌شود و ارجاع R12A با فهرست منابع کل جلد حل می‌شود."
+  ],
+  "validation": {
+    "chapters": 5,
+    "steps": 20,
+    "step_questions": 60,
+    "review_questions": 25,
+    "exam_questions": 50,
+    "total_questions": 135,
+    "lesson_word_range": [
+      232,
+      255
+    ],
+    "authored_exam_questions_per_chapter": {
+      "6": 10,
+      "7": 10,
+      "8": 10,
+      "9": 10,
+      "10": 10
+    },
+    "current_exam_questions_per_chapter_after_integration": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5,
+      "5": 5,
+      "6": 5,
+      "7": 5,
+      "8": 5,
+      "9": 5,
+      "10": 5
+    }
+  }
+}

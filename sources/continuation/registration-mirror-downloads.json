@@ -1,0 +1,18 @@
+[
+  {
+    "name": "heyva",
+    "url": "https://dl.heyvagroup.com/admin/Files/upload/2020963991DaftarcheDoktora1406.pdf",
+    "status": 200,
+    "bytes": 8646986,
+    "sha256": "9fa9b4094a0cb4fd609c8f5eba3f2a61cc560e5d486ace703383867cd5bfae1c",
+    "pdf": true
+  },
+  {
+    "name": "phdtest",
+    "url": "https://phdtest.ir/wp-content/uploads/2026/10/Daftarche-Sabtenam-PhD-Sarasari-Azad-PhdTest-1406.pdf",
+    "status": 200,
+    "bytes": 5151562,
+    "sha256": "780531810edd3ddbde05c4bcbb2d2bf2b2103d1281519a0736ed42e97d3a5b8b",
+    "pdf": true
+  }
+]

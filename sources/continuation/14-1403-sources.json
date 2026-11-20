@@ -1,0 +1,339 @@
+{
+  "year": 1403,
+  "sources": [
+    {
+      "id": "R14-1403-1",
+      "title": "OpenStax Biology 2e, 6.2 Potential, Kinetic, Free, and Activation Energy",
+      "url": "https://openstax.org/books/biology-2e/pages/6-2-potential-kinetic-free-and-activation-energy",
+      "section": "Free Energy; Endergonic and Exergonic Reactions",
+      "accessed": "2026-11-20",
+      "coverage": "متن بخش‌های انرژی آزاد و واکنش‌های مساعد/نامساعد خوانده شد."
+    },
+    {
+      "id": "R14-1403-2",
+      "title": "Ferrell (2009), Q&A: Cooperativity",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2737376/",
+      "section": "Positive/negative cooperativity; cooperative and ultrasensitive responses",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های تعریف همکاری مثبت و حد پاسخ همه‌یا‌هیچ خوانده شد."
+    },
+    {
+      "id": "R14-1403-3",
+      "title": "OpenStax Biology 2e, 3.4 Proteins",
+      "url": "https://openstax.org/books/biology-2e/pages/3-4-proteins",
+      "section": "Amino Acids; Figures 3.22–3.23",
+      "accessed": "2026-11-20",
+      "coverage": "ساختار کربن آلفا و زنجیره جانبی گلیسین در متن و توصیف شکل خوانده شد."
+    },
+    {
+      "id": "R14-1403-4",
+      "title": "Afanzar et al. (2021), The switching mechanism of the bacterial rotary motor combines tight regulation with inherent flexibility",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7957414/",
+      "section": "Abstract; Introduction; CheY interaction with the flagellar motor",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و بخش‌های سازوکار CheY/سوئیچ و شرح نتایج مرتبط خوانده شد؛ نه تمام روش‌های آزمایش."
+    },
+    {
+      "id": "R14-1403-5",
+      "title": "OpenStax Microbiology, 3.3 Unique Characteristics of Prokaryotic Cells",
+      "url": "https://openstax.org/books/microbiology/pages/3-3-unique-characteristics-of-prokaryotic-cells",
+      "section": "Cell Wall; Archaeal cell walls",
+      "accessed": "2026-11-20",
+      "coverage": "بخش پپتیدوگلیکان و مقایسه دیواره آرکی با باکتری خوانده شد."
+    },
+    {
+      "id": "R14-1403-6",
+      "title": "OpenStax Microbiology, 11.2 DNA Replication",
+      "url": "https://openstax.org/books/microbiology/pages/11-2-dna-replication",
+      "section": "Initiation; Elongation; sliding clamp and SSB",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های آغاز و طویل‌شدن خوانده شد؛ خطاهای ساده‌ساز متن درباره جهت سنتز و جدول توپوایزومراز به پاسخ منتقل نشده است."
+    },
+    {
+      "id": "R14-1403-7",
+      "title": "OpenStax Biology 2e, 5.3 Active Transport",
+      "url": "https://openstax.org/books/biology-2e/pages/5-3-active-transport",
+      "section": "Electrochemical Gradient; Sodium-Potassium Pump; Figure 5.19",
+      "accessed": "2026-11-20",
+      "coverage": "متن چرخه پمپ و نسبت سه سدیم/دو پتاسیم خوانده شد."
+    },
+    {
+      "id": "R14-1403-8",
+      "title": "Kinoshita (2016), Glycosylphosphatidylinositol (GPI) Anchors: Biochemistry and Cell Biology: Introduction to a Thematic Review Series",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4689333/",
+      "section": "GPI assembly, attachment and maturation in ER/Golgi",
+      "accessed": "2026-11-20",
+      "coverage": "متن مقدمه مروری و توضیح مسیر ساخت و اتصال GPI خوانده شد."
+    },
+    {
+      "id": "R14-1403-9",
+      "title": "Skowyra and Rapoport (2022), PEX5 translocation into and out of peroxisomes drives matrix protein import",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9444985/",
+      "section": "Summary; Introduction: PTS1 SKL and PEX5 TPR domain",
+      "accessed": "2026-11-20",
+      "coverage": "خلاصه و مقدمه درباره SKL/PTS1 و PEX5 خوانده شد؛ ادعای داوری همه آزمایش‌ها نمی‌شود."
+    },
+    {
+      "id": "R14-1403-10",
+      "title": "Prakash et al. (2015), Homologous Recombination and Human Health: The Roles of BRCA1, BRCA2, and Associated Proteins",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4382744/",
+      "section": "Abstract; opening overview of HR and BRCA1/BRCA2",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه نقش BRCA در ترمیم شکست دورشته‌ای خوانده شد."
+    },
+    {
+      "id": "R14-1403-11",
+      "title": "Kazazian (2014), Processed pseudogene insertions in somatic cells",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4151081/",
+      "section": "Abstract; Background: L1 enzymatic activities and processed pseudogenes",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و پیشینه درباره رونویسی معکوس، اندونوکلئاز LINE-1 و منشأ ژن کاذب پردازش‌شده خوانده شد."
+    },
+    {
+      "id": "R14-1403-12",
+      "title": "Croker et al. (2008), SOCS Regulation of the JAK/STAT Signalling Pathway",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2597703/",
+      "section": "Introduction; Figure 1 Mechanism of SOCS action",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده، مقدمه و شرح شکل۱ درباره حلقه بازخورد منفی SOCS خوانده شد."
+    },
+    {
+      "id": "R14-1403-13",
+      "title": "Swulius and Jensen (2012), The Helical MreB Cytoskeleton in Escherichia coli MC1000/pLE7 Is an Artifact of the N-Terminal Yellow Fluorescent Protein Tag",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3497537/",
+      "section": "Abstract and opening discussion of MreB helices",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و بحث آغازین درباره اثر برچسب و مدل مارپیچی MreB خوانده شد."
+    },
+    {
+      "id": "R14-1403-14",
+      "title": "Korotkov et al. (2012), The type II secretion system: biogenesis, molecular architecture and mechanism",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3705712/",
+      "section": "Abstract; Introduction",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه درباره خروج پروتئین تاخورده از پری‌پلاسم خوانده شد."
+    },
+    {
+      "id": "R14-1403-15",
+      "title": "Oostergetel et al. (2010), The chlorosome: a prototype for efficient light harvesting in photosynthesis",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2882566/",
+      "section": "Abstract; Introduction",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه درباره آنتن کلروزوم و سازگاری با شدت بسیار کم نور خوانده شد."
+    },
+    {
+      "id": "R14-1403-16",
+      "title": "Sutormin et al. (2021), Diversity and Functions of Type II Topoisomerases",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8084294/",
+      "section": "Catalytic mechanisms; DNA gyrase and transcription; gyrA/gyrB/topA homeostasis",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های انواع توپوایزومراز و توضیح تنظیم متقابل ژیراز/توپوایزومرازI و ابرپیچش منفی خوانده شد."
+    },
+    {
+      "id": "R14-1403-17",
+      "title": "Maslowska et al. (2019), The SOS system: A complex and tightly regulated response to DNA damage",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6590174/",
+      "section": "Introduction and regulation by RecA/LexA",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و بخش‌های آغازین مربوط به DNA آسیب‌دیده و تنظیم پاسخ SOS خوانده شد."
+    },
+    {
+      "id": "R14-1403-18",
+      "title": "Fang et al. (2026), PB1 mutations as key drivers of influenza A virus evolution",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12894230/",
+      "section": "Introduction; PB1/PB2/PA polymerase composition",
+      "accessed": "2026-11-20",
+      "coverage": "مقدمه و توضیح ساختار سه‌زیرواحدی و نقش مولکولی PB1/PB2/PA خوانده شد؛ برای پایه پاسخ، نه پیش‌بینی بالینی یا پروتکل، استفاده شد."
+    }
+  ],
+  "exam_source": {
+    "title": "آزمون ورودی دوره‌های دکتری (نیمه‌متمرکز) سال ۱۴۰۳، زیست‌شناسی سلولی و مولکولی",
+    "code": "2226؛ کد کنترل 687 C؛ دفترچه شماره ۳ از ۳",
+    "source_url": "https://dll.theenglishtoday.ir/phd/Cell-and-Molecular-Biology/1403.pdf",
+    "sha256": "f28a75043873aacf2416dab2eb564c2f620723000903a7f9914426afbe4a0937",
+    "pages": 48
+  },
+  "key_source": {
+    "file": "archive/exams/1403.jpg",
+    "sha256": "08c64fb725a6cd199f170666ec5a3f93b0b2a5e6f327311de30036581c65ee64",
+    "coverage": "questions 1–90 only",
+    "status": "third-party image; booklet control code and preliminary/final status not shown"
+  },
+  "notes": [
+    "سؤال۴۲ میان کلید واسط و پاسخ علمی اختلاف دارد؛ تعارض حفظ شد.",
+    "سؤال۱۴۶ حاوی توصیف کلاسیک مارپیچ MreB است؛ محدودیت تجربی با منبع ذکر شد.",
+    "عبارت فقط فعالیتRT در سؤال۴۴ به معنی فقدان اندونوکلئاز LINE-1 نیست.",
+    "ماده علمی و شکل‌های منابع بازنشر نشده‌اند؛ تحلیل مستقل و لینک منبع ثبت شده است."
+  ],
+  "qa_corrections": [
+    {
+      "date": "2026-11-20",
+      "question": "Y1403-Q21",
+      "change": "گزینه۳ مطابق تصویر به «دو ـ داخل ـ یک ـ بیرون ـ مثبت» اصلاح شد؛ پاسخ آموزشی۴ بدون تغییر."
+    },
+    {
+      "date": "2026-11-20",
+      "question": "Y1403-Q1",
+      "change": "حد پایین برش تصویر از378.571به384.286نقطه گسترش یافت تا واحد mol کامل باشد."
+    },
+    {
+      "date": "2026-11-20",
+      "question": "Y1403-Q42",
+      "change": "حد پایین برش تصویر از242.857به250نقطه گسترش یافت تا گزینهآخر کامل باشد."
+    }
+  ],
+  "sources_after_review": [
+    {
+      "id": "R14-1403-1",
+      "title": "OpenStax Biology 2e, 6.2 Potential, Kinetic, Free, and Activation Energy",
+      "url": "https://openstax.org/books/biology-2e/pages/6-2-potential-kinetic-free-and-activation-energy",
+      "section": "Free Energy; Endergonic and Exergonic Reactions",
+      "accessed": "2026-11-20",
+      "coverage": "متن بخش‌های انرژی آزاد و واکنش‌های مساعد/نامساعد خوانده شد."
+    },
+    {
+      "id": "R14-1403-2",
+      "title": "Ferrell (2009), Q&A: Cooperativity",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2737376/",
+      "section": "Positive/negative cooperativity; cooperative and ultrasensitive responses",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های تعریف همکاری مثبت و حد پاسخ همه‌یا‌هیچ خوانده شد."
+    },
+    {
+      "id": "R14-1403-3",
+      "title": "OpenStax Biology 2e, 3.4 Proteins",
+      "url": "https://openstax.org/books/biology-2e/pages/3-4-proteins",
+      "section": "Amino Acids; Figures 3.22–3.23",
+      "accessed": "2026-11-20",
+      "coverage": "ساختار کربن آلفا و زنجیره جانبی گلیسین در متن و توصیف شکل خوانده شد."
+    },
+    {
+      "id": "R14-1403-4",
+      "title": "Afanzar et al. (2021), The switching mechanism of the bacterial rotary motor combines tight regulation with inherent flexibility",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7957414/",
+      "section": "Abstract; Introduction; CheY interaction with the flagellar motor",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و بخش‌های سازوکار CheY/سوئیچ و شرح نتایج مرتبط خوانده شد؛ نه تمام روش‌های آزمایش."
+    },
+    {
+      "id": "R14-1403-5",
+      "title": "OpenStax Microbiology, 3.3 Unique Characteristics of Prokaryotic Cells",
+      "url": "https://openstax.org/books/microbiology/pages/3-3-unique-characteristics-of-prokaryotic-cells",
+      "section": "Cell Wall; Archaeal cell walls",
+      "accessed": "2026-11-20",
+      "coverage": "بخش پپتیدوگلیکان و مقایسه دیواره آرکی با باکتری خوانده شد."
+    },
+    {
+      "id": "R14-1403-6",
+      "title": "OpenStax Microbiology, 11.2 DNA Replication",
+      "url": "https://openstax.org/books/microbiology/pages/11-2-dna-replication",
+      "section": "Initiation; Elongation; sliding clamp and SSB",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های آغاز و طویل‌شدن خوانده شد؛ خطاهای ساده‌ساز متن درباره جهت سنتز و جدول توپوایزومراز به پاسخ منتقل نشده است."
+    },
+    {
+      "id": "R14-1403-7",
+      "title": "OpenStax Biology 2e, 5.3 Active Transport",
+      "url": "https://openstax.org/books/biology-2e/pages/5-3-active-transport",
+      "section": "Electrochemical Gradient; Sodium-Potassium Pump; Figure 5.19",
+      "accessed": "2026-11-20",
+      "coverage": "متن چرخه پمپ و نسبت سه سدیم/دو پتاسیم خوانده شد."
+    },
+    {
+      "id": "R14-1403-8",
+      "title": "Kinoshita (2016), Glycosylphosphatidylinositol (GPI) Anchors: Biochemistry and Cell Biology: Introduction to a Thematic Review Series",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4689333/",
+      "section": "GPI assembly, attachment and maturation in ER/Golgi",
+      "accessed": "2026-11-20",
+      "coverage": "متن مقدمه مروری و توضیح مسیر ساخت و اتصال GPI خوانده شد."
+    },
+    {
+      "id": "R14-1403-9",
+      "title": "Skowyra and Rapoport (2022), PEX5 translocation into and out of peroxisomes drives matrix protein import",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9444985/",
+      "section": "Summary; Introduction: PTS1 SKL and PEX5 TPR domain",
+      "accessed": "2026-11-20",
+      "coverage": "خلاصه و مقدمه درباره SKL/PTS1 و PEX5 خوانده شد؛ ادعای داوری همه آزمایش‌ها نمی‌شود."
+    },
+    {
+      "id": "R14-1403-10",
+      "title": "Prakash et al. (2015), Homologous Recombination and Human Health: The Roles of BRCA1, BRCA2, and Associated Proteins",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4382744/",
+      "section": "Abstract; opening overview of HR and BRCA1/BRCA2",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه نقش BRCA در ترمیم شکست دورشته‌ای خوانده شد."
+    },
+    {
+      "id": "R14-1403-11",
+      "title": "Kazazian (2014), Processed pseudogene insertions in somatic cells",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4151081/",
+      "section": "Abstract; Background: L1 enzymatic activities and processed pseudogenes",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و پیشینه درباره رونویسی معکوس، اندونوکلئاز LINE-1 و منشأ ژن کاذب پردازش‌شده خوانده شد."
+    },
+    {
+      "id": "R14-1403-12",
+      "title": "Croker et al. (2008), SOCS Regulation of the JAK/STAT Signalling Pathway",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2597703/",
+      "section": "Introduction; Figure 1 Mechanism of SOCS action",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده، مقدمه و شرح شکل۱ درباره حلقه بازخورد منفی SOCS خوانده شد."
+    },
+    {
+      "id": "R14-1403-13",
+      "title": "Swulius and Jensen (2012), The Helical MreB Cytoskeleton in Escherichia coli MC1000/pLE7 Is an Artifact of the N-Terminal Yellow Fluorescent Protein Tag",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3497537/",
+      "section": "Abstract and opening discussion of MreB helices",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و بحث آغازین درباره اثر برچسب و مدل مارپیچی MreB خوانده شد."
+    },
+    {
+      "id": "R14-1403-14",
+      "title": "Korotkov et al. (2012), The type II secretion system: biogenesis, molecular architecture and mechanism",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3705712/",
+      "section": "Abstract; Introduction",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه درباره خروج پروتئین تاخورده از پری‌پلاسم خوانده شد."
+    },
+    {
+      "id": "R14-1403-15",
+      "title": "Oostergetel et al. (2010), The chlorosome: a prototype for efficient light harvesting in photosynthesis",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2882566/",
+      "section": "Abstract; Introduction",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه درباره آنتن کلروزوم و سازگاری با شدت بسیار کم نور خوانده شد."
+    },
+    {
+      "id": "R14-1403-16",
+      "title": "Sutormin et al. (2021), Diversity and Functions of Type II Topoisomerases",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8084294/",
+      "section": "Catalytic mechanisms; DNA gyrase and transcription; gyrA/gyrB/topA homeostasis",
+      "accessed": "2026-11-20",
+      "coverage": "بخش‌های انواع توپوایزومراز و توضیح تنظیم متقابل ژیراز/توپوایزومرازI و ابرپیچش منفی خوانده شد."
+    },
+    {
+      "id": "R14-1403-17",
+      "title": "Maslowska et al. (2019), The SOS system: A complex and tightly regulated response to DNA damage",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6590174/",
+      "section": "Introduction and regulation by RecA/LexA",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و بخش‌های آغازین مربوط به DNA آسیب‌دیده و تنظیم پاسخ SOS خوانده شد."
+    },
+    {
+      "id": "R14-1403-18",
+      "title": "Fang et al. (2026), PB1 mutations as key drivers of influenza A virus evolution",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12894230/",
+      "section": "Introduction; PB1/PB2/PA polymerase composition",
+      "accessed": "2026-11-20",
+      "coverage": "مقدمه و توضیح ساختار سه‌زیرواحدی و نقش مولکولی PB1/PB2/PA خوانده شد؛ برای پایه پاسخ، نه پیش‌بینی بالینی یا پروتکل، استفاده شد."
+    },
+    {
+      "id": "R14-1403-19",
+      "title": "Baldwin et al. — Structures, functions and adaptations of the human LINE-1 ORF2 protein",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10830420/",
+      "section": "Abstract and opening Main: non-LTR retrotransposon and ORF2 endonuclease/reverse transcriptase",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و آغاز متن توسط بازبین مستقل خوانده شد؛ برای non-LTR بودن LINE و کارکرد ORF2."
+    }
+  ]
+}
