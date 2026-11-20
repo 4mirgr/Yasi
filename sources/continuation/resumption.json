@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-20",
+  "starting_commit": "e991629b7b974c8a2f219c9c97e1757c2de99ab0",
+  "conversation_access": "Original prior conversation not directly accessible by its ID; user supplied the original request and yaci.pdf, which were read.",
+  "attachment_handling": "Personal contacts excluded from public repository; only project decisions retained.",
+  "archive_integrity": "All 11 educational PDFs and introduction match recorded byte sizes and SHA-256 values.",
+  "font": {
+    "url": "https://github.com/intuxicated/css-persian/blob/master/fonts/BNazanin.ttf",
+    "sha256": "d088c489473040c556ae804359aad61e5e6a6cec34f49e8e176da9e2e100bf4c",
+    "family": "B Nazanin"
+  },
+  "official_1406": {
+    "url": "https://www8.sanjesh.org/download/1406/phd/reg/RegphdNote1406v1.pdf",
+    "observed_status": 403,
+    "page_33_read": false,
+    "evidence_note": "Firecrawl response was cached from an earlier 2026-11-20 request; no official syllabus confirmation inferred."
+  },
+  "ncbi_bookshelf": "Firecrawl failed for NBK26850/NBK21113; direct NBK26850 HTTP200 yielded challenge page, not textbook content. Not used as read evidence."
+}
