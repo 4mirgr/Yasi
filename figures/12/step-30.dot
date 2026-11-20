@@ -1,7 +1,7 @@
 digraph G {
 graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
-node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];
-edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
 n0 [label="کاست و attC\nGene cassette + attC"];
 n1 [label="IntI و attI\nIntegrase + attI"];
 n2 [label="آرایه کاست‌ها و Pc\nCassette array + Pc"];

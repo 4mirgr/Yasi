@@ -18,6 +18,9 @@ WORD = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
 
 
 def normalized(text):
+    from build_books import SCRIPT_CHARS
+    text = re.sub(r'(?<=[0-9۰-۹])\^([+−\-]?[0-9۰-۹]+)', r'\1', text)
+    text = text.translate(SCRIPT_CHARS)
     return re.sub(r'[\s\u200e\u200f\u2066-\u2069]', '', text)
 
 

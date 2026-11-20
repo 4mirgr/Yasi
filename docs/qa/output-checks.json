@@ -1,75 +1,75 @@
 {
   "pdfs": {
     "12": {
-      "pages": 151,
-      "bytes": 5598043,
-      "sha256": "4f4bfedce2c13e05980cb63dfddd7e7364ad3d24971bfb31f19ab1057ac551a7",
+      "pages": 170,
+      "bytes": 2024069,
+      "sha256": "de496b8690ba8bb0b71c4cafe6c4c6b6043f7e2dd9b86d32f789aafa596c3f39",
       "empty_body_pages": [],
       "text_outside_page": [],
       "replacement_character_pages": [],
       "outline_entries": 157,
       "all_pages_rendered": true,
       "contact_sheets": "work/qa/12/",
-      "internal_links": 555,
+      "internal_links": 532,
       "internal_anchor_elements": 532,
       "bad_link_targets": []
     },
     "13": {
-      "pages": 136,
-      "bytes": 5474823,
-      "sha256": "8a3317a8b8ff6d209fb9d85a6e57c52f445f15fb9bb71224e4122c808a36c403",
+      "pages": 156,
+      "bytes": 1533627,
+      "sha256": "b8e9b458a30b25266edbbf8938705b01100fa663266cff14c109b20695deb6c7",
       "empty_body_pages": [],
       "text_outside_page": [],
       "replacement_character_pages": [],
       "outline_entries": 157,
       "all_pages_rendered": true,
       "contact_sheets": "work/qa/13/",
-      "internal_links": 517,
+      "internal_links": 501,
       "internal_anchor_elements": 501,
       "bad_link_targets": []
     },
     "14": {
-      "pages": 49,
-      "bytes": 4796009,
-      "sha256": "813aa446c8322269c36157d74bf4891a8a17aeed9e115f0d906261b281b67f61",
+      "pages": 55,
+      "bytes": 747449,
+      "sha256": "369eb2f0740b02886852dc050d418121c49d32d8592ecc78ca5413b09d6e4273",
       "empty_body_pages": [],
       "text_outside_page": [],
       "replacement_character_pages": [],
       "outline_entries": 11,
       "all_pages_rendered": true,
       "contact_sheets": "work/qa/14/",
-      "internal_links": 85,
+      "internal_links": 73,
       "internal_anchor_elements": 73,
       "bad_link_targets": []
     }
   },
   "docx": {
     "12": {
-      "bytes": 8189342,
+      "bytes": 5095781,
       "questions_checked": 270,
       "missing_question_stems": [],
       "internal_hyperlinks": 532,
       "bookmarks": 88,
       "embedded_images": 42,
-      "sha256": "dea8cd5395ec732c61943c72071b126da82e54f55492d660d43b31cbc0b7a6f4"
+      "sha256": "57dfce9e9a637de23f7e7da54a2122faae235c405bc0a42570cd47c87a7a2785"
     },
     "13": {
-      "bytes": 8063142,
+      "bytes": 5051564,
       "questions_checked": 270,
       "missing_question_stems": [],
       "internal_hyperlinks": 501,
       "bookmarks": 81,
       "embedded_images": 42,
-      "sha256": "5dfade3984f43c7cb22a75ecad18d6361b7da0813007f558dcd13cc8d352c360"
+      "sha256": "77a6098a4567b34050e7bc68a23e6135f9ebf6334d2db77499bdf30ca8a5f0c2"
     },
     "14": {
-      "bytes": 5667767,
+      "bytes": 2245099,
       "questions_checked": 60,
       "missing_question_stems": [],
       "internal_hyperlinks": 73,
-      "bookmarks": 65,
+      "bookmarks": 66,
       "embedded_images": 3,
-      "sha256": "22dbf8c64f1dfc6f76b1dbbea4fbcbebf8608416286ff2f9ac2c40f9062abfca"
+      "sha256": "a77534ef2e15759943afb95addef42ec8018aa535a3b504ea1b0369de62eb077"
     }
   },
   "svg_geometry": {

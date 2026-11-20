@@ -45,11 +45,22 @@ class ContentValidationTests(unittest.TestCase):
         self.assertIn('<bdi>ΔG &lt; 0</bdi>', esc('شرط ΔG < 0'))
         self.assertNotIn('&<bdi>', esc('شرط ΔG < 0'))
         self.assertIn('<bdi>Güttler &amp; Görlich</bdi>', esc('منبع: Güttler & Görlich'))
-        self.assertIn('<bdi>۲۰ ÷ (۰٫۰۵ × ۱۰⁻³) = ۴ × ۱۰⁵ PFU/mL</bdi>',
+        self.assertIn('<bdi>۲۰ ÷ (۰٫۰۵ × ۱۰<sup>−3</sup>) = ۴ × ۱۰<sup>5</sup> PFU/mL</bdi>',
                       esc('پاسخ ۲۰ ÷ (۰٫۰۵ × ۱۰⁻³) = ۴ × ۱۰⁵ PFU/mL'))
         self.assertIn('<bdi>(HIV)</bdi>', esc('ویروس (HIV)'))
-        self.assertIn('<bdi>P(N≥2) = 1−e⁻ᵐ(1+m)</bdi>', esc('احتمال P(N≥2) = 1−e⁻ᵐ(1+m)'))
+        self.assertIn('<bdi>P(N≥2) = 1−e<sup>−m</sup>(1+m)</bdi>', esc('احتمال P(N≥2) = 1−e⁻ᵐ(1+m)'))
         self.assertIn('<bdi>(p)ppGpp</bdi>', esc('آلارمون (p)ppGpp'))
+
+    def test_legacy_powers_and_gene_superscripts_use_real_vertical_layout(self):
+        self.assertIn('۱۰<sup>۶</sup>', esc('تعداد ۲×۱۰^۶'))
+        self.assertIn('lacI<sup>−</sup>', esc('ژنوتیپ lacI⁻'))
+        self.assertIn('I<sup>s</sup>', esc('مهارگر Iˢ'))
+        self.assertIn('F<sub>1</sub>', esc('نسل F₁'))
+
+    def test_text_after_formatted_exponents_is_preserved(self):
+        from lxml import html
+        text = html.fromstring('<p>'+esc('پاسخ ۱۰⁻⁵ چه تیتری می‌دهد؟ سپس ۱۰^۶ ذره.')+'</p>').text_content()
+        self.assertEqual(text, 'پاسخ ۱۰−5 چه تیتری می‌دهد؟ سپس ۱۰۶ ذره.')
 
 
 if __name__ == '__main__':

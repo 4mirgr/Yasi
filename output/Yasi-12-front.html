@@ -1,44 +1,79 @@
-<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>ژنتیک پروکاریوت‌ها</title><style>
-@font-face{font-family:Yasi;src:url('../assets/fonts/NotoNaskhArabic-Regular.ttf')}
-@font-face{font-family:Yasi;src:url('../assets/fonts/NotoNaskhArabic-Bold.ttf');font-weight:700}
-@font-face{font-family:CoverYasi;src:url('../assets/fonts/BNazanin.ttf')}
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>ژنتیک پروکاریوت‌ها</title><style>@font-face{font-family:Vazirmatn;src:url('../assets/fonts/Vazirmatn-Regular.ttf');font-weight:400}
+@font-face{font-family:Vazirmatn;src:url('../assets/fonts/Vazirmatn-Medium.ttf');font-weight:500}
+@font-face{font-family:Vazirmatn;src:url('../assets/fonts/Vazirmatn-Bold.ttf');font-weight:700}
+@font-face{font-family:Vazirmatn;src:url('../assets/fonts/Vazirmatn-ExtraBold.ttf');font-weight:800}
+/* Only symbols absent from Vazirmatn (Greek letters, arrows and superscripts)
+   fall back to this bundled font. All prose, digits and Latin use Vazirmatn. */
+@font-face{font-family:YasiSymbols;src:url('../assets/fonts/DejaVuSans.ttf')}
 @page{size:A4;margin:15mm 15mm 17mm 25mm}
 @page:left{margin-left:15mm;margin-right:25mm}
-*{box-sizing:border-box}html{direction:rtl}body{font-family:Yasi,'Noto Naskh Arabic',serif;
-font-size:14pt;line-height:1.48;color:#18202b;margin:0}h1,h2,h3,h4{line-height:1.35;
-break-after:avoid;color:#173b5a}h1{font-size:25pt}h2{font-size:20pt;margin:16pt 0 10pt}
-h3{font-size:17pt;margin:14pt 0 8pt}h4{font-size:15pt;margin:9pt 0 4pt}
-p{margin:5pt 0 7pt;orphans:3;widows:3;text-align:justify}bdi,.latin{font-family:'DejaVu Sans',sans-serif;
-font-size:.78em;direction:ltr;unicode-bidi:isolate}a{color:#17628b;text-decoration:none}
-.chapter,.major{break-before:auto}.exam-start{break-before:page}.meta,.citation{font-size:11.5pt;color:#526171}
-.note{background:#f2f8fb;border-right:3px solid #208a9b;padding:9pt 12pt;margin:10pt 0}
-.example{background:#f7f9fc;border:1px solid #d9e3e9;padding:9pt 12pt;margin:9pt 0;
-break-inside:avoid}.question{break-inside:avoid;margin:10pt 0 12pt}.question p{margin-bottom:4pt}
-.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3pt 16pt;
-padding:2pt 8pt}.options.long{grid-template-columns:1fr}.option{text-align:right}
-.answer{break-inside:avoid;margin:7pt 0 9pt}.answer p{text-align:justify}
-.exam-question{margin:6pt 0 8pt}
-table{width:100%;border-collapse:collapse;margin:9pt 0;font-size:12.5pt;break-inside:avoid}
-thead{display:table-header-group}th{background:#e7f3f8;color:#173b5a}
-td,th{border:1px solid #cddce5;padding:5pt 7pt;text-align:right;vertical-align:top}
-tr{break-inside:avoid}figure{margin:12pt 0;break-inside:avoid;text-align:center}
-figure img{width:100%;max-height:90mm;object-fit:contain}figcaption{font-size:11.5pt;
-line-height:1.4;margin-top:5pt;color:#3d4d5a}.source{break-inside:avoid;margin:9pt 0;
-overflow-wrap:anywhere;font-size:11.5pt}.toc{font-size:13pt;line-height:1.2}.toc p{margin:4pt 0}.keygrid{font-size:12pt}
-.cover{width:210mm;height:297mm;position:relative;overflow:hidden;margin:0;
-background:#14b4bd url('../assets/cover-art.png') center/cover no-repeat;
-display:flex;flex-direction:column;align-items:center;text-align:center;padding:22mm 17mm 15mm}
-.cover *{text-align:center}.cover{font-family:CoverYasi,serif}.cover .pill{border:2px solid #e3be5c;border-radius:22pt;
-background:#431276;color:white;padding:6pt 20pt;font-size:24pt;line-height:1.35}
-.cover h1{color:#39115c;font-size:43pt;line-height:1.32;margin:22mm 0 8mm;
-text-shadow:0 1px 8px #fff;background:#fff9e8d9;padding:5mm;border-radius:8mm;width:100%}
-.cover .subtitle{font-size:21pt;color:#431276;background:#ffe76be8;border:1px solid #d7a629;
-padding:5pt 14pt;border-radius:20pt}.cover .author{font-size:23pt;background:#fffcebdc;
-color:#431276;border:1px solid #d7b64d;border-radius:20pt;padding:4pt 16pt;margin-top:13mm}
-.cover .badge{margin-top:auto;color:white;background:#c52e46;border:2px solid #e7c44f;
-font-size:17pt;border-radius:22pt;padding:4pt 20pt}.cover.back{padding-top:30mm}
-.back .backpanel{background:#fff9e9ed;border:3px double #daa938;border-radius:10mm;
-padding:8mm;width:100%;font-size:20pt;line-height:1.7;color:#431276}
-.backpanel h2{font-size:24pt;color:#431276;margin-top:0}.backpanel p{text-align:right}
+*{box-sizing:border-box}
+html{direction:rtl}
+body{font-family:Vazirmatn,YasiSymbols,sans-serif;font-size:13pt;line-height:1.8;color:#182c3b;margin:0;font-variant-numeric:tabular-nums}
+h1,h2,h3,h4{line-height:1.65;break-after:avoid;color:#153d54;font-weight:800}
+h1{font-size:24pt;margin:0 0 8mm}h2{font-size:19pt;margin:14pt 0 9pt}
+h3{font-size:16pt;margin:14pt 0 7pt}h4{font-size:14pt;margin:9pt 0 4pt}
+p{margin:5pt 0 8pt;orphans:3;widows:3;text-align:justify}
+bdi,.latin{font-family:inherit;font-size:1em;direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+sup,sub{font-family:inherit;font-size:.75em;line-height:0}
+a{color:#12657a;text-decoration:none}
+.chapter,.major{break-before:auto}.exam-start{break-before:page}
+.meta,.citation{font-size:10.5pt;color:#4c6270;line-height:1.8}
+.note{background:#f1f7f8;border-right:3px solid #188d98;padding:10pt 12pt;margin:12pt 0}
+.example{background:#f5f8fb;border:1px solid #d4e2e9;border-radius:3mm;padding:10pt 12pt;margin:11pt 0;break-inside:avoid}
+.question{break-inside:avoid;margin:11pt 0 13pt}.question p{margin-bottom:5pt}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4pt 14pt;padding:3pt 7pt}
+.options.long{grid-template-columns:1fr}.option{text-align:right}
+.answer{break-inside:avoid;margin:8pt 0 10pt}.answer p{text-align:justify}
+.exam-question{margin:7pt 0 9pt}
+table{width:100%;border-collapse:collapse;margin:10pt 0;font-size:11.5pt;line-height:1.7}
+table.keep-table{break-inside:avoid;page-break-inside:avoid}
+table.flow-table{break-inside:auto}
+thead{display:table-header-group}th{background:#e6f2f5;color:#153d54;font-weight:700}
+td,th{border:1px solid #cbdde3;padding:6pt 7pt;text-align:right;vertical-align:top}
+tr{break-inside:avoid;page-break-inside:avoid}
+figure{margin:13pt 0;break-inside:avoid;text-align:center}
+figure img{width:100%;max-height:90mm;object-fit:contain}
+figcaption{font-size:10.5pt;line-height:1.7;margin-top:6pt;color:#3d5865}
+.source{break-inside:avoid;margin:11pt 0;overflow-wrap:anywhere;font-size:10.5pt}
+.source a{font-size:9.5pt}
+.keygrid{font-size:11.5pt}
+.toc-page{break-before:page;break-after:page;height:260mm;position:relative;padding:7mm 0 10mm}
+.toc-page h2{font-size:27pt;margin:0 0 4mm;padding-bottom:5mm;border-bottom:2px solid #188d98}
+.toc-caption{font-size:11pt;color:#4c6270;margin:0 0 7mm;text-align:right}
+.toc{height:208mm;display:flex;flex-direction:column;justify-content:space-between;font-size:12.5pt;line-height:1.65}
+.toc p{margin:0;text-align:right}
+.toc a{display:flex;align-items:baseline;gap:4mm;border-bottom:1px solid #d7e4e8;padding:2.3mm 0;color:#153d54;font-weight:500}
+.toc-label{flex:1}.toc-number{min-width:10mm;text-align:left;color:#12657a;font-weight:700}
+.toc-page.short .toc{height:208mm;padding-top:10mm}
+.cover{--ink:#082f3e;--accent:#70f0cc;--gold:#f5cf83;width:210mm;height:297mm;position:relative;overflow:hidden;margin:0;
+ background:radial-gradient(ellipse at 12% 64%,#147d83 0,transparent 54%),linear-gradient(145deg,#061c2b,#0b4552 63%,#082a3e);
+ color:#fff;padding:19mm 16mm 13mm;display:flex;flex-direction:column;align-items:stretch;text-align:center}
+.cover.v13{--ink:#302347;--accent:#a9b6ff;background:radial-gradient(ellipse at 18% 64%,#66438a 0,transparent 55%),linear-gradient(145deg,#191b39,#39325c 63%,#201f40)}
+.cover.v14{--ink:#112f57;--accent:#8cdaff;background:radial-gradient(ellipse at 18% 64%,#225f92 0,transparent 55%),linear-gradient(145deg,#0c2036,#173d65 63%,#101f39)}
+.cover:before{content:'';position:absolute;inset:9mm;border:1px solid #ffffff29;border-radius:2mm;pointer-events:none}
+.cover:after{content:'';position:absolute;top:0;right:0;width:7mm;height:100%;background:var(--accent);opacity:.8}
+.cover *{text-align:center;position:relative;z-index:1}
+.cover .cover-top{display:flex;justify-content:space-between;align-items:center;color:#e3f3f3;font-size:12pt;font-weight:500}
+.brand{font-size:32pt;font-weight:800;line-height:1.3;color:var(--gold)}
+.cover .series{font-size:20pt;font-weight:700;margin-top:13mm;line-height:1.7;color:white}
+.cover .volume{align-self:center;font-size:14pt;font-weight:700;border:1px solid #ffffff50;border-radius:99px;padding:1mm 8mm;margin-top:5mm;color:var(--gold)}
+.cover h1{color:white;background:none;border:0;text-shadow:0 2px 15px #00000025;font-size:34pt;font-weight:800;line-height:1.55;
+ margin:11mm -3mm 3mm;padding:0;white-space:nowrap;word-break:normal;overflow-wrap:normal}
+.cover.v14 h1{font-size:22pt}
+.cover .subtitle{font-size:13pt;font-weight:500;color:var(--accent);line-height:1.9}
+.cover .science-art{width:100%;height:112mm;margin:4mm 0 0;z-index:0}
+.cover .science-art *{position:static}
+.cover .author{font-size:17pt;font-weight:700;margin-top:auto;color:white}
+.cover .badge{font-size:10pt;font-weight:700;color:#f9e7bf;margin-top:7mm;letter-spacing:0;line-height:1.6}
+.cover.back{padding-top:17mm}
+.back .back-heading{font-size:25pt;font-weight:800;color:white;margin:8mm 0 2mm}
+.back .back-title{color:var(--accent);font-size:15pt;font-weight:700;margin:0 0 7mm}
+.backpanel{padding:0 0 0 1mm;margin:0;list-style:none;text-align:right;flex-shrink:0}
+.backpanel li{display:flex;gap:5mm;align-items:baseline;border-bottom:1px solid #ffffff29;padding:1.9mm 0;color:white;font-size:21pt;font-weight:800;line-height:1.4;text-align:right}
+.backpanel li span{font-size:14pt;font-weight:700;min-width:9mm;color:var(--gold);text-align:right}
+.backpanel li div{text-align:right}
+.back .back-foot{margin-top:auto;font-size:13pt;font-weight:700;line-height:1.9;color:var(--accent)}
+.back.v14 .backpanel{margin-top:8mm}.back.v14 .backpanel li{padding:6mm 0;font-size:21pt}
 @media screen{body{max-width:180mm;margin:20px auto;background:white}html{background:#edf2f5}}
-@page{size:A4;margin:0}@page:left{margin:0}@page:right{margin:0}@page:first{margin:0}html,body{margin:0;padding:0;width:210mm;max-width:none;background:white}.cover h1{overflow-wrap:break-word}</style></head><body><div class="cover"><div class="pill">آمادگی آزمون دکتری ۱۴۰۶</div><div class="pill" style="margin-top:9mm;background:#cf3d52">جلد ۱۲</div><h1>ژنتیک پروکاریوت‌ها</h1><div class="subtitle">درسنامه گام‌به‌گام و آزمون</div><div class="author">دکتر امیر هوشنگ گرامی</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div></body></html>
+@page{size:A4;margin:0}@page:left{margin:0}@page:right{margin:0}@page:first{margin:0}html,body{margin:0;padding:0;width:210mm;max-width:none;background:white}</style></head><body><div class="cover v12"><div class="cover-top"><span class="brand">یاسی</span><span>مجموعه زیست‌شناسی</span></div><div class="series">آمادگی آزمون دکتری ۱۴۰۶</div><div class="volume">جلد ۱۲</div><h1>ژنتیک پروکاریوت‌ها</h1><div class="subtitle">درسنامه گام‌به‌گام و آزمون</div><svg class="science-art" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><radialGradient id="halo"><stop stop-color="#7fffe0" stop-opacity=".2"/><stop offset="1" stop-color="#7fffe0" stop-opacity="0"/></radialGradient><linearGradient id="strand" x2="1" y2="1"><stop stop-color="#8bffe1"/><stop offset="1" stop-color="#2fa9d3"/></linearGradient><linearGradient id="capsid" x2=".7" y2="1"><stop stop-color="#d3d9ff"/><stop offset="1" stop-color="#7774cb"/></linearGradient></defs><ellipse cx="340" cy="240" rx="330" ry="220" fill="url(#halo)"/><circle cx="58" cy="110" r="8" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="105" cy="170" r="5" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="570" cy="100" r="7" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="610" cy="170" r="5" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="560" cy="350" r="8" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="110" cy="360" r="7" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="48" cy="275" r="4" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="630" cy="295" r="6" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><path d="M58 110L105 170L48 275L110 360M570 100L610 170L630 295L560 350" fill="none" stroke="#c6f1ff" stroke-opacity=".12" stroke-width="2"/><ellipse cx="397" cy="239" rx="154" ry="140" fill="#062e3c" fill-opacity=".45" stroke="#63d4c0" stroke-width="3"/><ellipse cx="397" cy="239" rx="131" ry="118" fill="none" stroke="#a5f8da" stroke-opacity=".32" stroke-width="2"/><polyline points="410.42,99.53 415.77,100.04 421.09,100.72 426.38,101.57 431.64,102.59 436.86,103.77 442.03,105.12 447.14,106.63 452.19,108.30 457.17,110.13 462.08,112.12 466.91,114.26 471.66,116.55 476.32,119.00 480.87,121.59 485.33,124.32 489.68,127.19 493.92,130.20 498.03,133.34 502.03,136.61 505.89,140.01 509.63,143.52 513.23,147.15 516.68,150.90 519.99,154.75 523.15,158.70 526.16,162.75 529.00,166.89 531.69,171.13 534.22,175.44 536.57,179.83 538.76,184.30 540.77,188.83" fill="none" stroke="#f5cf83" stroke-width="16" stroke-linecap="round"/><polyline points="527.60,313.19 524.67,317.29 521.59,321.29 518.35,325.19 514.97,328.99 511.44,332.68 507.78,336.25 503.98,339.71 500.05,343.04 495.99,346.25 491.81,349.32 487.52,352.26 483.12,355.07 478.61,357.73 474.00,360.24 469.30,362.61 464.51,364.83 459.64,366.90 454.69,368.81 449.67,370.56 444.59,372.15 439.45,373.58 434.26,374.84 429.02,375.94 423.74,376.87 418.43,377.64 413.10,378.23 407.74,378.66 402.37,378.91 397.00,379.00 391.63,378.91 386.26,378.66 380.90,378.23" fill="none" stroke="#7ee5e0" stroke-width="16" stroke-linecap="round"/><polyline points="274.01,323.25 270.85,319.30 267.84,315.25 265.00,311.11 262.31,306.87 259.78,302.56 257.43,298.17 255.24,293.70 253.23,289.17 251.39,284.58 249.73,279.93 248.25,275.23 246.95,270.49 245.83,265.71 244.90,260.90 244.15,256.06 243.59,251.20 243.21,246.33 243.02,241.44 243.02,236.56 243.21,231.67 243.59,226.80 244.15,221.94 244.90,217.10 245.83,212.29 246.95,207.51 248.25,202.77 249.73,198.07 251.39,193.42 253.23,188.83 255.24,184.30 257.43,179.83 259.78,175.44" fill="none" stroke="#7fafff" stroke-width="16" stroke-linecap="round"/><path d="M184.0 45L184.0 45" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M206.1 60L161.9 60" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M224.6 75L143.4 75" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M236.5 90L131.5 90" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M239.9 105L128.1 105" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M234.3 120L133.7 120" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M220.5 135L147.5 135" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M200.7 150L167.3 150" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M178.3 165L189.7 165" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M156.8 180L211.2 180" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M139.7 195L228.3 195" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M129.8 210L238.2 210" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M128.6 225L239.4 225" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M136.5 240L231.5 240" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M152.0 255L216.0 255" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M172.8 270L195.2 270" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M195.3 285L172.7 285" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M216.0 300L152.0 300" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M231.5 315L136.5 315" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M239.4 330L128.6 330" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M238.2 345L129.8 345" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M228.3 360L139.7 360" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M211.1 375L156.9 375" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><path d="M189.6 390L178.4 390" stroke="#b7fce1" stroke-opacity=".65" stroke-width="4"/><polyline points="184.00,45 187.03,47 190.04,49 193.04,51 196.01,53 198.95,55 201.85,57 204.69,59 207.47,61 210.18,63 212.82,65 215.37,67 217.83,69 220.19,71 222.45,73 224.59,75 226.62,77 228.52,79 230.29,81 231.92,83 233.42,85 234.77,87 235.97,89 237.02,91 237.92,93 238.66,95 239.24,97 239.65,99 239.91,101 240.00,103 239.93,105 239.69,107 239.29,109 238.73,111 238.02,113 237.14,115 236.11,117 234.92,119 233.59,121 232.11,123 230.49,125 228.74,127 226.85,129 224.84,131 222.71,133 220.47,135 218.12,137 215.67,139 213.13,141 210.50,143 207.80,145 205.02,147 202.19,149 199.30,151 196.37,153 193.40,155 190.40,157 187.39,159 184.36,161 181.34,163 178.32,165 175.32,167 172.34,169 169.40,171 166.50,173 163.65,175 160.86,177 158.14,179 155.49,181 152.93,183 150.46,185 148.08,187 145.82,189 143.66,191 141.62,193 139.70,195 137.92,197 136.27,199 134.75,201 133.38,203 132.16,205 131.09,207 130.18,209 129.42,211 128.82,213 128.39,215 128.11,217 128.00,219 128.06,221 128.27,223 128.65,225 129.19,227 129.89,229 130.75,231 131.76,233 132.93,235 134.25,237 135.71,239 137.31,241 139.05,243 140.92,245 142.91,247 145.03,249 147.26,251 149.60,253 152.03,255 154.56,257 157.18,259 159.88,261 162.64,263 165.47,265 168.35,267 171.28,269 174.25,271 177.24,273 180.25,275 183.28,277 186.30,279 189.32,281 192.33,283 195.31,285 198.25,287 201.16,289 204.01,291 206.81,293 209.54,295 212.20,297 214.77,299 217.25,301 219.64,303 221.92,305 224.09,307 226.14,309 228.07,311 229.88,313 231.54,315 233.07,317 234.46,319 235.70,321 236.79,323 237.72,325 238.50,327 239.11,329 239.57,331 239.86,333 239.99,335 239.96,337 239.76,339 239.40,341 238.88,343 238.20,345 237.36,347 236.37,349 235.22,351 233.92,353 232.48,355 230.89,357 229.17,359 227.31,361 225.33,363 223.23,365 221.01,367 218.69,369 216.26,371 213.74,373 211.14,375 208.45,377 205.69,379 202.87,381 199.99,383 197.07,385 194.11,387 191.12,389 188.11,391 185.08,393 182.06,395" fill="none" stroke="#7df3d6" stroke-width="9" stroke-linecap="round"/><polyline points="184.00,45 180.97,47 177.96,49 174.96,51 171.99,53 169.05,55 166.15,57 163.31,59 160.53,61 157.82,63 155.18,65 152.63,67 150.17,69 147.81,71 145.55,73 143.41,75 141.38,77 139.48,79 137.71,81 136.08,83 134.58,85 133.23,87 132.03,89 130.98,91 130.08,93 129.34,95 128.76,97 128.35,99 128.09,101 128.00,103 128.07,105 128.31,107 128.71,109 129.27,111 129.98,113 130.86,115 131.89,117 133.08,119 134.41,121 135.89,123 137.51,125 139.26,127 141.15,129 143.16,131 145.29,133 147.53,135 149.88,137 152.33,139 154.87,141 157.50,143 160.20,145 162.98,147 165.81,149 168.70,151 171.63,153 174.60,155 177.60,157 180.61,159 183.64,161 186.66,163 189.68,165 192.68,167 195.66,169 198.60,171 201.50,173 204.35,175 207.14,177 209.86,179 212.51,181 215.07,183 217.54,185 219.92,187 222.18,189 224.34,191 226.38,193 228.30,195 230.08,197 231.73,199 233.25,201 234.62,203 235.84,205 236.91,207 237.82,209 238.58,211 239.18,213 239.61,215 239.89,217 240.00,219 239.94,221 239.73,223 239.35,225 238.81,227 238.11,229 237.25,231 236.24,233 235.07,235 233.75,237 232.29,239 230.69,241 228.95,243 227.08,245 225.09,247 222.97,249 220.74,251 218.40,253 215.97,255 213.44,257 210.82,259 208.12,261 205.36,263 202.53,265 199.65,267 196.72,269 193.75,271 190.76,273 187.75,275 184.72,277 181.70,279 178.68,281 175.67,283 172.69,285 169.75,287 166.84,289 163.99,291 161.19,293 158.46,295 155.80,297 153.23,299 150.75,301 148.36,303 146.08,305 143.91,307 141.86,309 139.93,311 138.12,313 136.46,315 134.93,317 133.54,319 132.30,321 131.21,323 130.28,325 129.50,327 128.89,329 128.43,331 128.14,333 128.01,335 128.04,337 128.24,339 128.60,341 129.12,343 129.80,345 130.64,347 131.63,349 132.78,351 134.08,353 135.52,355 137.11,357 138.83,359 140.69,361 142.67,363 144.77,365 146.99,367 149.31,369 151.74,371 154.26,373 156.86,375 159.55,377 162.31,379 165.13,381 168.01,383 170.93,385 173.89,387 176.88,389 179.89,391 182.92,393 185.94,395" fill="none" stroke="#f5cf83" stroke-width="9" stroke-linecap="round"/><path d="M294 225Q355 155 424 208T494 253Q422 296 352 263T294 225" fill="none" stroke="#91e7e6" stroke-width="4" stroke-opacity=".65"/><circle cx="393" cy="228" r="18" fill="#f5cf83" fill-opacity=".85"/></svg><div class="author">دکتر امیر هوشنگ گرامی</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div></body></html>

@@ -5,6 +5,7 @@ Run from any directory: python tools/build_books.py [12 13 14]
 """
 import argparse
 import asyncio
+import base64
 import html
 import json
 import re
@@ -13,6 +14,8 @@ import threading
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+
+from cover_art import science_art
 
 import pymupdf as fitz
 from docx import Document
@@ -27,55 +30,19 @@ OUT = ROOT / 'output'
 TITLES = {12: 'ژنتیک پروکاریوت‌ها', 13: 'ویروس‌شناسی پیشرفته',
           14: 'گزیده آزمون‌های سنوات با پاسخ و تحلیل'}
 NUMBERS = str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹')
-LATIN_RE = re.compile(r"[+−\-]?[A-Za-z0-9\u00b0-\u024f\u0370-\u03ff\u06f0-\u06f9][A-Za-z0-9\u00b0-\u024f\u0370-\u03ff\u06f0-\u06f9\u1d00-\u1dbf\u2070-\u209f\u2200-\u22ff\s._,:;/\\+=<>&!′’'−–\-→←±×()%\[\]{}^٫٬]*")
-STYLE = '''
-@font-face{font-family:Yasi;src:url('../assets/fonts/NotoNaskhArabic-Regular.ttf')}
-@font-face{font-family:Yasi;src:url('../assets/fonts/NotoNaskhArabic-Bold.ttf');font-weight:700}
-@font-face{font-family:CoverYasi;src:url('../assets/fonts/BNazanin.ttf')}
-@page{size:A4;margin:15mm 15mm 17mm 25mm}
-@page:left{margin-left:15mm;margin-right:25mm}
-*{box-sizing:border-box}html{direction:rtl}body{font-family:Yasi,'Noto Naskh Arabic',serif;
-font-size:14pt;line-height:1.48;color:#18202b;margin:0}h1,h2,h3,h4{line-height:1.35;
-break-after:avoid;color:#173b5a}h1{font-size:25pt}h2{font-size:20pt;margin:16pt 0 10pt}
-h3{font-size:17pt;margin:14pt 0 8pt}h4{font-size:15pt;margin:9pt 0 4pt}
-p{margin:5pt 0 7pt;orphans:3;widows:3;text-align:justify}bdi,.latin{font-family:'DejaVu Sans',sans-serif;
-font-size:.78em;direction:ltr;unicode-bidi:isolate}a{color:#17628b;text-decoration:none}
-.chapter,.major{break-before:auto}.exam-start{break-before:page}.meta,.citation{font-size:11.5pt;color:#526171}
-.note{background:#f2f8fb;border-right:3px solid #208a9b;padding:9pt 12pt;margin:10pt 0}
-.example{background:#f7f9fc;border:1px solid #d9e3e9;padding:9pt 12pt;margin:9pt 0;
-break-inside:avoid}.question{break-inside:avoid;margin:10pt 0 12pt}.question p{margin-bottom:4pt}
-.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3pt 16pt;
-padding:2pt 8pt}.options.long{grid-template-columns:1fr}.option{text-align:right}
-.answer{break-inside:avoid;margin:7pt 0 9pt}.answer p{text-align:justify}
-.exam-question{margin:6pt 0 8pt}
-table{width:100%;border-collapse:collapse;margin:9pt 0;font-size:12.5pt;break-inside:avoid}
-thead{display:table-header-group}th{background:#e7f3f8;color:#173b5a}
-td,th{border:1px solid #cddce5;padding:5pt 7pt;text-align:right;vertical-align:top}
-tr{break-inside:avoid}figure{margin:12pt 0;break-inside:avoid;text-align:center}
-figure img{width:100%;max-height:90mm;object-fit:contain}figcaption{font-size:11.5pt;
-line-height:1.4;margin-top:5pt;color:#3d4d5a}.source{break-inside:avoid;margin:9pt 0;
-overflow-wrap:anywhere;font-size:11.5pt}.toc{font-size:13pt;line-height:1.2}.toc p{margin:4pt 0}.keygrid{font-size:12pt}
-.cover{width:210mm;height:297mm;position:relative;overflow:hidden;margin:0;
-background:#14b4bd url('../assets/cover-art.png') center/cover no-repeat;
-display:flex;flex-direction:column;align-items:center;text-align:center;padding:22mm 17mm 15mm}
-.cover *{text-align:center}.cover{font-family:CoverYasi,serif}.cover .pill{border:2px solid #e3be5c;border-radius:22pt;
-background:#431276;color:white;padding:6pt 20pt;font-size:24pt;line-height:1.35}
-.cover h1{color:#39115c;font-size:43pt;line-height:1.32;margin:22mm 0 8mm;
-text-shadow:0 1px 8px #fff;background:#fff9e8d9;padding:5mm;border-radius:8mm;width:100%}
-.cover .subtitle{font-size:21pt;color:#431276;background:#ffe76be8;border:1px solid #d7a629;
-padding:5pt 14pt;border-radius:20pt}.cover .author{font-size:23pt;background:#fffcebdc;
-color:#431276;border:1px solid #d7b64d;border-radius:20pt;padding:4pt 16pt;margin-top:13mm}
-.cover .badge{margin-top:auto;color:white;background:#c52e46;border:2px solid #e7c44f;
-font-size:17pt;border-radius:22pt;padding:4pt 20pt}.cover.back{padding-top:30mm}
-.back .backpanel{background:#fff9e9ed;border:3px double #daa938;border-radius:10mm;
-padding:8mm;width:100%;font-size:20pt;line-height:1.7;color:#431276}
-.backpanel h2{font-size:24pt;color:#431276;margin-top:0}.backpanel p{text-align:right}
-@media screen{body{max-width:180mm;margin:20px auto;background:white}html{background:#edf2f5}}
-'''
+SCRIPT_CHARS = str.maketrans('⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ᶜˢᵐ₀₁₂₃₄₅₆₇₈₉₊₋', '0123456789+−=()csm0123456789+−')
+LATIN_RE = re.compile(r"[+−\-]?[A-Za-z0-9\u00b0-\u024f\u02e2\u0370-\u03ff\u06f0-\u06f9\u1d00-\u1dbf][A-Za-z0-9\u00b0-\u024f\u02e2\u0370-\u03ff\u06f0-\u06f9\u1d00-\u1dbf\u2070-\u209f\u2200-\u22ff\s._,:;/\\+=<>&!′’'−–\-→←±×()%\[\]{}^٫٬]*")
+STYLE = (ROOT / 'assets/styles/book.css').read_text()
 
 
 def fa(n):
     return str(n).translate(NUMBERS)
+
+
+def script_markup(escaped):
+    escaped = re.sub(r'(?<=[0-9۰-۹])\^([+−\-]?[0-9۰-۹]+)', r'<sup>\1</sup>', escaped)
+    escaped = re.sub(r'[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ᶜˢᵐ]+', lambda m:'<sup>'+m.group().translate(SCRIPT_CHARS)+'</sup>', escaped)
+    return re.sub(r'[₀₁₂₃₄₅₆₇₈₉₊₋]+', lambda m:'<sub>'+m.group().translate(SCRIPT_CHARS)+'</sub>', escaped)
 
 
 def esc(value):
@@ -89,8 +56,9 @@ def esc(value):
             start -= 1
             token = value[start] + token
         output.append(html.escape(value[end:start]))
-        output.append('<bdi>' + html.escape(token) + '</bdi>')
         end = start + len(token)
+        token = script_markup(html.escape(token))
+        output.append('<bdi>' + token + '</bdi>')
     output.append(html.escape(value[end:]))
     return ''.join(output)
 
@@ -120,8 +88,21 @@ def answer_html(q, number=None):
 
 
 def table_html(headers, rows):
-    return '<table><thead><tr>' + ''.join(f'<th>{esc(t)}</th>' for t in headers) + '</tr></thead><tbody>' + ''.join(
+    # Short summaries/answer keys stay whole; multi-page indexes repeat headers
+    # and break only between complete rows instead of forcing a giant table.
+    cls = 'keep-table' if len(rows) <= 8 else 'flow-table'
+    return f'<table class="{cls}"><thead><tr>' + ''.join(f'<th>{esc(t)}</th>' for t in headers) + '</tr></thead><tbody>' + ''.join(
         '<tr>' + ''.join(f'<td>{esc(t)}</td>' for t in row) + '</tr>' for row in rows) + '</tbody></table>'
+
+
+def contents_html(entries):
+    short = ' short' if len(entries) < 8 else ''
+    rows = ''.join(f'<p class="toc-entry"><a href="#{html.escape(target)}">'
+                   f'<span class="toc-label">{esc(title)}</span>'
+                   '<span class="toc-number"></span></a></p>' for target, title in entries)
+    return (f'<section class="toc-page{short}"><h2 id="contents">فهرست مطالب</h2>'
+            '<p class="toc-caption">برای رفتن به هر بخش، عنوان آن را انتخاب کنید.</p>'
+            f'<div class="toc">{rows}</div></section>')
 
 
 def make_diagram(volume, step):
@@ -132,11 +113,24 @@ def make_diagram(volume, step):
     d = step['diagram']
     orientation = 'TB' if len(d['nodes']) >= 4 else 'LR'
     lines = ['digraph G {', f'graph [rankdir={orientation}, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];',
-             'node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];',
-             'edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];']
+             'node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];',
+             'edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];']
     for i, n in enumerate(d['nodes']):
         label = n['fa'] + '\n' + n['en']
-        lines.append(f'n{i} [label={json.dumps(label, ensure_ascii=False)}];')
+        marked = script_markup(html.escape(label))
+        if marked != html.escape(label):
+            # Graphviz does not keep an HTML SUP attached to an LTR identifier
+            # inside a mixed RTL text node. Give each directional run its own
+            # cell; the Latin base and its superscript remain a single unit.
+            runs = [s for s in re.split(r'(<bdi>.*?</bdi>)', esc(n['fa'])) if s.strip()]
+            cells = [s.replace('<bdi>','').replace('</bdi>','') for s in reversed(runs)]
+            marked = ('<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="1"><TR>'
+                      + ''.join('<TD>'+s+'</TD>' for s in cells) + '</TR>'
+                      + f'<TR><TD COLSPAN="{len(cells)}">{script_markup(html.escape(n["en"]))}</TD></TR></TABLE>')
+            marked = marked.replace('<sup>','<SUP><FONT POINT-SIZE="12">').replace('</sup>','</FONT></SUP>').replace('<sub>','<SUB><FONT POINT-SIZE="12">').replace('</sub>','</FONT></SUB>')
+            lines.append(f'n{i} [label=<{marked}>];')
+        else:
+            lines.append(f'n{i} [label={json.dumps(label, ensure_ascii=False)}];')
     for e in d['edges']:
         label = f' [label={json.dumps(e[2], ensure_ascii=False)}]' if len(e) == 3 and e[2] else ''
         lines.append(f'n{e[0]} -> n{e[1]}{label};')
@@ -148,6 +142,13 @@ def make_diagram(volume, step):
         dpi = ['-Gdpi=180'] if fmt == 'png' else []
         subprocess.run(['dot', '-T' + fmt, *dpi, str(base.with_suffix('.dot')),
                         '-o', str(base.with_suffix('.' + fmt))], check=True, capture_output=True)
+        if fmt == 'svg':
+            svg_path = base.with_suffix('.svg')
+            svg = svg_path.read_text()
+            data = base64.b64encode((ROOT/'assets/fonts/Vazirmatn-Regular.ttf').read_bytes()).decode('ascii')
+            style = '<style>@font-face{font-family:Vazirmatn;src:url(data:font/ttf;base64,'+data+')}</style>'
+            start = svg.index('>',svg.index('<svg'))+1
+            svg_path.write_text(svg[:start]+'\n'+style+svg[start:])
     return base
 
 
@@ -175,11 +176,11 @@ def teaching_html(volume, book):
          para('این جلد بر استدلال سازوکاری و تفسیر داده تمرکز دارد. مبانی در جلدهای پیشین آمده‌اند؛ اینجا هر گام با درسنامه، مثال حل‌شده، شکل تألیفی و سه تست همراه است. ابتدا سؤال را مستقل حل کنید و سپس پاسخ و منبع را بخوانید. مثال‌های عددی و نمودارهای این جلد مدل آموزشی‌اند و داده تجربی منتشرشده نامیده نمی‌شوند.'),
          para('ساختار: ده فصل و چهل گام، پنجاه سؤال مرور مستقل و چهار آزمون مستقل ۲۵ سؤالی. پاسخ هر گام بلافاصله پس از سؤال‌های آن است؛ پاسخ بانک مرور پس از بانک و پاسخ هر چهار آزمون پس از آزمون چهارم قرار دارد. شکل‌ها شماتیک و دوزبانه‌اند؛ اندازه و فاصله اجزا مقیاس واقعی نیست.'),
          '<div class="note">نسخه آزمایشی غیرقابل انتشار. طبق صفحه چاپی ۳۳ دو نسخه بازنشرشده دفترچه ۱۴۰۶ و تصویر ارسالی کاربر، در مجموعه ۲۲۲۶ مسیر سلولی‌مولکولی ترکیب ۱ (دروس ۱،۲،۳،۴) و میکروبیولوژی ترکیب ۴ (دروس ۱،۲،۷) است. جلدهای ۱۲ و ۱۳ بخشی از ماده ۷ مسیر میکروبیولوژی‌اند؛ برای مسیر سلولی‌مولکولی، مبانی مشترک را تقویت می‌کنند و جایگزین مواد اختصاصی ۳ و ۴ نیستند. ماده ۷ بوم‌شناسی میکروارگانیسم‌ها را نیز دارد؛ مطالعه آن را جدا کامل کنید. دریافت مستقیم مبدأ سنجش ممکن نشد؛ علامت انتخاب درس، ضریب عددی زیرمبحث نیست. این جزوه پیش‌بینی سهم سؤال‌های آینده نیست.</div>',
-         '<h2 id="contents">فهرست پیونددار</h2><div class="toc">']
-    for c in book['chapters']:
-        h.append(f'<p><a href="#chapter-{c["number"]}">فصل {fa(c["number"])} — {esc(c["title"])}</a></p>')
-    h += ['<p><a href="#review">بانک پنجاه سؤال مرور</a></p><p><a href="#exams">چهار آزمون جامع</a></p>',
-          '<p><a href="#exam-answers">کلید و پاسخ تشریحی چهار آزمون</a></p><p><a href="#glossary">واژه‌نامه</a></p><p><a href="#sources">منابع</a></p></div>']
+         ]
+    entries = [(f'chapter-{c["number"]}', f'فصل {fa(c["number"])} — {c["title"]}') for c in book['chapters']]
+    entries += [('review', 'بانک پنجاه سؤال مرور'), ('exams', 'چهار آزمون جامع'),
+                ('exam-answers', 'کلید و پاسخ تشریحی چهار آزمون'), ('glossary', 'واژه‌نامه'), ('sources', 'منابع')]
+    h.append(contents_html(entries))
     for c in book['chapters']:
         h.append(f'<h2 class="chapter" id="chapter-{c["number"]}">فصل {fa(c["number"])} — {esc(c["title"])}</h2>')
         for s in c['steps']:
@@ -225,10 +226,10 @@ def exam_html(book):
          para('این جلد شامل ۶۰ سؤال واقعی منتخب از دفترچه‌های ۱۴۰۳، ۱۴۰۴ و ۱۴۰۵ مجموعه ۲۲۲۶ است؛ هر سال ۲۰ سؤال از بخش مشترک، سلولی‌مولکولی پیشرفته و بخش میکروبی انتخاب شده است. این گزیده بانک کامل سال‌های ۱۳۹۵ تا ۱۴۰۵ نیست و فراوانی مباحث آن تخمین سهم آزمون آینده محسوب نمی‌شود. سؤال‌های رشته‌های دیگر وارد این انتخاب نشده‌اند.'),
          para('در هر سال ابتدا صورت و گزینه‌ها با ترتیب دفترچه برای تمرین آمده و سپس پاسخ تشریحی مستقل ارائه می‌شود. شماره اصلی سؤال حفظ شده است. فایل‌های تصویر در منبع قابل ویرایش و مخزن، شاهد رونویسی‌اند. فاصله‌گذاری و شکل حروف یکدست شده‌اند؛ بازنویسی مفهومی سؤال انجام نشده است.'),
          '<div class="note">پاسخ آموزشی با کلید رسمی تفاوت دارد. عنوان «رونویسی‌شده، تأییدنشده» یعنی تصویر کلید دیده شده اما انتساب آن به کد دفترچه و اولیه یا نهایی بودن آن قطعی نیست. «نامعلوم» یعنی کلید معتبر برای آن رکورد در دست نیست. اختلاف کلید و پاسخ در همان رکورد ثبت شده است.</div>',
-         '<h2>فهرست</h2>']
-    for d in book:
-        h.append(f'<p><a href="#year-{d["year"]}">سال {fa(d["year"])} — {fa(len(d["questions"]))} سؤال</a></p>')
-    h.append('<p><a href="#topic-index">نمایه موضوعی و محل مرور</a></p><p><a href="#sources">منابع علمی</a></p>')
+         ]
+    entries = [(f'year-{d["year"]}', f'سال {fa(d["year"])} — {fa(len(d["questions"]))} سؤال') for d in book]
+    entries += [('topic-index', 'نمایه موضوعی و محل مرور'), ('sources', 'منابع علمی')]
+    h.append(contents_html(entries))
     all_sources = []
     for d in book:
         y = d['year']; b = d['booklet']
@@ -267,17 +268,25 @@ def cover_html(volume, back=False):
     if back:
         if volume in (12, 13):
             book = load_book(volume)
-            entries = [f'<p><span>{fa(c["number"])}.</span> {esc(c["title"])}</p>' for c in book['chapters']]
+            entries = [f'<li><span>{fa(c["number"])}</span><div>{esc(c["title"])}</div></li>' for c in book['chapters']]
         else:
             entries = ['بیست سؤال منتخب از سال ۱۴۰۳', 'بیست سؤال منتخب از سال ۱۴۰۴', 'بیست سؤال منتخب از سال ۱۴۰۵',
                        'تحلیل مستقل پاسخ و گزینه‌ها', 'منبع و محل مرور هر سؤال', 'نمایه موضوعی برای دو رشته']
-            entries = [para(x) for x in entries]
-        body = '<div class="cover back"><div class="backpanel"><h2>مباحث این جلد</h2>' + ''.join(entries) + '</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div>'
+            entries = [f'<li><span>{fa(i)}</span><div>{esc(x)}</div></li>' for i, x in enumerate(entries, 1)]
+        body = (f'<div class="cover back v{volume}"><div class="cover-top"><span class="brand">یاسی</span>'
+                f'<span>جلد {fa(volume)} · آمادگی دکتری ۱۴۰۶</span></div>'
+                f'<h2 class="back-heading">در این جلد می‌خوانید</h2><p class="back-title">{esc(TITLES[volume])}</p>'
+                '<ol class="backpanel">' + ''.join(entries) + '</ol>'
+                '<div class="back-foot">زیست‌شناسی سلولی و مولکولی و میکروبیولوژی<br>آموزش، تمرین و تحلیل پاسخ‌ها</div>'
+                '<div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div>')
     else:
-        body = (f'<div class="cover"><div class="pill">آمادگی آزمون دکتری ۱۴۰۶</div><div class="pill" style="margin-top:9mm;background:#cf3d52">جلد {fa(volume)}</div>'
-                f'<h1>{TITLES[volume]}</h1><div class="subtitle">{("درسنامه گام‌به‌گام و آزمون" if volume != 14 else "سؤال‌های واقعی؛ پاسخ و تحلیل")}</div>'
+        body = (f'<div class="cover v{volume}"><div class="cover-top"><span class="brand">یاسی</span>'
+                '<span>مجموعه زیست‌شناسی</span></div><div class="series">آمادگی آزمون دکتری ۱۴۰۶</div>'
+                f'<div class="volume">جلد {fa(volume)}</div><h1>{TITLES[volume]}</h1>'
+                f'<div class="subtitle">{("درسنامه گام‌به‌گام و آزمون" if volume != 14 else "سؤال‌های واقعی؛ پاسخ و تحلیل")}</div>'
+                + science_art(volume) +
                 '<div class="author">دکتر امیر هوشنگ گرامی</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div>')
-    return document_html(TITLES[volume], body, STYLE + '@page{size:A4;margin:0}@page:left{margin:0}@page:right{margin:0}@page:first{margin:0}html,body{margin:0;padding:0;width:210mm;max-width:none;background:white}.cover h1{overflow-wrap:break-word}')
+    return document_html(TITLES[volume], body, STYLE + '@page{size:A4;margin:0}@page:left{margin:0}@page:right{margin:0}@page:first{margin:0}html,body{margin:0;padding:0;width:210mm;max-width:none;background:white}')
 
 
 def rtl_paragraph(p):
@@ -295,9 +304,13 @@ def docx_build(volume, body, cover_png, back_png):
     section.left_margin = Cm(2.5); section.right_margin = Cm(1.5)
     for style in doc.styles:
         if style.type == 1:
-            style.font.name = 'Noto Naskh Arabic'; style.font.size = Pt(14)
-            style.paragraph_format.line_spacing = 1.2
-            style.element.get_or_add_rPr().rFonts.set(qn('w:cs'), 'Noto Naskh Arabic')
+            size = {'Heading 1':24, 'Heading 2':19, 'Heading 3':16, 'Caption':10.5}.get(style.name, 13)
+            style.font.name = 'Vazirmatn'; style.font.size = Pt(size)
+            style.paragraph_format.line_spacing = 1.65
+            props = style.element.get_or_add_rPr()
+            for key in ('ascii', 'hAnsi', 'cs', 'eastAsia'):
+                props.rFonts.set(qn('w:' + key), 'Vazirmatn')
+            cs_size = OxmlElement('w:szCs'); cs_size.set(qn('w:val'), str(int(size*2))); props.append(cs_size)
     settings = doc.settings.element
     settings.append(OxmlElement('w:mirrorMargins'))
     # A source DOCX uses image covers within printable margins; PDF covers are full bleed.
@@ -305,11 +318,12 @@ def docx_build(volume, body, cover_png, back_png):
     doc.add_page_break()
     tree = lh.fromstring('<div>' + body + '</div>')
     bookmark_counter = 0
+    page_before_next = False
 
     def bookmark_name(identifier):
         return ('b_' + re.sub('[^A-Za-z0-9_]', '_', identifier))[:40]
 
-    def rich_runs(container, text, bold=False):
+    def rich_runs(container, text, bold=False, vertical=None):
         end = 0
         spans = []
         for match in LATIN_RE.finditer(text):
@@ -326,30 +340,42 @@ def docx_build(volume, body, cover_png, back_png):
             if not part: continue
             run = OxmlElement('w:r'); props = OxmlElement('w:rPr')
             fonts = OxmlElement('w:rFonts')
-            fonts.set(qn('w:ascii'), 'DejaVu Sans' if latin else 'Noto Naskh Arabic')
-            fonts.set(qn('w:hAnsi'), 'DejaVu Sans' if latin else 'Noto Naskh Arabic')
-            fonts.set(qn('w:cs'), 'Noto Naskh Arabic'); props.append(fonts)
+            fonts.set(qn('w:ascii'), 'Vazirmatn')
+            fonts.set(qn('w:hAnsi'), 'Vazirmatn')
+            fonts.set(qn('w:cs'), 'Vazirmatn'); fonts.set(qn('w:eastAsia'), 'Vazirmatn'); props.append(fonts)
             rtl = OxmlElement('w:rtl'); rtl.set(qn('w:val'), '0' if latin else '1'); props.append(rtl)
-            if bold: props.append(OxmlElement('w:b'))
+            if bold:
+                props.append(OxmlElement('w:b')); props.append(OxmlElement('w:bCs'))
+            if vertical:
+                align = OxmlElement('w:vertAlign'); align.set(qn('w:val'), vertical); props.append(align)
             run.append(props); content = OxmlElement('w:t'); content.set(qn('xml:space'), 'preserve')
             content.text = ('\u200e' + part + '\u200e') if latin else part
             run.append(content); container.append(run)
 
-    def inline(container, element, bold=False):
-        if element.text: rich_runs(container, element.text, bold)
+    def inline(container, element, bold=False, vertical=None):
+        vertical = {'sup':'superscript', 'sub':'subscript'}.get(element.tag, vertical)
+        if element.text: rich_runs(container, element.text, bold, vertical)
         for child in element:
             href = child.get('href', '')
             if child.tag == 'a' and href.startswith('#'):
                 link = OxmlElement('w:hyperlink'); link.set(qn('w:anchor'), bookmark_name(href[1:]))
-                inline(link, child, bold); container.append(link)
+                inline(link, child, bold, vertical); container.append(link)
             else:
-                inline(container, child, bold or child.tag == 'strong')
-            if child.tail: rich_runs(container, child.tail, bold)
+                inline(container, child, bold or child.tag == 'strong', vertical)
+            if child.tail: rich_runs(container, child.tail, bold, vertical)
 
     def ptext(el, style=None):
-        nonlocal bookmark_counter
+        nonlocal bookmark_counter, page_before_next
         p = doc.add_paragraph(style=style)
         rtl_paragraph(p)
+        if page_before_next:
+            p.paragraph_format.page_break_before = True
+            page_before_next = False
+        if 'toc-entry' in el.get('class', ''):
+            # Word multiplies the font's natural line box, not the nominal point
+            # size. Vazirmatn's tall metrics would push 15 entries past one page.
+            p.paragraph_format.space_after = Pt(12)
+            p.paragraph_format.line_spacing = Pt(24)
         if el.get('id'):
             bookmark_counter += 1
             start = OxmlElement('w:bookmarkStart'); start.set(qn('w:id'), str(bookmark_counter))
@@ -360,8 +386,23 @@ def docx_build(volume, body, cover_png, back_png):
         return p
 
     def walk(el):
+        nonlocal page_before_next
         tag = el.tag
-        if tag in ('h1', 'h2', 'h3', 'h4'):
+        if tag == 'section' and 'toc-page' in el.get('class', ''):
+            first_paragraph = len(doc.paragraphs)
+            page_before_next = True
+            for child in el: walk(child)
+            title = doc.paragraphs[first_paragraph]
+            title.paragraph_format.line_spacing = Pt(38)
+            title.paragraph_format.space_before = Pt(0)
+            title.paragraph_format.space_after = Pt(12)
+            for paragraph in doc.paragraphs[first_paragraph+1:]:
+                paragraph.paragraph_format.space_before = Pt(0)
+                if not paragraph._p.xpath('.//w:hyperlink'):
+                    paragraph.paragraph_format.line_spacing = Pt(24)
+                    paragraph.paragraph_format.space_after = Pt(12)
+            page_before_next = True
+        elif tag in ('h1', 'h2', 'h3', 'h4'):
             p = ptext(el, 'Heading ' + str(min(int(tag[1]), 3)))
             if 'exam-start' in el.get('class', ''):
                 p.paragraph_format.page_break_before = True
@@ -375,11 +416,17 @@ def docx_build(volume, body, cover_png, back_png):
             bidi = OxmlElement('w:bidiVisual'); t._tbl.tblPr.append(bidi)
             for i, row in enumerate(rows):
                 cells = t.add_row().cells
+                row_props = t.rows[-1]._tr.get_or_add_trPr()
+                row_props.append(OxmlElement('w:cantSplit'))
                 for cell, element in zip(cells, row):
                     cell.text = ''
                     for p in cell.paragraphs:
                         rtl_paragraph(p)
-                        rich_runs(p._p, ''.join(element.itertext()), i == 0)
+                        inline(p._p, element, i == 0)
+                        p.paragraph_format.space_after = Pt(5)
+                        p.paragraph_format.keep_together = True
+                        if 'keep-table' in el.get('class', '') and i < len(rows)-1:
+                            p.paragraph_format.keep_with_next = True
                 if i == 0:
                     repeat = OxmlElement('w:tblHeader'); t.rows[-1]._tr.get_or_add_trPr().append(repeat)
         elif tag == 'figure':
@@ -420,6 +467,7 @@ async def build(volumes):
     async with async_playwright() as p:
         browser = await p.chromium.launch(executable_path='/usr/bin/chromium', args=['--no-sandbox'])
         page = await browser.new_page(viewport={'width':794,'height':1123}, device_scale_factor=1.5)
+        await page.emulate_media(media='print')
         for volume in volumes:
             book = load_book(volume)
             body = exam_html(book) if volume == 14 else teaching_html(volume, book)
@@ -429,17 +477,52 @@ async def build(volumes):
             for side in ('front', 'back'):
                 path = OUT / f'Yasi-{volume}-{side}.html'; path.write_text(cover_html(volume, side == 'back'))
                 await page.goto(origin + '/output/' + path.name); await page.evaluate('document.fonts.ready')
+                # Never silently deliver a clipped one-line cover title.
+                if side == 'front':
+                    title_fits = await page.locator('.cover h1').evaluate('''el => {
+                        const range = document.createRange(); range.selectNodeContents(el);
+                        return range.getBoundingClientRect().width <= el.clientWidth + 1;
+                    }''')
+                    if not title_fits:
+                        raise ValueError(f'Volume {volume}: cover title exceeds its line')
+                clipped = await page.locator('.cover').evaluate('''cover => {
+                    const bounds = cover.getBoundingClientRect();
+                    return [...cover.querySelectorAll('.badge,.back-foot,.backpanel li,.author')]
+                        .filter(el => {const r=el.getBoundingClientRect();
+                            return r.bottom>bounds.bottom-12 || r.left<bounds.left || r.right>bounds.right;})
+                        .map(el=>el.textContent);
+                }''')
+                if clipped:
+                    raise ValueError(f'Volume {volume}: clipped {side} cover text: {clipped}')
                 await page.screenshot(path=str(OUT / f'Yasi-{volume}-{side}.png'), full_page=True)
                 dest = OUT / f'.Yasi-{volume}-{side}.pdf'
                 await page.pdf(path=str(dest), prefer_css_page_size=True, print_background=True)
+                with fitz.open(dest) as cover:
+                    if len(cover) != 1:
+                        raise ValueError(f'Volume {volume}: {side} cover is not one page')
                 pdf_parts.append(dest)
             await page.goto(origin + '/output/' + main.name); await page.evaluate('document.fonts.ready')
             await page.emulate_media(media='print')
             main_pdf = OUT / f'.Yasi-{volume}-main.pdf'
-            await page.pdf(path=str(main_pdf), prefer_css_page_size=True, print_background=True,
-                           outline=True, tagged=True,
-                           display_header_footer=True, header_template='<span></span>',
-                           footer_template='<div style="width:100%;text-align:center;font-size:10px;color:#4b5c6b"><span class="pageNumber"></span></div>')
+            pdf_settings = dict(prefer_css_page_size=True, print_background=True, outline=True, tagged=True)
+            await page.pdf(path=str(main_pdf), **pdf_settings)
+            # Resolve the actual printed destinations, including the front-cover
+            # offset. Reserved number columns keep the second print's layout fixed.
+            with fitz.open(main_pdf) as first_pass:
+                names = first_pass.resolve_names()
+                entries = await page.locator('.toc a').evaluate_all('(els) => els.map(el => el.hash.slice(1))')
+                numbers = {key:fa(names[key]['page']+2) for key in entries}
+                first_pages = len(first_pass)
+            await page.evaluate('''numbers => {
+                for (const link of document.querySelectorAll('.toc a'))
+                    link.querySelector('.toc-number').textContent = numbers[link.hash.slice(1)];
+            }''', numbers)
+            main.write_text(await page.content())
+            await page.pdf(path=str(main_pdf), **pdf_settings)
+            with fitz.open(main_pdf) as second_pass:
+                if len(second_pass) != first_pages or any(
+                        fa(second_pass.resolve_names()[key]['page']+2) != number for key, number in numbers.items()):
+                    raise ValueError('Contents numbers changed pagination')
             result = fitz.open()
             for path in (pdf_parts[0], main_pdf, pdf_parts[1]):
                 with fitz.open(path) as part: result.insert_pdf(part)
@@ -462,6 +545,16 @@ async def build(volumes):
                             'page':target+1, 'to':point, 'zoom':link.get('zoom', 0)})
             destination = OUT / f'Yasi-{volume}.pdf'
             temporary = OUT / f'.Yasi-{volume}-assembled.pdf'
+            # Chromium's header/footer template does not load document webfonts.
+            # Insert readable Persian page numbers using the bundled font itself.
+            font_path = ROOT / 'assets/fonts/Vazirmatn-Regular.ttf'
+            footer_font = fitz.Font(fontfile=str(font_path))
+            for index in range(1, len(result)-1):
+                target_page = result[index]
+                label = fa(index+1)
+                width = footer_font.text_length(label, fontsize=10)
+                target_page.insert_text(((target_page.rect.width-width)/2, target_page.rect.height-22),
+                    label, fontname='VazirmatnFooter', fontfile=str(font_path), fontsize=10, color=(.26,.36,.42))
             result.save(temporary, garbage=4, deflate=True)
             temporary.replace(destination)
             print(f'Volume {volume}: {len(result)} PDF pages; {destination.stat().st_size:,} bytes', flush=True)
