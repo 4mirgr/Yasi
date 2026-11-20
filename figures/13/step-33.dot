@@ -1,0 +1,14 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];
+n0 [label="پیدایش تغییر\nMutation generation"];
+n1 [label="تنوع اولیه\nInitial diversity"];
+n2 [label="انتخاب و رانش\nSelection and drift"];
+n3 [label="فراوانی مشاهده‌شده\nObserved frequency"];
+n4 [label="تعویض الگو\nTemplate switching"];
+n0 -> n1 [label="تولید واریانت"];
+n1 -> n2 [label="پویایی جمعیت"];
+n2 -> n3 [label="نمونه‌گیری"];
+n4 -> n1 [label="نوترکیبی"];
+}

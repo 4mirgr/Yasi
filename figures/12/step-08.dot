@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];
+n0 [label="جمعیت اولیه\nStarting population"];
+n1 [label="انتخاب یا غربال\nSelection or screening"];
+n2 [label="کنترل بقا و زمینه\nViability and baseline"];
+n3 [label="استنتاج محدود به آزمون\nAssay-bounded inference"];
+n0 -> n1;
+n1 -> n2;
+n2 -> n3;
+}

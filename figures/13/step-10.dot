@@ -1,0 +1,13 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];
+n0 [label="عامل رونویسی در ذره\nPackaged transcription factor"];
+n1 [label="رونویسی زودرس\nEarly transcription"];
+n2 [label="همانندسازی DNA\nDNA replication"];
+n3 [label="بیان دیررس و بسته‌بندی عامل\nLate expression and packaging"];
+n0 -> n1 [label="پس از ورود"];
+n1 -> n2 [label="محصول زودرس"];
+n2 -> n3 [label="برنامه دیررس"];
+n3 -> n0 [label="نسل بعد"];
+}

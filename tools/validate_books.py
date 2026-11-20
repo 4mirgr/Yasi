@@ -68,6 +68,8 @@ def validate_all(partial=False):
         require(len(review) == 50, f'V{volume}: review must contain 50 independent questions')
         require([e['number'] for e in exams] == [1, 2, 3, 4], f'V{volume}: four exam sequence')
         require(all(len(e['questions']) == 25 for e in exams), f'V{volume}: exam length')
+        require(all({q.get('chapter') for q in e['questions']} == set(range(1, 11)) for e in exams),
+                f'V{volume}: each comprehensive exam must cover all ten chapters')
         questions += review + sum((e['questions'] for e in exams), [])
         stems = set()
         answer_counts = [0] * 4

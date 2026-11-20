@@ -1,0 +1,14 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];
+n0 [label="RNA هدف\nTarget RNA"];
+n1 [label="cDNA\nComplementary DNA"];
+n2 [label="سیگنال تکثیر\nAmplification signal"];
+n3 [label="وجود توالی هدف\nTarget detected"];
+n4 [label="شاهد عملکردی مستقل\nIndependent infectivity evidence"];
+n0 -> n1 [label="رونویسی معکوس"];
+n1 -> n2 [label="PCR"];
+n2 -> n3 [label="نتیجه مولکولی"];
+n3 -> n4 [label="برای ادعای عفونتزایی لازم است"];
+}

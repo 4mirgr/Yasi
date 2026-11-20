@@ -14,7 +14,7 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-import fitz
+import pymupdf as fitz
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
@@ -29,7 +29,9 @@ TITLES = {12: 'ژنتیک پروکاریوت‌ها', 13: 'ویروس‌شناس
 NUMBERS = str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹')
 LATIN_RE = re.compile(r"[+−\-]?[A-Za-z0-9\u00b0-\u024f\u0370-\u03ff\u06f0-\u06f9][A-Za-z0-9\u00b0-\u024f\u0370-\u03ff\u06f0-\u06f9\u1d00-\u1dbf\u2070-\u209f\u2200-\u22ff\s._,:;/\\+=<>&!′’'−–\-→←±×()%\[\]{}^٫٬]*")
 STYLE = '''
-@font-face{font-family:Yasi;src:url('../assets/fonts/BNazanin.ttf')}
+@font-face{font-family:Yasi;src:url('../assets/fonts/NotoNaskhArabic-Regular.ttf')}
+@font-face{font-family:Yasi;src:url('../assets/fonts/NotoNaskhArabic-Bold.ttf');font-weight:700}
+@font-face{font-family:CoverYasi;src:url('../assets/fonts/BNazanin.ttf')}
 @page{size:A4;margin:15mm 15mm 17mm 25mm}
 @page:left{margin-left:15mm;margin-right:25mm}
 *{box-sizing:border-box}html{direction:rtl}body{font-family:Yasi,'Noto Naskh Arabic',serif;
@@ -45,6 +47,7 @@ break-inside:avoid}.question{break-inside:avoid;margin:10pt 0 12pt}.question p{m
 .options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3pt 16pt;
 padding:2pt 8pt}.options.long{grid-template-columns:1fr}.option{text-align:right}
 .answer{break-inside:avoid;margin:7pt 0 9pt}.answer p{text-align:justify}
+.exam-question{margin:6pt 0 8pt}
 table{width:100%;border-collapse:collapse;margin:9pt 0;font-size:12.5pt;break-inside:avoid}
 thead{display:table-header-group}th{background:#e7f3f8;color:#173b5a}
 td,th{border:1px solid #cddce5;padding:5pt 7pt;text-align:right;vertical-align:top}
@@ -55,7 +58,7 @@ overflow-wrap:anywhere;font-size:11.5pt}.toc{font-size:13pt;line-height:1.2}.toc
 .cover{width:210mm;height:297mm;position:relative;overflow:hidden;margin:0;
 background:#14b4bd url('../assets/cover-art.png') center/cover no-repeat;
 display:flex;flex-direction:column;align-items:center;text-align:center;padding:22mm 17mm 15mm}
-.cover *{text-align:center}.cover .pill{border:2px solid #e3be5c;border-radius:22pt;
+.cover *{text-align:center}.cover{font-family:CoverYasi,serif}.cover .pill{border:2px solid #e3be5c;border-radius:22pt;
 background:#431276;color:white;padding:6pt 20pt;font-size:24pt;line-height:1.35}
 .cover h1{color:#39115c;font-size:43pt;line-height:1.32;margin:22mm 0 8mm;
 text-shadow:0 1px 8px #fff;background:#fff9e8d9;padding:5mm;border-radius:8mm;width:100%}
@@ -82,7 +85,7 @@ def esc(value):
     for match in LATIN_RE.finditer(value):
         token = match.group().rstrip()
         start = match.start()
-        if start > end and value[start-1] in '([' and token.endswith({'(':')','[':']'}[value[start-1]]):
+        if start > end and value[start-1] in '([' and token.count({'(':')','[':']'}[value[start-1]]) > token.count(value[start-1]):
             start -= 1
             token = value[start] + token
         output.append(html.escape(value[end:start]))
@@ -100,11 +103,11 @@ def refs_html(ids):
     return '؛ '.join(f'<a href="#ref-{html.escape(i)}"><bdi>[{html.escape(i)}]</bdi></a>' for i in ids)
 
 
-def question_html(q, number=None):
+def question_html(q, number=None, compact=False):
     label = fa(number) if number is not None else q['id']
     long = max(map(len, q['options'])) > 65 or sum(map(len, q['options'])) > 170
     options = ''.join(f'<div class="option">{fa(i+1)}) {esc(t)}</div>' for i, t in enumerate(q['options']))
-    return (f'<div class="question" id="{html.escape(q["id"])}"><p><strong>{esc(label)} — {esc(q["stem"])}</strong></p>'
+    return (f'<div class="question {"exam-question" if compact else ""}" id="{html.escape(q["id"])}"><p><strong>{esc(label)} — {esc(q["stem"])}</strong></p>'
             f'<div class="options {"long" if long else ""}">{options}</div></div>')
 
 
@@ -204,7 +207,7 @@ def teaching_html(volume, book):
     for e in book['exams']:
         cls = 'exam-start' if e['number'] > 1 else ''
         h.append(f'<h2 class="{cls}" id="exam-{e["number"]}">آزمون {fa(e["number"])} — {esc(e["title"])}</h2>')
-        h.extend(question_html(q, i+1) for i, q in enumerate(e['questions']))
+        h.extend(question_html(q, i+1, compact=True) for i, q in enumerate(e['questions']))
     h.append('<h2 class="major" id="exam-answers">کلید و پاسخ تشریحی چهار آزمون</h2>')
     for e in book['exams']:
         h.append(f'<h3>پاسخ آزمون {fa(e["number"])}</h3>')
@@ -264,11 +267,12 @@ def cover_html(volume, back=False):
     if back:
         if volume in (12, 13):
             book = load_book(volume)
-            entries = [f'{fa(c["number"])}. {c["title"]}' for c in book['chapters']]
+            entries = [f'<p><span>{fa(c["number"])}.</span> {esc(c["title"])}</p>' for c in book['chapters']]
         else:
             entries = ['بیست سؤال منتخب از سال ۱۴۰۳', 'بیست سؤال منتخب از سال ۱۴۰۴', 'بیست سؤال منتخب از سال ۱۴۰۵',
                        'تحلیل مستقل پاسخ و گزینه‌ها', 'منبع و محل مرور هر سؤال', 'نمایه موضوعی برای دو رشته']
-        body = '<div class="cover back"><div class="backpanel"><h2>مباحث این جلد</h2>' + ''.join(para(x) for x in entries) + '</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div>'
+            entries = [para(x) for x in entries]
+        body = '<div class="cover back"><div class="backpanel"><h2>مباحث این جلد</h2>' + ''.join(entries) + '</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div>'
     else:
         body = (f'<div class="cover"><div class="pill">آمادگی آزمون دکتری ۱۴۰۶</div><div class="pill" style="margin-top:9mm;background:#cf3d52">جلد {fa(volume)}</div>'
                 f'<h1>{TITLES[volume]}</h1><div class="subtitle">{("درسنامه گام‌به‌گام و آزمون" if volume != 14 else "سؤال‌های واقعی؛ پاسخ و تحلیل")}</div>'
@@ -291,9 +295,9 @@ def docx_build(volume, body, cover_png, back_png):
     section.left_margin = Cm(2.5); section.right_margin = Cm(1.5)
     for style in doc.styles:
         if style.type == 1:
-            style.font.name = 'B Nazanin'; style.font.size = Pt(14)
+            style.font.name = 'Noto Naskh Arabic'; style.font.size = Pt(14)
             style.paragraph_format.line_spacing = 1.2
-            style.element.get_or_add_rPr().rFonts.set(qn('w:cs'), 'B Nazanin')
+            style.element.get_or_add_rPr().rFonts.set(qn('w:cs'), 'Noto Naskh Arabic')
     settings = doc.settings.element
     settings.append(OxmlElement('w:mirrorMargins'))
     # A source DOCX uses image covers within printable margins; PDF covers are full bleed.
@@ -311,7 +315,7 @@ def docx_build(volume, body, cover_png, back_png):
         for match in LATIN_RE.finditer(text):
             token = match.group().rstrip()
             start = match.start()
-            if start > end and text[start-1] in '([' and token.endswith({'(':')','[':']'}[text[start-1]]):
+            if start > end and text[start-1] in '([' and token.count({'(':')','[':']'}[text[start-1]]) > token.count(text[start-1]):
                 start -= 1
                 token = text[start] + token
             spans.append((text[end:start], False))
@@ -322,9 +326,9 @@ def docx_build(volume, body, cover_png, back_png):
             if not part: continue
             run = OxmlElement('w:r'); props = OxmlElement('w:rPr')
             fonts = OxmlElement('w:rFonts')
-            fonts.set(qn('w:ascii'), 'DejaVu Sans' if latin else 'B Nazanin')
-            fonts.set(qn('w:hAnsi'), 'DejaVu Sans' if latin else 'B Nazanin')
-            fonts.set(qn('w:cs'), 'B Nazanin'); props.append(fonts)
+            fonts.set(qn('w:ascii'), 'DejaVu Sans' if latin else 'Noto Naskh Arabic')
+            fonts.set(qn('w:hAnsi'), 'DejaVu Sans' if latin else 'Noto Naskh Arabic')
+            fonts.set(qn('w:cs'), 'Noto Naskh Arabic'); props.append(fonts)
             rtl = OxmlElement('w:rtl'); rtl.set(qn('w:val'), '0' if latin else '1'); props.append(rtl)
             if bold: props.append(OxmlElement('w:b'))
             run.append(props); content = OxmlElement('w:t'); content.set(qn('xml:space'), 'preserve')
@@ -363,6 +367,8 @@ def docx_build(volume, body, cover_png, back_png):
                 p.paragraph_format.page_break_before = True
         elif tag == 'p':
             ptext(el)
+        elif tag == 'strong':
+            ptext(el, 'Heading 3')
         elif tag == 'table':
             rows = el.xpath('.//tr')
             t = doc.add_table(rows=0, cols=max(len(row) for row in rows)); t.style = 'Table Grid'
@@ -443,6 +449,17 @@ async def build(volumes):
             with fitz.open(main_pdf) as part:
                 toc = part.get_toc()
                 if toc: result.set_toc([[level,title,index+1] for level,title,index in toc])
+                # insert_pdf does not copy Chromium's /Dests name tree. Resolve
+                # named anchors into explicit page destinations before saving.
+                for page_index, source_page in enumerate(part):
+                    for link in source_page.get_links():
+                        if link['kind'] != fitz.LINK_NAMED or link.get('page', -1) < 0:
+                            continue
+                        target = link['page']
+                        point = link.get('to', fitz.Point(0, part[target].rect.height))
+                        point = point * part[target].transformation_matrix
+                        result[page_index+1].insert_link({'kind':fitz.LINK_GOTO, 'from':link['from'],
+                            'page':target+1, 'to':point, 'zoom':link.get('zoom', 0)})
             destination = OUT / f'Yasi-{volume}.pdf'
             temporary = OUT / f'.Yasi-{volume}-assembled.pdf'
             result.save(temporary, garbage=4, deflate=True)

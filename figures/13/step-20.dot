@@ -1,0 +1,15 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];
+n0 [label="ژنوم dsRNA در ذره درونی\nCore-associated dsRNA"];
+n1 [label="mRNA خروجی\nExported mRNA"];
+n2 [label="پروتئین‌های ویروسی\nViral proteins"];
+n3 [label="بسته‌بندی RNA مثبت\nPositive RNA packaging"];
+n4 [label="ساخت رشته منفی در ذره\nIntracapsid negative synthesis"];
+n0 -> n1 [label="پلیمراز همراه"];
+n1 -> n2 [label="ترجمه"];
+n1 -> n3 [label="انتخاب مجموعه"];
+n2 -> n3 [label="مونتاژ"];
+n3 -> n4 [label="بازسازی dsRNA"];
+}

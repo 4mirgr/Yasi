@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];
+n0 [label="ساخت با نرخ s\nSynthesis rate s"];
+n1 [label="مخزن RNA: M\nmRNA pool M"];
+n2 [label="تجزیه با نرخ kM\nDecay rate kM"];
+n3 [label="پروتئین هدف\nTarget protein"];
+n0 -> n1 [label="ورودی"];
+n1 -> n2 [label="حذف"];
+n1 -> n3 [label="ترجمه؛ مستقل از شمارش صرف"];
+}

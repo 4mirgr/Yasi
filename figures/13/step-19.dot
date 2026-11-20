@@ -1,0 +1,14 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];
+n0 [label="RNA میزبان کلاهک‌دار\nCapped host RNA"];
+n1 [label="PB2: اتصال کلاهک\nPB2 cap binding"];
+n2 [label="PA: برش آغازگر\nPA endonuclease"];
+n3 [label="PB1: گسترش RNA\nPB1 polymerization"];
+n4 [label="mRNA با رهبر میزبان\nHost-led viral mRNA"];
+n0 -> n1 [label="شناسایی"];
+n1 -> n2 [label="ارائه قالب"];
+n2 -> n3 [label="آغازگر کوتاه"];
+n3 -> n4 [label="رونویسی از vRNA"];
+}

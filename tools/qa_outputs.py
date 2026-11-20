@@ -9,7 +9,7 @@ import zipfile
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-import fitz
+import pymupdf as fitz
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,13 +22,18 @@ def normalized(text):
 
 
 def run():
+    if tuple(int(n) for n in fitz.VersionBind.split('.')[:3]) < (1, 28, 2):
+        raise RuntimeError('Install PyMuPDF >= 1.28.2 from tools/requirements.txt; 1.26.6 crashes during extraction of some RTL text.')
     report = {'pdfs': {}, 'docx': {}, 'svg_geometry': {}, 'limits': [
         'Contact sheets require human inspection; machine checks alone do not establish visual or scientific correctness.']}
+    report['pymupdf_version'] = fitz.VersionBind
     for volume in (12, 13, 14):
         path = ROOT / f'output/Yasi-{volume}.pdf'
         pdf = fitz.open(path)
         empty = []; outside = []; replacement = []
         dest = ROOT / f'work/qa/{volume}'; dest.mkdir(parents=True, exist_ok=True)
+        for pattern in ('sheet-*.png', 'page-*.png'):
+            for old in dest.glob(pattern): old.unlink()
         for start in range(0, len(pdf), 16):
             sheet = Image.new('RGB', (1200, 1780), '#e2e8ed'); draw = ImageDraw.Draw(sheet)
             for index in range(start, min(start+16, len(pdf))):
@@ -56,6 +61,11 @@ def run():
             text_outside_page=outside, replacement_character_pages=replacement,
             outline_entries=len(pdf.get_toc()), all_pages_rendered=True,
             contact_sheets=f'work/qa/{volume}/')
+        internal = [link for page in pdf for link in page.get_links() if link['kind'] == fitz.LINK_GOTO]
+        expected = (ROOT / f'output/Yasi-{volume}.html').read_text().count('href="#')
+        report['pdfs'][str(volume)]['internal_links'] = len(internal)
+        report['pdfs'][str(volume)]['internal_anchor_elements'] = expected
+        report['pdfs'][str(volume)]['bad_link_targets'] = [link['page'] for link in internal if not 0 <= link['page'] < len(pdf)]
         docx = ROOT / f'output/Yasi-{volume}.docx'
         with zipfile.ZipFile(docx) as z:
             xml = ET.fromstring(z.read('word/document.xml'))
@@ -88,6 +98,7 @@ def run():
     assert not failures, 'SVG clipping'
     assert all(not v['missing_question_stems'] for v in report['docx'].values()), 'DOCX missing questions'
     assert all(not v['empty_body_pages'] and not v['text_outside_page'] and not v['replacement_character_pages'] for v in report['pdfs'].values()), 'PDF geometry/text failure'
+    assert all(v['internal_links'] >= v['internal_anchor_elements'] and not v['bad_link_targets'] for v in report['pdfs'].values()), 'PDF internal anchors lost during merging'
 
 
 if __name__=='__main__': run()

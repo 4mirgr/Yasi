@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];
+n0 [label="RNA و آغازگر\nRNA + primer"];
+n1 [label="DNA منفی و دورگه\nMinus DNA hybrid"];
+n2 [label="DNA دو‌رشته‌ای با LTR\nLTR-containing dsDNA"];
+n3 [label="ادغام\nIntegration"];
+n0 -> n1 [label="RT"];
+n1 -> n2 [label="RNase H و ساخت رشته مثبت"];
+n2 -> n3 [label="اینتگراز"];
+}

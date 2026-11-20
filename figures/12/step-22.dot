@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];
+n0 [label="tRNA تریپتوفان کم‌شارژ\nLow charged tRNA-Trp"];
+n1 [label="مکث ریبوزوم در رهبر\nLeader ribosome stall"];
+n2 [label="ضدپایان‌دهنده ۲–۳\n2–3 antiterminator"];
+n3 [label="عبور رونویسی به ژن‌ها\nTranscription readthrough"];
+n0 -> n1 [label="کمبود سوبسترای ترجمه"];
+n1 -> n2 [label="آزادماندن ناحیه ۲"];
+n2 -> n3 [label="جلوگیری از ۳–۴"];
+}

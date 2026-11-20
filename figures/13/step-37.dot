@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Noto Naskh Arabic", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Noto Naskh Arabic", fontsize=12];
+n0 [label="نمونه اولیه\nOriginal sample"];
+n1 [label="کسر رقت d\nDilution fraction d"];
+n2 [label="حجم V و پلاک N\nVolume V and plaques N"];
+n3 [label="تیتر N/(Vd)\nTiter N/(Vd)"];
+n0 -> n1 [label="رقیق‌شدن"];
+n1 -> n2 [label="سنجش عملکرد"];
+n2 -> n3 [label="محاسبه با واحد"];
+}

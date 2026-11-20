@@ -49,6 +49,7 @@ class ContentValidationTests(unittest.TestCase):
                       esc('پاسخ ۲۰ ÷ (۰٫۰۵ × ۱۰⁻³) = ۴ × ۱۰⁵ PFU/mL'))
         self.assertIn('<bdi>(HIV)</bdi>', esc('ویروس (HIV)'))
         self.assertIn('<bdi>P(N≥2) = 1−e⁻ᵐ(1+m)</bdi>', esc('احتمال P(N≥2) = 1−e⁻ᵐ(1+m)'))
+        self.assertIn('<bdi>(p)ppGpp</bdi>', esc('آلارمون (p)ppGpp'))
 
 
 if __name__ == '__main__':
