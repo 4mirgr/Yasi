@@ -46,34 +46,22 @@ figcaption{font-size:10.5pt;line-height:1.7;margin-top:6pt;color:#3d5865}
 .toc a{display:flex;align-items:baseline;gap:4mm;border-bottom:1px solid #d7e4e8;padding:2.3mm 0;color:#153d54;font-weight:500}
 .toc-label{flex:1}.toc-number{min-width:10mm;text-align:left;color:#12657a;font-weight:700}
 .toc-page.short .toc{height:208mm;padding-top:10mm}
-.cover{--ink:#082f3e;--accent:#70f0cc;--gold:#f5cf83;width:210mm;height:297mm;position:relative;overflow:hidden;margin:0;
- background:radial-gradient(ellipse at 12% 64%,#147d83 0,transparent 54%),linear-gradient(145deg,#061c2b,#0b4552 63%,#082a3e);
- color:#fff;padding:19mm 16mm 13mm;display:flex;flex-direction:column;align-items:stretch;text-align:center}
-.cover.v13{--ink:#302347;--accent:#a9b6ff;background:radial-gradient(ellipse at 18% 64%,#66438a 0,transparent 55%),linear-gradient(145deg,#191b39,#39325c 63%,#201f40)}
-.cover.v14{--ink:#112f57;--accent:#8cdaff;background:radial-gradient(ellipse at 18% 64%,#225f92 0,transparent 55%),linear-gradient(145deg,#0c2036,#173d65 63%,#101f39)}
-.cover:before{content:'';position:absolute;inset:9mm;border:1px solid #ffffff29;border-radius:2mm;pointer-events:none}
-.cover:after{content:'';position:absolute;top:0;right:0;width:7mm;height:100%;background:var(--accent);opacity:.8}
-.cover *{text-align:center;position:relative;z-index:1}
-.cover .cover-top{display:flex;justify-content:space-between;align-items:center;color:#e3f3f3;font-size:12pt;font-weight:500}
-.brand{font-size:32pt;font-weight:800;line-height:1.3;color:var(--gold)}
-.cover .series{font-size:20pt;font-weight:700;margin-top:13mm;line-height:1.7;color:white}
-.cover .volume{align-self:center;font-size:14pt;font-weight:700;border:1px solid #ffffff50;border-radius:99px;padding:1mm 8mm;margin-top:5mm;color:var(--gold)}
-.cover h1{color:white;background:none;border:0;text-shadow:0 2px 15px #00000025;font-size:34pt;font-weight:800;line-height:1.55;
- margin:11mm -3mm 3mm;padding:0;white-space:nowrap;word-break:normal;overflow-wrap:normal}
-.cover.v14 h1{font-size:22pt}
-.cover .subtitle{font-size:13pt;font-weight:500;color:var(--accent);line-height:1.9}
-.cover .science-art{width:100%;height:112mm;margin:4mm 0 0;z-index:0}
-.cover .science-art *{position:static}
-.cover .author{font-size:17pt;font-weight:700;margin-top:auto;color:white}
-.cover .badge{font-size:10pt;font-weight:700;color:#f9e7bf;margin-top:7mm;letter-spacing:0;line-height:1.6}
-.cover.back{padding-top:17mm}
-.back .back-heading{font-size:25pt;font-weight:800;color:white;margin:8mm 0 2mm}
-.back .back-title{color:var(--accent);font-size:15pt;font-weight:700;margin:0 0 7mm}
-.backpanel{padding:0 0 0 1mm;margin:0;list-style:none;text-align:right;flex-shrink:0}
-.backpanel li{display:flex;gap:5mm;align-items:baseline;border-bottom:1px solid #ffffff29;padding:1.9mm 0;color:white;font-size:21pt;font-weight:800;line-height:1.4;text-align:right}
-.backpanel li span{font-size:14pt;font-weight:700;min-width:9mm;color:var(--gold);text-align:right}
-.backpanel li div{text-align:right}
-.back .back-foot{margin-top:auto;font-size:13pt;font-weight:700;line-height:1.9;color:var(--accent)}
-.back.v14 .backpanel{margin-top:8mm}.back.v14 .backpanel li{padding:6mm 0;font-size:21pt}
+.cover{width:210mm;height:297mm;position:relative;overflow:hidden;margin:0;
+background:#14b4bd url('../assets/cover-art.png') center/cover no-repeat;
+display:flex;flex-direction:column;align-items:center;text-align:center;padding:22mm 17mm 15mm}
+.cover *{text-align:center}.cover{font-family:Vazirmatn,sans-serif}.cover .pill{border:2px solid #e3be5c;border-radius:22pt;
+background:#431276;color:white;padding:6pt 20pt;font-size:21pt;line-height:1.45}
+.cover h1{color:#39115c;font-size:37pt;font-weight:800;line-height:1.4;margin:23mm 0 0;
+width:100%;white-space:nowrap;background:transparent}
+.cover.v14 h1{font-size:26pt}
+.cover .science-art{width:37mm;height:8mm;margin:0 0 5mm;flex:none}
+.cover .subtitle{font-size:17pt;color:#431276;background:#ffe76be8;border:1px solid #d7a629;
+padding:5pt 14pt;border-radius:20pt}.cover .author{font-size:18pt;background:#fffcebdc;
+color:#431276;border:1px solid #d7b64d;border-radius:20pt;padding:4pt 16pt;margin-top:13mm}
+.cover .badge{margin-top:auto;color:white;background:#c52e46;border:2px solid #e7c44f;
+font-size:14pt;border-radius:22pt;padding:4pt 20pt}.cover.back{padding-top:30mm}
+.back .backpanel{background:#fff9e9ed;border:3px double #daa938;border-radius:10mm;
+padding:8mm;width:100%;font-size:21pt;font-weight:700;line-height:1.55;color:#431276}
+.backpanel h2{font-size:24pt;color:#431276;margin-top:0}.backpanel p{text-align:right;margin:4pt 0}.backpanel h2{font-weight:800}
 @media screen{body{max-width:180mm;margin:20px auto;background:white}html{background:#edf2f5}}
-@page{size:A4;margin:0}@page:left{margin:0}@page:right{margin:0}@page:first{margin:0}html,body{margin:0;padding:0;width:210mm;max-width:none;background:white}</style></head><body><div class="cover v13"><div class="cover-top"><span class="brand">یاسی</span><span>مجموعه زیست‌شناسی</span></div><div class="series">آمادگی آزمون دکتری ۱۴۰۶</div><div class="volume">جلد ۱۳</div><h1>ویروس‌شناسی پیشرفته</h1><div class="subtitle">درسنامه گام‌به‌گام و آزمون</div><svg class="science-art" viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><radialGradient id="halo"><stop stop-color="#7fffe0" stop-opacity=".2"/><stop offset="1" stop-color="#7fffe0" stop-opacity="0"/></radialGradient><linearGradient id="strand" x2="1" y2="1"><stop stop-color="#8bffe1"/><stop offset="1" stop-color="#2fa9d3"/></linearGradient><linearGradient id="capsid" x2=".7" y2="1"><stop stop-color="#d3d9ff"/><stop offset="1" stop-color="#7774cb"/></linearGradient></defs><ellipse cx="340" cy="240" rx="330" ry="220" fill="url(#halo)"/><circle cx="58" cy="110" r="8" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="105" cy="170" r="5" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="570" cy="100" r="7" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="610" cy="170" r="5" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="560" cy="350" r="8" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="110" cy="360" r="7" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="48" cy="275" r="4" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><circle cx="630" cy="295" r="6" fill="none" stroke="#c6f1ff" stroke-opacity=".3" stroke-width="2"/><path d="M58 110L105 170L48 275L110 360M570 100L610 170L630 295L560 350" fill="none" stroke="#c6f1ff" stroke-opacity=".12" stroke-width="2"/><path d="M493.00 230.00L524.00 230.00" stroke="#b9c5ff" stroke-width="6"/><circle cx="524.00" cy="230.00" r="8" fill="#f4d18d"/><path d="M480.64 288.16L508.96 300.77" stroke="#b9c5ff" stroke-width="6"/><circle cx="508.96" cy="300.77" r="8" fill="#f4d18d"/><path d="M445.69 336.27L466.43 359.31" stroke="#b9c5ff" stroke-width="6"/><circle cx="466.43" cy="359.31" r="8" fill="#f4d18d"/><path d="M394.19 366.00L403.77 395.48" stroke="#b9c5ff" stroke-width="6"/><circle cx="403.77" cy="395.48" r="8" fill="#f4d18d"/><path d="M335.05 372.22L331.81 403.05" stroke="#b9c5ff" stroke-width="6"/><circle cx="331.81" cy="403.05" r="8" fill="#f4d18d"/><path d="M278.50 353.84L263.00 380.69" stroke="#b9c5ff" stroke-width="6"/><circle cx="263.00" cy="380.69" r="8" fill="#f4d18d"/><path d="M234.31 314.05L209.23 332.27" stroke="#b9c5ff" stroke-width="6"/><circle cx="209.23" cy="332.27" r="8" fill="#f4d18d"/><path d="M210.12 259.73L179.80 266.18" stroke="#b9c5ff" stroke-width="6"/><circle cx="179.80" cy="266.18" r="8" fill="#f4d18d"/><path d="M210.12 200.27L179.80 193.82" stroke="#b9c5ff" stroke-width="6"/><circle cx="179.80" cy="193.82" r="8" fill="#f4d18d"/><path d="M234.31 145.95L209.23 127.73" stroke="#b9c5ff" stroke-width="6"/><circle cx="209.23" cy="127.73" r="8" fill="#f4d18d"/><path d="M278.50 106.16L263.00 79.31" stroke="#b9c5ff" stroke-width="6"/><circle cx="263.00" cy="79.31" r="8" fill="#f4d18d"/><path d="M335.05 87.78L331.81 56.95" stroke="#b9c5ff" stroke-width="6"/><circle cx="331.81" cy="56.95" r="8" fill="#f4d18d"/><path d="M394.19 94.00L403.77 64.52" stroke="#b9c5ff" stroke-width="6"/><circle cx="403.77" cy="64.52" r="8" fill="#f4d18d"/><path d="M445.69 123.73L466.43 100.69" stroke="#b9c5ff" stroke-width="6"/><circle cx="466.43" cy="100.69" r="8" fill="#f4d18d"/><path d="M480.64 171.84L508.96 159.23" stroke="#b9c5ff" stroke-width="6"/><circle cx="508.96" cy="159.23" r="8" fill="#f4d18d"/><circle cx="350" cy="230" r="142" fill="#4c497d" stroke="#c1cbff" stroke-width="7"/><circle cx="350" cy="230" r="128" fill="#252949" stroke="#b4c7ed" stroke-width="2" stroke-dasharray="3 8"/><path d="M350 126L444 179L444 282L350 336L256 282L256 179Z" fill="url(#capsid)" fill-opacity=".5" stroke="#b6c7ff" stroke-width="3"/><path d="M350 126L350 230L444 179M350 230L444 282M350 230L350 336M350 230L256 282M350 230L256 179" fill="none" stroke="#aebcf4" stroke-width="2"/><path d="M304 184C401 169 299 236 389 224S391 286 317 277S380 252 350 200" fill="none" stroke="#ffe0a0" stroke-width="7" stroke-linecap="round"/><ellipse cx="350" cy="230" rx="242" ry="72" fill="none" stroke="#b0c6ff" stroke-opacity=".28" transform="rotate(-25 350 230)" stroke-width="2"/></svg><div class="author">دکتر امیر هوشنگ گرامی</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div></body></html>
+@page{size:A4;margin:0}@page:left{margin:0}@page:right{margin:0}@page:first{margin:0}html,body{margin:0;padding:0;width:210mm;max-width:none;background:white}</style></head><body><div class="cover v13"><div class="pill">آمادگی آزمون دکتری ۱۴۰۶</div><div class="pill" style="margin-top:9mm;background:#cf3d52">جلد ۱۳</div><h1>ویروس‌شناسی پیشرفته</h1><svg class="science-art" viewBox="0 0 100 22" aria-hidden="true" fill="none" stroke="#74561b" stroke-width="1.3" stroke-linejoin="round"><path d="M2 11h35m26 0h35" stroke="#b28b38"/><path d="m50 2 8 4v9l-8 5-8-5V6Zm0 0-4 11 12-7m-12 7 4 7 5-8-13-6"/></svg><div class="subtitle">درسنامه گام‌به‌گام و آزمون</div><div class="author">دکتر امیر هوشنگ گرامی</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div></body></html>

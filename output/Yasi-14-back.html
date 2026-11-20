@@ -46,34 +46,22 @@ figcaption{font-size:10.5pt;line-height:1.7;margin-top:6pt;color:#3d5865}
 .toc a{display:flex;align-items:baseline;gap:4mm;border-bottom:1px solid #d7e4e8;padding:2.3mm 0;color:#153d54;font-weight:500}
 .toc-label{flex:1}.toc-number{min-width:10mm;text-align:left;color:#12657a;font-weight:700}
 .toc-page.short .toc{height:208mm;padding-top:10mm}
-.cover{--ink:#082f3e;--accent:#70f0cc;--gold:#f5cf83;width:210mm;height:297mm;position:relative;overflow:hidden;margin:0;
- background:radial-gradient(ellipse at 12% 64%,#147d83 0,transparent 54%),linear-gradient(145deg,#061c2b,#0b4552 63%,#082a3e);
- color:#fff;padding:19mm 16mm 13mm;display:flex;flex-direction:column;align-items:stretch;text-align:center}
-.cover.v13{--ink:#302347;--accent:#a9b6ff;background:radial-gradient(ellipse at 18% 64%,#66438a 0,transparent 55%),linear-gradient(145deg,#191b39,#39325c 63%,#201f40)}
-.cover.v14{--ink:#112f57;--accent:#8cdaff;background:radial-gradient(ellipse at 18% 64%,#225f92 0,transparent 55%),linear-gradient(145deg,#0c2036,#173d65 63%,#101f39)}
-.cover:before{content:'';position:absolute;inset:9mm;border:1px solid #ffffff29;border-radius:2mm;pointer-events:none}
-.cover:after{content:'';position:absolute;top:0;right:0;width:7mm;height:100%;background:var(--accent);opacity:.8}
-.cover *{text-align:center;position:relative;z-index:1}
-.cover .cover-top{display:flex;justify-content:space-between;align-items:center;color:#e3f3f3;font-size:12pt;font-weight:500}
-.brand{font-size:32pt;font-weight:800;line-height:1.3;color:var(--gold)}
-.cover .series{font-size:20pt;font-weight:700;margin-top:13mm;line-height:1.7;color:white}
-.cover .volume{align-self:center;font-size:14pt;font-weight:700;border:1px solid #ffffff50;border-radius:99px;padding:1mm 8mm;margin-top:5mm;color:var(--gold)}
-.cover h1{color:white;background:none;border:0;text-shadow:0 2px 15px #00000025;font-size:34pt;font-weight:800;line-height:1.55;
- margin:11mm -3mm 3mm;padding:0;white-space:nowrap;word-break:normal;overflow-wrap:normal}
-.cover.v14 h1{font-size:22pt}
-.cover .subtitle{font-size:13pt;font-weight:500;color:var(--accent);line-height:1.9}
-.cover .science-art{width:100%;height:112mm;margin:4mm 0 0;z-index:0}
-.cover .science-art *{position:static}
-.cover .author{font-size:17pt;font-weight:700;margin-top:auto;color:white}
-.cover .badge{font-size:10pt;font-weight:700;color:#f9e7bf;margin-top:7mm;letter-spacing:0;line-height:1.6}
-.cover.back{padding-top:17mm}
-.back .back-heading{font-size:25pt;font-weight:800;color:white;margin:8mm 0 2mm}
-.back .back-title{color:var(--accent);font-size:15pt;font-weight:700;margin:0 0 7mm}
-.backpanel{padding:0 0 0 1mm;margin:0;list-style:none;text-align:right;flex-shrink:0}
-.backpanel li{display:flex;gap:5mm;align-items:baseline;border-bottom:1px solid #ffffff29;padding:1.9mm 0;color:white;font-size:21pt;font-weight:800;line-height:1.4;text-align:right}
-.backpanel li span{font-size:14pt;font-weight:700;min-width:9mm;color:var(--gold);text-align:right}
-.backpanel li div{text-align:right}
-.back .back-foot{margin-top:auto;font-size:13pt;font-weight:700;line-height:1.9;color:var(--accent)}
-.back.v14 .backpanel{margin-top:8mm}.back.v14 .backpanel li{padding:6mm 0;font-size:21pt}
+.cover{width:210mm;height:297mm;position:relative;overflow:hidden;margin:0;
+background:#14b4bd url('../assets/cover-art.png') center/cover no-repeat;
+display:flex;flex-direction:column;align-items:center;text-align:center;padding:22mm 17mm 15mm}
+.cover *{text-align:center}.cover{font-family:Vazirmatn,sans-serif}.cover .pill{border:2px solid #e3be5c;border-radius:22pt;
+background:#431276;color:white;padding:6pt 20pt;font-size:21pt;line-height:1.45}
+.cover h1{color:#39115c;font-size:37pt;font-weight:800;line-height:1.4;margin:23mm 0 0;
+width:100%;white-space:nowrap;background:transparent}
+.cover.v14 h1{font-size:26pt}
+.cover .science-art{width:37mm;height:8mm;margin:0 0 5mm;flex:none}
+.cover .subtitle{font-size:17pt;color:#431276;background:#ffe76be8;border:1px solid #d7a629;
+padding:5pt 14pt;border-radius:20pt}.cover .author{font-size:18pt;background:#fffcebdc;
+color:#431276;border:1px solid #d7b64d;border-radius:20pt;padding:4pt 16pt;margin-top:13mm}
+.cover .badge{margin-top:auto;color:white;background:#c52e46;border:2px solid #e7c44f;
+font-size:14pt;border-radius:22pt;padding:4pt 20pt}.cover.back{padding-top:30mm}
+.back .backpanel{background:#fff9e9ed;border:3px double #daa938;border-radius:10mm;
+padding:8mm;width:100%;font-size:21pt;font-weight:700;line-height:1.55;color:#431276}
+.backpanel h2{font-size:24pt;color:#431276;margin-top:0}.backpanel p{text-align:right;margin:4pt 0}.backpanel h2{font-weight:800}
 @media screen{body{max-width:180mm;margin:20px auto;background:white}html{background:#edf2f5}}
-@page{size:A4;margin:0}@page:left{margin:0}@page:right{margin:0}@page:first{margin:0}html,body{margin:0;padding:0;width:210mm;max-width:none;background:white}</style></head><body><div class="cover back v14"><div class="cover-top"><span class="brand">یاسی</span><span>جلد ۱۴ · آمادگی دکتری ۱۴۰۶</span></div><h2 class="back-heading">در این جلد می‌خوانید</h2><p class="back-title">گزیده آزمون‌های سنوات با پاسخ و تحلیل</p><ol class="backpanel"><li><span>۱</span><div>بیست سؤال منتخب از سال <bdi>۱۴۰۳</bdi></div></li><li><span>۲</span><div>بیست سؤال منتخب از سال <bdi>۱۴۰۴</bdi></div></li><li><span>۳</span><div>بیست سؤال منتخب از سال <bdi>۱۴۰۵</bdi></div></li><li><span>۴</span><div>تحلیل مستقل پاسخ و گزینه‌ها</div></li><li><span>۵</span><div>منبع و محل مرور هر سؤال</div></li><li><span>۶</span><div>نمایه موضوعی برای دو رشته</div></li></ol><div class="back-foot">زیست‌شناسی سلولی و مولکولی و میکروبیولوژی<br>آموزش، تمرین و تحلیل پاسخ‌ها</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div></body></html>
+@page{size:A4;margin:0}@page:left{margin:0}@page:right{margin:0}@page:first{margin:0}html,body{margin:0;padding:0;width:210mm;max-width:none;background:white}</style></head><body><div class="cover back"><div class="backpanel"><h2>مباحث این جلد</h2><p class="">بیست سؤال منتخب از سال <bdi>۱۴۰۳</bdi></p><p class="">بیست سؤال منتخب از سال <bdi>۱۴۰۴</bdi></p><p class="">بیست سؤال منتخب از سال <bdi>۱۴۰۵</bdi></p><p class="">تحلیل مستقل پاسخ و گزینه‌ها</p><p class="">منبع و محل مرور هر سؤال</p><p class="">نمایه موضوعی برای دو رشته</p></div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div></body></html>

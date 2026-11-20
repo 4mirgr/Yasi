@@ -268,23 +268,15 @@ def cover_html(volume, back=False):
     if back:
         if volume in (12, 13):
             book = load_book(volume)
-            entries = [f'<li><span>{fa(c["number"])}</span><div>{esc(c["title"])}</div></li>' for c in book['chapters']]
+            entries = [f'<p><span>{fa(c["number"])}.</span> {esc(c["title"])}</p>' for c in book['chapters']]
         else:
             entries = ['بیست سؤال منتخب از سال ۱۴۰۳', 'بیست سؤال منتخب از سال ۱۴۰۴', 'بیست سؤال منتخب از سال ۱۴۰۵',
                        'تحلیل مستقل پاسخ و گزینه‌ها', 'منبع و محل مرور هر سؤال', 'نمایه موضوعی برای دو رشته']
-            entries = [f'<li><span>{fa(i)}</span><div>{esc(x)}</div></li>' for i, x in enumerate(entries, 1)]
-        body = (f'<div class="cover back v{volume}"><div class="cover-top"><span class="brand">یاسی</span>'
-                f'<span>جلد {fa(volume)} · آمادگی دکتری ۱۴۰۶</span></div>'
-                f'<h2 class="back-heading">در این جلد می‌خوانید</h2><p class="back-title">{esc(TITLES[volume])}</p>'
-                '<ol class="backpanel">' + ''.join(entries) + '</ol>'
-                '<div class="back-foot">زیست‌شناسی سلولی و مولکولی و میکروبیولوژی<br>آموزش، تمرین و تحلیل پاسخ‌ها</div>'
-                '<div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div>')
+            entries = [para(x) for x in entries]
+        body = '<div class="cover back"><div class="backpanel"><h2>مباحث این جلد</h2>' + ''.join(entries) + '</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div>'
     else:
-        body = (f'<div class="cover v{volume}"><div class="cover-top"><span class="brand">یاسی</span>'
-                '<span>مجموعه زیست‌شناسی</span></div><div class="series">آمادگی آزمون دکتری ۱۴۰۶</div>'
-                f'<div class="volume">جلد {fa(volume)}</div><h1>{TITLES[volume]}</h1>'
-                f'<div class="subtitle">{("درسنامه گام‌به‌گام و آزمون" if volume != 14 else "سؤال‌های واقعی؛ پاسخ و تحلیل")}</div>'
-                + science_art(volume) +
+        body = (f'<div class="cover v{volume}"><div class="pill">آمادگی آزمون دکتری ۱۴۰۶</div><div class="pill" style="margin-top:9mm;background:#cf3d52">جلد {fa(volume)}</div>'
+                f'<h1>{TITLES[volume]}</h1>{science_art(volume)}<div class="subtitle">{("درسنامه گام‌به‌گام و آزمون" if volume != 14 else "سؤال‌های واقعی؛ پاسخ و تحلیل")}</div>'
                 '<div class="author">دکتر امیر هوشنگ گرامی</div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div>')
     return document_html(TITLES[volume], body, STYLE + '@page{size:A4;margin:0}@page:left{margin:0}@page:right{margin:0}@page:first{margin:0}html,body{margin:0;padding:0;width:210mm;max-width:none;background:white}')
 
@@ -487,7 +479,7 @@ async def build(volumes):
                         raise ValueError(f'Volume {volume}: cover title exceeds its line')
                 clipped = await page.locator('.cover').evaluate('''cover => {
                     const bounds = cover.getBoundingClientRect();
-                    return [...cover.querySelectorAll('.badge,.back-foot,.backpanel li,.author')]
+                    return [...cover.querySelectorAll('.badge,.backpanel,.backpanel p,.author')]
                         .filter(el => {const r=el.getBoundingClientRect();
                             return r.bottom>bounds.bottom-12 || r.left<bounds.left || r.right>bounds.right;})
                         .map(el=>el.textContent);

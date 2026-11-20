@@ -124,10 +124,10 @@
     "split_short_tables": [],
     "split_rows": [],
     "fonts": {
-      "Vazirmatn-ExtraBold": 175,
-      "Vazirmatn-Medium": 18,
-      "Vazirmatn-Bold": 977,
-      "Vazirmatn-Regular": 4976,
+      "Vazirmatn-Regular": 4982,
+      "Vazirmatn-ExtraBold": 162,
+      "Vazirmatn-Medium": 15,
+      "Vazirmatn-Bold": 969,
       "DejaVuSans": 2
     },
     "digits_using_fallback": [],
@@ -259,12 +259,12 @@
     "split_short_tables": [],
     "split_rows": [],
     "fonts": {
-      "Vazirmatn-ExtraBold": 184,
-      "Vazirmatn-Medium": 18,
-      "Vazirmatn-Bold": 873,
-      "Vazirmatn-Regular": 4729,
+      "Vazirmatn-Regular": 4735,
+      "Vazirmatn-ExtraBold": 167,
+      "Vazirmatn-Medium": 15,
+      "Vazirmatn-Bold": 867,
       "DejaVuSans": 8,
-      "Type3 (388 0 R)": 1
+      "Type3 (357 0 R)": 1
     },
     "digits_using_fallback": [],
     "word_question_fields_checked": 1620,
@@ -317,12 +317,12 @@
     "split_short_tables": [],
     "split_rows": [],
     "fonts": {
-      "Vazirmatn-ExtraBold": 22,
-      "Vazirmatn-Medium": 8,
-      "Vazirmatn-Bold": 279,
-      "Vazirmatn-Regular": 1680,
-      "Type3 (76 0 R)": 4,
-      "Type3 (83 0 R)": 1,
+      "Vazirmatn-Regular": 1686,
+      "Vazirmatn-ExtraBold": 13,
+      "Vazirmatn-Medium": 5,
+      "Vazirmatn-Bold": 271,
+      "Type3 (48 0 R)": 4,
+      "Type3 (55 0 R)": 1,
       "DejaVuSans": 41
     },
     "digits_using_fallback": [],
