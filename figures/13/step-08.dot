@@ -1,0 +1,14 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="مونتاژ در غشا\nMembrane assembly"];
+n1 [label="جوانه به فضای وزیکولی\nIntracellular budding"];
+n2 [label="خروج وزیکولی\nExocytic egress"];
+n3 [label="لیز سلول\nCell lysis"];
+n4 [label="ذره بیرون سلول\nExtracellular virion"];
+n0 -> n1 [label="کسب پوشش"];
+n1 -> n2 [label="جابه‌جایی"];
+n2 -> n4 [label="آزادسازی"];
+n3 -> n4 [label="مسیر متفاوت"];
+}

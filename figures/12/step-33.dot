@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="توالی هدف یکسان\nSame target sequence"];
+n1 [label="اصلاح محافظ متناسب\nCognate protective modification"];
+n2 [label="DNA فاقد اصلاح متناسب\nDNA lacking cognate protection"];
+n3 [label="برش در سامانه متعارف\nCleavage in canonical R-M"];
+n0 -> n1 [label="حفاظت بالقوه"];
+n0 -> n2 [label="شاخه بدون حفاظت"];
+n2 -> n3 [label="شناسایی آنزیم"];
+}

@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="قطعات والد اول\nParent A segments"];
+n1 [label="قطعات والد دوم\nParent B segments"];
+n2 [label="ترکیب قطعات نسل جدید\nReassorted genome"];
+n3 [label="سازگاری و انتخاب\nCompatibility and selection"];
+n0 -> n2 [label="سهم والد A"];
+n1 -> n2 [label="سهم والد B"];
+n2 -> n3 [label="پالایش زیستی"];
+}

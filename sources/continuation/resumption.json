@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-20",
+  "starting_commit": "e991629b7b974c8a2f219c9c97e1757c2de99ab0",
+  "conversation_access": "Original prior conversation not directly accessible by its ID; user supplied the original request and yaci.pdf, which were read.",
+  "attachment_handling": "Personal contacts excluded from public repository; only project decisions retained.",
+  "archive_integrity": "All 11 educational PDFs and introduction match recorded byte sizes and SHA-256 values.",
+  "font": {
+    "url": "https://github.com/intuxicated/css-persian/blob/master/fonts/BNazanin.ttf",
+    "sha256": "d088c489473040c556ae804359aad61e5e6a6cec34f49e8e176da9e2e100bf4c",
+    "family": "B Nazanin"
+  },
+  "official_1406": {
+    "url": "https://www8.sanjesh.org/download/1406/phd/reg/RegphdNote1406v1.pdf",
+    "observed_status": 403,
+    "page_33_read": true,
+    "evidence_note": "Printed page 33 read in two mirrors, normalized page text matches; user supplied photograph also matches. Official-origin bytes remain unverified."
+  },
+  "ncbi_bookshelf": "Firecrawl failed for NBK26850/NBK21113; direct NBK26850 HTTP200 yielded challenge page, not textbook content. Not used as read evidence.",
+  "production_body_font": {
+    "family": "Noto Naskh Arabic",
+    "size_pt": 14,
+    "license": "SIL Open Font License 1.1",
+    "location": "assets/fonts/NotoNaskhArabic-Regular.ttf"
+  },
+  "pdf_qa_runtime": {
+    "pymupdf": "1.28.2",
+    "note": "1.26.6 native text extraction crashes were reproduced; font changes alone did not reliably remove the issue. Final artifacts passed extraction and rendering under 1.28.2."
+  }
+}

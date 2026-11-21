@@ -1,0 +1,13 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="برخورد چنگال‌ها\nFork fusion"];
+n1 [label="حلقه‌های درهم‌قفل\nCatenanes"];
+n2 [label="یک حلقه دوژنومی\nChromosome dimer"];
+n3 [label="دو کروموزوم قابل جداسازی\nSeparable chromosomes"];
+n0 -> n1 [label="پیامد توپولوژیک"];
+n0 -> n2 [label="نوترکیبی ممکن"];
+n1 -> n3 [label="توپوایزومراز IV"];
+n2 -> n3 [label="XerCD/dif"];
+}

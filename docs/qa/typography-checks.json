@@ -1,0 +1,332 @@
+{
+  "12": {
+    "pages": 170,
+    "contents_page": 3,
+    "contents_entries": [
+      {
+        "target": "chapter-1",
+        "pdf_page": 4
+      },
+      {
+        "target": "chapter-2",
+        "pdf_page": 14
+      },
+      {
+        "target": "chapter-3",
+        "pdf_page": 24
+      },
+      {
+        "target": "chapter-4",
+        "pdf_page": 33
+      },
+      {
+        "target": "chapter-5",
+        "pdf_page": 44
+      },
+      {
+        "target": "chapter-6",
+        "pdf_page": 54
+      },
+      {
+        "target": "chapter-7",
+        "pdf_page": 65
+      },
+      {
+        "target": "chapter-8",
+        "pdf_page": 76
+      },
+      {
+        "target": "chapter-9",
+        "pdf_page": 87
+      },
+      {
+        "target": "chapter-10",
+        "pdf_page": 98
+      },
+      {
+        "target": "review",
+        "pdf_page": 108
+      },
+      {
+        "target": "exams",
+        "pdf_page": 125
+      },
+      {
+        "target": "exam-answers",
+        "pdf_page": 148
+      },
+      {
+        "target": "glossary",
+        "pdf_page": 161
+      },
+      {
+        "target": "sources",
+        "pdf_page": 164
+      }
+    ],
+    "tables": [
+      [
+        12
+      ],
+      [
+        22
+      ],
+      [
+        32
+      ],
+      [
+        42
+      ],
+      [
+        52
+      ],
+      [
+        64
+      ],
+      [
+        75
+      ],
+      [
+        86
+      ],
+      [
+        96
+      ],
+      [
+        107
+      ],
+      [
+        147
+      ],
+      [
+        150
+      ],
+      [
+        154
+      ],
+      [
+        157
+      ],
+      [
+        160,
+        161,
+        162
+      ]
+    ],
+    "table_rows_checked": 108,
+    "repeated_table_headers": [
+      [
+        160,
+        161,
+        162
+      ]
+    ],
+    "split_short_tables": [],
+    "split_rows": [],
+    "fonts": {
+      "Vazirmatn-Regular": 4982,
+      "Vazirmatn-ExtraBold": 162,
+      "Vazirmatn-Medium": 15,
+      "Vazirmatn-Bold": 969,
+      "DejaVuSans": 2
+    },
+    "digits_using_fallback": [],
+    "word_question_fields_checked": 1620,
+    "word_missing_fields": []
+  },
+  "13": {
+    "pages": 156,
+    "contents_page": 3,
+    "contents_entries": [
+      {
+        "target": "chapter-1",
+        "pdf_page": 4
+      },
+      {
+        "target": "chapter-2",
+        "pdf_page": 13
+      },
+      {
+        "target": "chapter-3",
+        "pdf_page": 23
+      },
+      {
+        "target": "chapter-4",
+        "pdf_page": 33
+      },
+      {
+        "target": "chapter-5",
+        "pdf_page": 43
+      },
+      {
+        "target": "chapter-6",
+        "pdf_page": 53
+      },
+      {
+        "target": "chapter-7",
+        "pdf_page": 63
+      },
+      {
+        "target": "chapter-8",
+        "pdf_page": 72
+      },
+      {
+        "target": "chapter-9",
+        "pdf_page": 82
+      },
+      {
+        "target": "chapter-10",
+        "pdf_page": 91
+      },
+      {
+        "target": "review",
+        "pdf_page": 101
+      },
+      {
+        "target": "exams",
+        "pdf_page": 115
+      },
+      {
+        "target": "exam-answers",
+        "pdf_page": 135
+      },
+      {
+        "target": "glossary",
+        "pdf_page": 148
+      },
+      {
+        "target": "sources",
+        "pdf_page": 151
+      }
+    ],
+    "tables": [
+      [
+        12
+      ],
+      [
+        21
+      ],
+      [
+        31
+      ],
+      [
+        41
+      ],
+      [
+        51
+      ],
+      [
+        61
+      ],
+      [
+        71
+      ],
+      [
+        80
+      ],
+      [
+        90
+      ],
+      [
+        100
+      ],
+      [
+        134
+      ],
+      [
+        137
+      ],
+      [
+        140
+      ],
+      [
+        144
+      ],
+      [
+        147,
+        148,
+        149
+      ]
+    ],
+    "table_rows_checked": 110,
+    "repeated_table_headers": [
+      [
+        147,
+        148,
+        149
+      ]
+    ],
+    "split_short_tables": [],
+    "split_rows": [],
+    "fonts": {
+      "Vazirmatn-Regular": 4735,
+      "Vazirmatn-ExtraBold": 167,
+      "Vazirmatn-Medium": 15,
+      "Vazirmatn-Bold": 867,
+      "DejaVuSans": 8,
+      "Type3 (357 0 R)": 1
+    },
+    "digits_using_fallback": [],
+    "word_question_fields_checked": 1620,
+    "word_missing_fields": []
+  },
+  "14": {
+    "pages": 55,
+    "contents_page": 3,
+    "contents_entries": [
+      {
+        "target": "year-1403",
+        "pdf_page": 4
+      },
+      {
+        "target": "year-1404",
+        "pdf_page": 15
+      },
+      {
+        "target": "year-1405",
+        "pdf_page": 26
+      },
+      {
+        "target": "topic-index",
+        "pdf_page": 39
+      },
+      {
+        "target": "sources",
+        "pdf_page": 44
+      }
+    ],
+    "tables": [
+      [
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    ],
+    "table_rows_checked": 60,
+    "repeated_table_headers": [
+      [
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    ],
+    "split_short_tables": [],
+    "split_rows": [],
+    "fonts": {
+      "Vazirmatn-Regular": 1686,
+      "Vazirmatn-ExtraBold": 13,
+      "Vazirmatn-Medium": 5,
+      "Vazirmatn-Bold": 271,
+      "Type3 (48 0 R)": 4,
+      "Type3 (55 0 R)": 1,
+      "DejaVuSans": 41
+    },
+    "digits_using_fallback": [],
+    "word_question_fields_checked": 360,
+    "word_missing_fields": []
+  }
+}

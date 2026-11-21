@@ -1,0 +1,11 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="LacI سالم\nFunctional LacI"];
+n1 [label="اپراتور سالم هر دو نسخه\nBoth O+ copies"];
+n2 [label="اپراتور جهش‌یافته\nConstitutive operator"];
+n3 [label=<<TABLE BORDER="0" CELLBORDER="0" CELLPADDING="1"><TR><TD>O<SUP><FONT POINT-SIZE="12">c</FONT></SUP></TD><TD>ژن متصل به </TD></TR><TR><TD COLSPAN="2">Linked structural gene</TD></TR></TABLE>>];
+n0 -> n1 [label="مهار در ترانس"];
+n2 -> n3 [label="رفع مهار فقط در سیس"];
+}

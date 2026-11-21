@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="مجموعه اولیه موتانت‌ها\nInitial mutant pool"];
+n1 [label="انتخاب یا خوانش غربال\nSelection or screening readout"];
+n2 [label="نامزدهای تغییر فنوتیپ\nPhenotype candidates"];
+n3 [label="تأیید مستقل و بازگردانی\nIndependent validation + rescue"];
+n0 -> n1 [label="پوشش و گلوگاه مهم‌اند"];
+n1 -> n2 [label="نامزدی؛ نه اثبات"];
+n2 -> n3 [label="رفع توضیح جایگزین"];
+}

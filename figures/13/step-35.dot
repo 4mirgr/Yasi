@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="تنوع پیشین\nPre-existing diversity"];
+n1 [label="فشار انتخابی\nSelective pressure"];
+n2 [label="غنی‌شدن مقاوم\nResistant enrichment"];
+n3 [label="هزینه در محیط دیگر\nContext-dependent cost"];
+n0 -> n1 [label="تفاوت حساسیت"];
+n1 -> n2 [label="انتخاب نسبی"];
+n2 -> n3 [label="تغییر محیط"];
+}

@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="تعیین سازوکار و واحد\nMechanism and units"];
+n1 [label="نوشتن والد و انتخاب\nParents and selection"];
+n2 [label="محاسبه با مخرج درست\nCorrect denominators"];
+n3 [label="کنترل رقیب و تأیید مستقل\nAlternative controls and validation"];
+n0 -> n1;
+n1 -> n2;
+n2 -> n3;
+}

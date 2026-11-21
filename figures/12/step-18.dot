@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="انتخاب A مثبت\nSelect A+"];
+n1 [label="بررسی B در منتخب‌ها\nScore B among A+"];
+n2 [label="مخرج: همه A مثبت‌ها\nDenominator: all A+"];
+n3 [label="هم‌انتقالی شرطی\nConditional cotransfer"];
+n0 -> n1;
+n1 -> n2;
+n2 -> n3;
+}

@@ -1,0 +1,20 @@
+{
+  "12": {
+    "questions": 270,
+    "fields_checked_per_question": 6,
+    "missing_fields": [],
+    "worked_example_labels": 41
+  },
+  "13": {
+    "questions": 270,
+    "fields_checked_per_question": 6,
+    "missing_fields": [],
+    "worked_example_labels": 41
+  },
+  "14": {
+    "questions": 60,
+    "fields_checked_per_question": 6,
+    "missing_fields": [],
+    "worked_example_labels": 0
+  }
+}

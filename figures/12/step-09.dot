@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="DNA تک‌رشته و RecA\nRecA–ssDNA filament"];
+n1 [label="جست‌وجوی همولوژی\nHomology search"];
+n2 [label="ورود رشته و حلقه D\nStrand invasion and D-loop"];
+n3 [label="سنتز و پردازش اتصال\nSynthesis and junction processing"];
+n0 -> n1;
+n1 -> n2;
+n2 -> n3;
+}

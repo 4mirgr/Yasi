@@ -1,0 +1,14 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="حالت خاموش\nOFF state"];
+n1 [label="حالت روشن\nON state"];
+n2 [label="تفاوت بقا یا رشد\nDifferential survival/growth"];
+n3 [label="ترکیب نهایی جمعیت\nPopulation composition"];
+n0 -> n1 [label="تعویض برگشت‌پذیر"];
+n1 -> n0 [label="مسیر برگشت"];
+n0 -> n2 [label="اثر محیط"];
+n1 -> n2 [label="اثر محیط"];
+n2 -> n3 [label="انتخاب میان حالت‌ها"];
+}

@@ -1,0 +1,67 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>ژنتیک پروکاریوت‌ها</title><style>@font-face{font-family:Vazirmatn;src:url('../assets/fonts/Vazirmatn-Regular.ttf');font-weight:400}
+@font-face{font-family:Vazirmatn;src:url('../assets/fonts/Vazirmatn-Medium.ttf');font-weight:500}
+@font-face{font-family:Vazirmatn;src:url('../assets/fonts/Vazirmatn-Bold.ttf');font-weight:700}
+@font-face{font-family:Vazirmatn;src:url('../assets/fonts/Vazirmatn-ExtraBold.ttf');font-weight:800}
+/* Only symbols absent from Vazirmatn (Greek letters, arrows and superscripts)
+   fall back to this bundled font. All prose, digits and Latin use Vazirmatn. */
+@font-face{font-family:YasiSymbols;src:url('../assets/fonts/DejaVuSans.ttf')}
+@page{size:A4;margin:15mm 15mm 17mm 25mm}
+@page:left{margin-left:15mm;margin-right:25mm}
+*{box-sizing:border-box}
+html{direction:rtl}
+body{font-family:Vazirmatn,YasiSymbols,sans-serif;font-size:13pt;line-height:1.8;color:#182c3b;margin:0;font-variant-numeric:tabular-nums}
+h1,h2,h3,h4{line-height:1.65;break-after:avoid;color:#153d54;font-weight:800}
+h1{font-size:24pt;margin:0 0 8mm}h2{font-size:19pt;margin:14pt 0 9pt}
+h3{font-size:16pt;margin:14pt 0 7pt}h4{font-size:14pt;margin:9pt 0 4pt}
+p{margin:5pt 0 8pt;orphans:3;widows:3;text-align:justify}
+bdi,.latin{font-family:inherit;font-size:1em;direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums}
+sup,sub{font-family:inherit;font-size:.75em;line-height:0}
+a{color:#12657a;text-decoration:none}
+.chapter,.major{break-before:auto}.exam-start{break-before:page}
+.meta,.citation{font-size:10.5pt;color:#4c6270;line-height:1.8}
+.note{background:#f1f7f8;border-right:3px solid #188d98;padding:10pt 12pt;margin:12pt 0}
+.example{background:#f5f8fb;border:1px solid #d4e2e9;border-radius:3mm;padding:10pt 12pt;margin:11pt 0;break-inside:avoid}
+.question{break-inside:avoid;margin:11pt 0 13pt}.question p{margin-bottom:5pt}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4pt 14pt;padding:3pt 7pt}
+.options.long{grid-template-columns:1fr}.option{text-align:right}
+.answer{break-inside:avoid;margin:8pt 0 10pt}.answer p{text-align:justify}
+.exam-question{margin:7pt 0 9pt}
+table{width:100%;border-collapse:collapse;margin:10pt 0;font-size:11.5pt;line-height:1.7}
+table.keep-table{break-inside:avoid;page-break-inside:avoid}
+table.flow-table{break-inside:auto}
+thead{display:table-header-group}th{background:#e6f2f5;color:#153d54;font-weight:700}
+td,th{border:1px solid #cbdde3;padding:6pt 7pt;text-align:right;vertical-align:top}
+tr{break-inside:avoid;page-break-inside:avoid}
+figure{margin:13pt 0;break-inside:avoid;text-align:center}
+figure img{width:100%;max-height:90mm;object-fit:contain}
+figcaption{font-size:10.5pt;line-height:1.7;margin-top:6pt;color:#3d5865}
+.source{break-inside:avoid;margin:11pt 0;overflow-wrap:anywhere;font-size:10.5pt}
+.source a{font-size:9.5pt}
+.keygrid{font-size:11.5pt}
+.toc-page{break-before:page;break-after:page;height:260mm;position:relative;padding:7mm 0 10mm}
+.toc-page h2{font-size:27pt;margin:0 0 4mm;padding-bottom:5mm;border-bottom:2px solid #188d98}
+.toc-caption{font-size:11pt;color:#4c6270;margin:0 0 7mm;text-align:right}
+.toc{height:208mm;display:flex;flex-direction:column;justify-content:space-between;font-size:12.5pt;line-height:1.65}
+.toc p{margin:0;text-align:right}
+.toc a{display:flex;align-items:baseline;gap:4mm;border-bottom:1px solid #d7e4e8;padding:2.3mm 0;color:#153d54;font-weight:500}
+.toc-label{flex:1}.toc-number{min-width:10mm;text-align:left;color:#12657a;font-weight:700}
+.toc-page.short .toc{height:208mm;padding-top:10mm}
+.cover{width:210mm;height:297mm;position:relative;overflow:hidden;margin:0;
+background:#14b4bd url('../assets/cover-art.png') center/cover no-repeat;
+display:flex;flex-direction:column;align-items:center;text-align:center;padding:22mm 17mm 15mm}
+.cover *{text-align:center}.cover{font-family:Vazirmatn,sans-serif}.cover .pill{border:2px solid #e3be5c;border-radius:22pt;
+background:#431276;color:white;padding:6pt 20pt;font-size:21pt;line-height:1.45}
+.cover h1{color:#39115c;font-size:37pt;font-weight:800;line-height:1.4;margin:23mm 0 0;
+width:100%;white-space:nowrap;background:transparent}
+.cover.v14 h1{font-size:26pt}
+.cover .science-art{width:37mm;height:8mm;margin:0 0 5mm;flex:none}
+.cover .subtitle{font-size:17pt;color:#431276;background:#ffe76be8;border:1px solid #d7a629;
+padding:5pt 14pt;border-radius:20pt}.cover .author{font-size:18pt;background:#fffcebdc;
+color:#431276;border:1px solid #d7b64d;border-radius:20pt;padding:4pt 16pt;margin-top:13mm}
+.cover .badge{margin-top:auto;color:white;background:#c52e46;border:2px solid #e7c44f;
+font-size:14pt;border-radius:22pt;padding:4pt 20pt}.cover.back{padding-top:30mm}
+.back .backpanel{background:#fff9e9ed;border:3px double #daa938;border-radius:10mm;
+padding:8mm;width:100%;font-size:21pt;font-weight:700;line-height:1.55;color:#431276}
+.backpanel h2{font-size:24pt;color:#431276;margin-top:0}.backpanel p{text-align:right;margin:4pt 0}.backpanel h2{font-weight:800}
+@media screen{body{max-width:180mm;margin:20px auto;background:white}html{background:#edf2f5}}
+@page{size:A4;margin:0}@page:left{margin:0}@page:right{margin:0}@page:first{margin:0}html,body{margin:0;padding:0;width:210mm;max-width:none;background:white}</style></head><body><div class="cover back"><div class="backpanel"><h2>مباحث این جلد</h2><p><span>۱.</span> معماری و نگهداری ژنوم</p><p><span>۲.</span> جهش، ترمیم و منطق انتخاب</p><p><span>۳.</span> نوترکیبی و بازآرایی ژنوم</p><p><span>۴.</span> انتقال افقی و سرنوشت <bdi>DNA</bdi> واردشده</p><p><span>۵.</span> نقشه‌برداری و تفسیر داده‌های انتقال</p><p><span>۶.</span> تنظیم رونویسی: از اپرون تا شبکه</p><p><span>۷.</span> تنظیم پسارونویسی و پاسخ به کمبود</p><p><span>۸.</span> عناصر متحرک، پلاسمید و تکامل مقاومت</p><p><span>۹.</span> دفاع ژنومی، تنوع و تفاوت آرکی</p><p><span>۱۰.</span> روش‌های ژنتیکی و حدود استنباط</p></div><div class="badge">نسخه آزمایشی غیرقابل انتشار</div></div></body></html>

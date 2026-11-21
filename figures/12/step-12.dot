@@ -1,0 +1,11 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="تکرارهای مستقیم\nDirect repeats"];
+n1 [label="تکرارهای معکوس\nInverted repeats"];
+n2 [label="حذف یا مضاعف‌شدن\nDeletion or duplication"];
+n3 [label="وارونگی بدون افزایش نسخه\nCopy-neutral inversion"];
+n0 -> n2 [label="تبادل درون یا بین مولکولی"];
+n1 -> n3 [label="تبادل درون‌مولکولی"];
+}

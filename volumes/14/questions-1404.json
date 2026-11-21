@@ -1,0 +1,892 @@
+{
+  "year": 1404,
+  "selection_note": "گزیده آموزشی ۲۰ سؤال متنی از دفترچه واقعی سال ۱۴۰۴: ۸ سؤال بخش مشترک ۱ تا ۲۵، ۶ سؤال سلولی و مولکولی پیشرفته ۲۶ تا ۵۵ و ۶ سؤال بخش میکروارگانیسم‌ها و ویروس‌شناسی ۱۳۶ تا ۱۷۵. گزینش موضوعی است، نه بانک کامل دفترچه یا نماینده آماری فراوانی سؤال. ترتیب گزینه‌ها حفظ و تنها فاصله‌گذاری و شکل نوشتاری اصطلاحات یکدست شده است. پاسخ‌ها تألیف آموزشی مستقل‌اند. اختلاف سؤال ۵ با کلید بازنشرشده آشکار نگه داشته شده است.",
+  "booklet": {
+    "title": "آزمون ورودی دوره‌های دکتری (نیمه‌متمرکز) سال ۱۴۰۴ — زیست‌شناسی سلولی و مولکولی (کد ۲۲۲۶)، دفترچه شماره ۳ از ۳",
+    "code": "887A",
+    "exam_set": "2226",
+    "source_url": "https://dll.theenglishtoday.ir/phd/Cell-and-Molecular-Biology/1404.pdf",
+    "sha256": "90b14d573d5e49a0f72f88d31bf1a70fa2b8ea0697fac1b47c27dce0a262d9a7",
+    "pages": 48,
+    "question_count_printed": 320,
+    "exam_date_printed": "۱۴۰۳/۱۲/۰۲",
+    "key_source_url": "https://dll.theenglishtoday.ir/phd/Cell-and-Molecular-Biology/1404.jpg",
+    "key_sha256": "0e2e3d725bc76484d4a3ad1a8c94d63958365c6af6418d3073e593e6af656b0f"
+  },
+  "questions": [
+    {
+      "id": "Y1404-Q1",
+      "year": 1404,
+      "number": 1,
+      "pdf_page": 2,
+      "printed_page": "2",
+      "track": "common",
+      "topic": "ساختار پروتئین؛ پیوند دی‌سولفیدی",
+      "stem": "برای حذف پیوندهای دی‌سولفیدی موجود در پروتئین، جهت تعیین توالی پروتئین، از کدام ترکیب استفاده می‌شود؟",
+      "options": [
+        "دی‌تیوترتول (DTT)",
+        "سدیم دودسیل سولفات (SDS)",
+        "تریتون X100",
+        "توئین 60"
+      ],
+      "answer": 0,
+      "explanation": "گزینه ۱. DTT عامل احیاکننده است و پیوند S–S سیستین را به گروه‌های تیول تبدیل می‌کند؛ به این ترتیب زنجیره‌هایی که با دی‌سولفید متصل‌اند از هم باز می‌شوند. SDS شوینده یونی و دناتوره‌کننده است، اما به‌خودی‌خود احیاکننده دی‌سولفید نیست. تریتون و توئین شوینده‌های غیریونی‌اند و برهم‌کنش با غشا یا حلالیت را تغییر می‌دهند. بنابراین دناتوراسیون و احیای کووالانسی را نباید یکی دانست.",
+      "key": {
+        "value": 0,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q1.png",
+      "sources": [
+        "R14-1404-1",
+        "R14-1404-4"
+      ],
+      "review_in": "جلد ۹؛ ساختار و پیوندهای پایدارکننده پروتئین",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q3",
+      "year": 1404,
+      "number": 3,
+      "pdf_page": 2,
+      "printed_page": "2",
+      "track": "common",
+      "topic": "بیوسنتز هم؛ کوآنزیم PLP",
+      "stem": "سوکسینیل کوآ با کدام‌یک از اسیدهای آمینه و کوآنزیم‌های زیر می‌تواند اسید دلتا آمینولولینیک ایجاد کند؟",
+      "options": [
+        "گلایسین، PLP",
+        "هیستیدین، TPP",
+        "گلایسین، TPP",
+        "هیستیدین، PLP"
+      ],
+      "answer": 0,
+      "explanation": "گزینه ۱. در مسیر وابسته به ALA synthase، گلیسین با سوکسینیل‌کوآ واکنش می‌دهد و ۵-آمینولولینات همراه CO₂ و CoA تشکیل می‌شود. کوآنزیم آنزیم PLP است؛ TPP کوآنزیم این واکنش نیست و هیستیدین نیز جایگزین گلیسین نمی‌شود. این سازوکار به همه جانداران تعمیم ندارد: گیاهان، آرکی‌ها و بسیاری باکتری‌ها ALA را از مسیر گلوتامات می‌سازند. سؤال مشخصاً واکنش آغازشونده از سوکسینیل‌کوآ را هدف گرفته است.",
+      "key": {
+        "value": 0,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q3.png",
+      "sources": [
+        "R14-1404-2"
+      ],
+      "review_in": "جلد ۳؛ کوآنزیم‌ها و ساخت پورفیرین؛ جلد ۱۱؛ تنوع زیست‌ساخت",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q5",
+      "year": 1404,
+      "number": 5,
+      "pdf_page": 2,
+      "printed_page": "2",
+      "track": "common",
+      "topic": "ترمودینامیک زیستی؛ علامت انرژی آزاد",
+      "stem": "اگر ΔG یک واکنش منفی باشد و آنتروپی نیز در جریان آن افزایش یابد، آن چه واکنشی است؟",
+      "options": [
+        "انرژی‌خواه",
+        "انرژی‌زا",
+        "آنابولیک",
+        "تعادلی"
+      ],
+      "answer": 1,
+      "explanation": "پاسخ آموزشی گزینه ۲ است؛ این پاسخ با کلید بازنشرشده اختلاف دارد. ΔG منفی یعنی در جهت نوشته‌شده انرژی آزاد قابل استفاده آزاد می‌شود و واکنش exergonic یا انرژی‌زا است. شرط افزایش آنتروپی این نتیجه را نقض نمی‌کند. در تعادل ΔG خالص صفر است، و نام آنابولیک را نمی‌توان از این دو داده نتیجه گرفت. «خودبه‌خودی» نیز به معنی سریع بودن واکنش نیست. تصویر کلید آرشیوشده برای سؤال ۵ گزینه ۱ را نشان می‌دهد؛ این اختلاف بدون سند رسمی رفع‌شده تلقی نمی‌شود.",
+      "key": {
+        "value": 0,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند. اختلاف آشکار: کلید منبع گزینه ۱ «انرژی‌خواه»؛ پاسخ مستقل علمی گزینه ۲ «انرژی‌زا»."
+      },
+      "image": "volumes/14/images/1404/q5.png",
+      "sources": [
+        "R14-1404-3"
+      ],
+      "review_in": "جلد ۳؛ انرژی آزاد گیبس؛ جلد ۱۱، فصل ۱، گام ۲",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": false
+      }
+    },
+    {
+      "id": "Y1404-Q8",
+      "year": 1404,
+      "number": 8,
+      "pdf_page": 2,
+      "printed_page": "2",
+      "track": "common",
+      "topic": "مارپیچ غشایی؛ آب‌گریزی توالی",
+      "stem": "وجود کدام توالی، در بخشی از پروتئینی که ساختار مارپیچ آلفا دارد و در داخل غشای پلاسمایی قرار می‌گیرد، محتمل‌تر است؟",
+      "options": [
+        "GHKDEKLEEH",
+        "ALIVVVIWYAV",
+        "ALPGCIPV",
+        "KKKKKKK"
+      ],
+      "answer": 1,
+      "explanation": "گزینه ۲ از باقی توالی‌ها برای بخش مارپیچی در محیط آب‌گریز غشا مناسب‌تر است، زیرا عمدتاً از باقی‌مانده‌های غیرقطبی تشکیل شده است. توالی ۱ چند گروه باردار دارد و توالی ۴ به‌شدت بازی و باردار است. گزینه ۳ علاوه بر کوتاه بودن دارای دو پرولین است که در مقایسه با گزینه ۲ سازگاری کمتری با مارپیچ آلفای ممتد دارد. این توالی‌های کوتاه برای اثبات یک قطعه کامل گذرنده از غشا کافی نیستند؛ سؤال مقایسه احتمال در بخشی از قطعه را می‌پرسد.",
+      "key": {
+        "value": 1,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q8.png",
+      "sources": [
+        "R14-1404-4",
+        "R14-1404-7"
+      ],
+      "review_in": "جلد ۱؛ غشاها؛ جلد ۹؛ ساختار ثانویه و آب‌گریزی",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q19",
+      "year": 1404,
+      "number": 19,
+      "pdf_page": 4,
+      "printed_page": "4",
+      "track": "common",
+      "topic": "خاموش‌سازی پسارونویسی؛ miRNA",
+      "stem": "miRNAها، از کدام طریق می‌توانند خاموش‌سازی ژن‌ها را انجام دهند؟",
+      "options": [
+        "متیله نمودن ژن کاندید رونویسی برای جلوگیری از رونویسی",
+        "تخریب mRNA و یا جلوگیری از ترجمه آن",
+        "جلوگیری از رونویسی و ترجمه mRNA",
+        "تخریب mRNA"
+      ],
+      "answer": 1,
+      "explanation": "گزینه ۲ جامع‌ترین پاسخ است. miRNA در مجموعه خاموش‌سازی وابسته به RNA، پیام هدف را از راه مکمل‌شدن توالی شناسایی می‌کند و می‌تواند کارایی ترجمه را کم کند یا ناپایداری و تخریب mRNA را افزایش دهد. گزینه ۴ فقط یکی از سرنوشت‌های ممکن را بیان می‌کند. گزینه‌های ۱ و ۳ در این پرسش سازوکار معمول پسارونویسی miRNA را با خاموش‌سازی رونویسی خلط می‌کنند؛ نباید همه گونه‌های RNA کوچک و همه زمینه‌های زیستی را یکسان فرض کرد.",
+      "key": {
+        "value": 1,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q19.png",
+      "sources": [
+        "R14-1404-5"
+      ],
+      "review_in": "جلد ۸؛ تنظیم پسارونویسی یوکاریوتی",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q22",
+      "year": 1404,
+      "number": 22,
+      "pdf_page": 4,
+      "printed_page": "4",
+      "track": "common",
+      "topic": "اتصالات سلول به ماتریکس؛ اتصال کانونی",
+      "stem": "در اتصالات کانونی (Focal adhesion)، خوشه‌های بزرگی از اینتگرین‌ها، به کدام‌یک از اجزای زیر از طریق انواع مختلفی از آداپتورها متصل می‌شوند؟",
+      "options": [
+        "اکتین‌های سیتوپلاسمی",
+        "توبولین‌های سیتوپلاسمی",
+        "پروتئین‌های بند ۳ غشایی",
+        "نوعی از رشته‌های بینابینی سیتوپلاسمی"
+      ],
+      "answer": 0,
+      "explanation": "گزینه ۱. اینتگرین‌های اتصال کانونی از طریق پروتئین‌هایی مانند تالین و وینکولین به رشته‌های اکتین متصل می‌شوند و انتقال نیرو و پیام سلول–ماتریکس را ممکن می‌کنند. توبولین جزء میکروتوبول است، و پروتئین بند ۳ نام آداپتور اصلی اتصال کانونی نیست. اتصال به رشته‌های بینابینی بیشتر با همی‌دسموزوم‌ها و اینتگرین‌های ویژه آن مطرح است؛ تفاوت نوع اتصال، گزینه ۴ را از اتصال کانونی جدا می‌کند.",
+      "key": {
+        "value": 0,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q22.png",
+      "sources": [
+        "R14-1404-6"
+      ],
+      "review_in": "جلد ۱؛ اسکلت سلولی و اتصالات؛ جلد ۷؛ مکانوتراگذری",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q23",
+      "year": 1404,
+      "number": 23,
+      "pdf_page": 4,
+      "printed_page": "4",
+      "track": "common",
+      "topic": "پیام‌رسانی؛ آنزیم افکتور",
+      "stem": "«گاهی اوقات یک آنزیم توسط یک گیرنده فعال می‌شود و با تولید پیام‌رسان دوم، پاسخ سلولی را ایجاد می‌کند». نام این آنزیم کدام است؟",
+      "options": [
+        "A refractor",
+        "An effector",
+        "An activator",
+        "An affector"
+      ],
+      "answer": 1,
+      "explanation": "گزینه ۲. در این نام‌گذاری، آنزیم افکتور مانند آدنیلیل سیکلاز، در پایین‌دست گیرنده و پروتئین G پیام‌رسان دوم تولید می‌کند. Activator نام کلی عامل فعال‌کننده است و نقش مشخص آنزیم تولیدکننده پیام‌رسان دوم را نام‌گذاری نمی‌کند. دو عنوان دیگر اصطلاح استاندارد این جزء مسیر نیستند. گیرنده، پروتئین انتقال‌دهنده پیام و افکتور ممکن است اجزای جداگانه باشند؛ بنابراین پاسخ به معنای آنزیمی بودن همه گیرنده‌ها نیست.",
+      "key": {
+        "value": 1,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q23.png",
+      "sources": [
+        "R14-1404-7",
+        "R14-1404-13"
+      ],
+      "review_in": "جلد ۷؛ گیرنده‌های متصل به پروتئین G و پیام‌رسان دوم",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q25",
+      "year": 1404,
+      "number": 25,
+      "pdf_page": 4,
+      "printed_page": "4",
+      "track": "common",
+      "topic": "کنترل آسیب DNA و آپوپتوز",
+      "stem": "در کدام شرایط، احتمال دارد که سلول‌های توموری پس از آسیب به DNA دچار آپوپتوز شوند؟",
+      "options": [
+        "Rb غیرفعال",
+        "Bax غیرفعال",
+        "Rb فعال",
+        "P53 فعال"
+      ],
+      "answer": 3,
+      "explanation": "گزینه ۴. p53 سالم و فعال می‌تواند در پاسخ به آسیب DNA، توقف چرخه و ترمیم را القا کند و اگر آسیب قابل رفع نباشد مسیر مرگ برنامه‌ریزی‌شده را تقویت کند. Rb بیشتر مهار گذار چرخه سلولی را بر عهده دارد و فعال بودن آن به‌تنهایی شاهد آغاز آپوپتوز نیست. غیرفعال شدن Bax که عامل پیش‌برنده آپوپتوز است، انتظار ایجاد مرگ را تقویت نمی‌کند. در یک سلول واقعی، فعال بودن p53 تضمین قطعی مرگ نیست و به سلامت اجزای پایین‌دست نیز وابسته است؛ عبارت «احتمال دارد» با این محدودیت سازگار است.",
+      "key": {
+        "value": 3,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q25.png",
+      "sources": [
+        "R14-1404-8"
+      ],
+      "review_in": "جلد ۱؛ مرگ سلولی؛ جلد ۷؛ پاسخ به آسیب و چرخه",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q43",
+      "year": 1404,
+      "number": 43,
+      "pdf_page": 7,
+      "printed_page": "7",
+      "track": "cell-molecular",
+      "topic": "RNAهای کوچک و کنترل ترانسپوزون",
+      "stem": "کدام مورد، از طریق کنترل فرایند ترانسپوزیشن، مانع از تغییر یا غیرفعال شدن بیان ژن‌ها می‌شود؟",
+      "options": [
+        "eRNA",
+        "piRNA",
+        "7SL-RNA",
+        "7SK-RNA"
+      ],
+      "answer": 1,
+      "explanation": "گزینه ۲. piRNA با پروتئین‌های PIWI در مهار عناصر متحرک، به‌ویژه در دودمان زایشی جانوران، نقش شناخته‌شده دارد. این دفاع هم می‌تواند از راه تخریب RNA عنصر و هم خاموش‌سازی کروماتینی رونویسی آن انجام شود. eRNA معمولاً با فعالیت عناصر افزاینده مرتبط است؛ 7SL جزء RNA ذره شناسایی پیام و 7SK تنظیم‌کننده طویل‌شدن رونویسی است. نقش piRNA را نباید به همه سلول‌های پیکری و همه جانداران به یک صورت تعمیم داد.",
+      "key": {
+        "value": 1,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q43.png",
+      "sources": [
+        "R14-1404-9"
+      ],
+      "review_in": "جلد ۸؛ RNAهای تنظیمی و عناصر متحرک",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q44",
+      "year": 1404,
+      "number": 44,
+      "pdf_page": 7,
+      "printed_page": "7",
+      "track": "cell-molecular",
+      "topic": "طویل‌شدن ترجمه؛ ترانسلوکاسیون",
+      "stem": "در یوکاریوت‌ها، کدام فاکتور نقش EF-G پروکاریوتی را در سنتز پروتئین‌ها ایفا می‌کند؟",
+      "options": [
+        "eEF-1βγ",
+        "eEF-1α",
+        "eEF-2",
+        "EF-3"
+      ],
+      "answer": 2,
+      "explanation": "گزینه ۳. EF-G در باکتری و همتای یوکاریوتی آن eEF2، با چرخه GTP در جابه‌جایی ریبوزوم و مجموعه tRNA–mRNA طی طویل‌شدن ترجمه نقش دارند. eEF1α بیشتر با تحویل آمینواسیل-tRNA به جایگاه A مقایسه می‌شود و eEF1βγ در بازیافت نوکلئوتید eEF1A دخیل است. EF3 فاکتوری با توزیع محدود، به‌ویژه در قارچ‌ها، است و جایگزین عمومی eEF2 در یوکاریوت‌ها نیست.",
+      "key": {
+        "value": 2,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q44.png",
+      "sources": [
+        "R14-1404-10"
+      ],
+      "review_in": "جلد ۸؛ ترجمه پیشرفته؛ مقایسه فاکتورهای طویل‌شدن",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q45",
+      "year": 1404,
+      "number": 45,
+      "pdf_page": 7,
+      "printed_page": "7",
+      "track": "cell-molecular",
+      "topic": "آغاز همانندسازی یوکاریوتی؛ پریماز",
+      "stem": "کدام‌یک از آنزیم‌های زیر، دارای فعالیت پریمازی است؟",
+      "options": [
+        "DNA Pol δ",
+        "DNA Pol I",
+        "DNA Pol III",
+        "DNA Pol α"
+      ],
+      "answer": 3,
+      "explanation": "گزینه ۴ با تعبیر دقیق «کمپلکس Pol α–primase» صحیح است. این کمپلکس یوکاریوتی زیرواحدهای پریماز برای آغاز RNA و زیرواحدهای پلیمراز برای ادامه کوتاه DNA دارد؛ فعالیت پریمازی را نباید به‌اشتباه به جایگاه کاتالیتیک پلیمراز آلفا به‌تنهایی نسبت داد. Pol δ عمدتاً پلیمراز طویل‌کننده است و بدون آغازگر کار را از نو شروع نمی‌کند. Pol I و Pol III باکتریایی نیز پلیمراز هستند و وظیفه آغاز RNA را در باکتری پریماز جداگانه انجام می‌دهد.",
+      "key": {
+        "value": 3,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q45.png",
+      "sources": [
+        "R14-1404-11"
+      ],
+      "review_in": "جلد ۸؛ آغاز همانندسازی؛ مقایسه با جلد ۱۲، فصل ۱",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q51",
+      "year": 1404,
+      "number": 51,
+      "pdf_page": 7,
+      "printed_page": "7",
+      "track": "cell-molecular",
+      "topic": "حساسیت‌زدایی گیرنده؛ آرستین",
+      "stem": "اتصال Arestin به سطح سیتوزولی گیرنده‌های GPCR، از کدام مورد جلوگیری می‌کند؟",
+      "options": [
+        "پایداری پروتئین‌های G",
+        "تقویت پروتئین‌های G",
+        "فعال‌سازی بیشتر پروتئین‌های G",
+        "دناتوره‌شدن پروتئین‌های G"
+      ],
+      "answer": 2,
+      "explanation": "گزینه ۳. اتصال آرستین به گیرنده فعال و فسفریله، جفت‌شدن بعدی گیرنده با پروتئین G را محدود می‌کند و بخشی از حساسیت‌زدایی مسیر است. این کار با ناپایدار کردن یا دناتوره کردن خود پروتئین G برابر نیست؛ گزینه‌های ۱ و ۴ سازوکار را غلط نام می‌برند. گزینه ۲ نیز اثر مشخص این اتصال را توصیف نمی‌کند. آرستین می‌تواند اندوسیتوز و مسیرهای پیام‌رسانی دیگری را سامان دهد، پس توقف جفت‌شدن با G به معنی خاموشی همه خروجی‌های گیرنده نیست.",
+      "key": {
+        "value": 2,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q51.png",
+      "sources": [
+        "R14-1404-12"
+      ],
+      "review_in": "جلد ۷؛ تنظیم و پایان پیام‌رسانی GPCR",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q52",
+      "year": 1404,
+      "number": 52,
+      "pdf_page": 8,
+      "printed_page": "8",
+      "track": "cell-molecular",
+      "topic": "فسفریلاسیون پروتئین در پیام‌رسانی",
+      "stem": "در فرایند پیام‌رسانی، کدام اسیدآمینه‌ها توسط پروتئین کینازها فسفریله می‌شوند؟",
+      "options": [
+        "سرین - گلیسین - لوسین",
+        "سرین - ترئونین - تیروزین",
+        "فنیل آلانین - سرین - تیروزین",
+        "گلیسین - ترئونین - تیروزین"
+      ],
+      "answer": 1,
+      "explanation": "گزینه ۲. زنجیره جانبی سرین، ترئونین و تیروزین گروه هیدروکسیل دارد که هدف کلاسیک کینازهای پیام‌رسانی یوکاریوتی است؛ فسفات به اکسیژن آن متصل می‌شود. گلیسین، لوسین و فنیل‌آلانین چنین گروه هیدروکسیل جانبی ندارند، بنابراین هر یک از گزینه‌های دیگر یک باقی‌مانده نامتناسب وارد کرده است. این پاسخ در زمینه رایج پیام‌رسانی یوکاریوتی است و وجود فسفریلاسیون اسیدآمینه‌های دیگر مانند هیستیدین در سامانه‌های ویژه را نفی نمی‌کند.",
+      "key": {
+        "value": 1,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q52.png",
+      "sources": [
+        "R14-1404-13"
+      ],
+      "review_in": "جلد ۷؛ کینازها؛ جلد ۱۲؛ تفاوت تنظیم دوجزئی",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q53",
+      "year": 1404,
+      "number": 53,
+      "pdf_page": 8,
+      "printed_page": "8",
+      "track": "cell-molecular",
+      "topic": "پیام‌رسانی گازی؛ شل‌شدن عضله صاف",
+      "stem": "کدام عامل شناخته‌شده توسط سلول‌های اندوتلیالی، باعث می‌شود که سلول‌های عضلانی صاف در دیواره رگ‌ها شل شوند؟",
+      "options": [
+        "Acetylcholine",
+        "cAMP",
+        "cGMP",
+        "Nitric Oxide"
+      ],
+      "answer": 3,
+      "explanation": "گزینه ۴. NO تولیدشده در اندوتلیوم می‌تواند به سلول عضله صاف مجاور برسد و در مسیر کلاسیک، گوانیلیل سیکلاز محلول را فعال کند؛ افزایش cGMP و فعالیت PKG به شل‌شدن کمک می‌کند. cGMP پیام‌رسان درون‌سلولی پایین‌دست است، نه همان عامل گازی منتقل‌شونده از اندوتلیوم. استیل‌کولین می‌تواند محرک تولید NO در اندوتلیوم باشد و cAMP نیز مسیرهای شل‌کننده دیگری دارد، اما هیچ‌کدام پاسخ مستقیم این صورت سؤال نیستند. سهم این مسیر در همه رگ‌ها یکسان نیست.",
+      "key": {
+        "value": 3,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q53.png",
+      "sources": [
+        "R14-1404-14"
+      ],
+      "review_in": "جلد ۷؛ NO، cGMP و پیام‌رسانی موضعی",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q138",
+      "year": 1404,
+      "number": 138,
+      "pdf_page": 20,
+      "printed_page": "20",
+      "track": "microbiology",
+      "topic": "بوم‌شناسی تغذیه‌ای؛ الیگوتروفی",
+      "stem": "مفهوم «الیگوتروفی» در باکتری‌ها، به چه معنی است؟",
+      "options": [
+        "رشد بهینه در فشار اتمسفری و اسمزی بالا در باکتری‌ها",
+        "معادل کمولیتوتروفی در دنیای باکتری‌ها است.",
+        "رشد بهینه در غلظت‌های پایین مواد غذایی",
+        "رشد بهینه باکتری بر روی الیگوساکاریدها"
+      ],
+      "answer": 2,
+      "explanation": "گزینه ۳. الیگوتروف به سازگاری میکروب برای زیستن و رشد در محیط‌های کم‌ماده غذایی اشاره دارد. این ویژگی از نوع منبع انرژی و الکترون مستقل است؛ کمولیتوتروفی استفاده از دهندگان الکترون معدنی را توصیف می‌کند، نه غلظت پایین غذا. فشار و اسمزی بودن شرایط نیز محورهای دیگری‌اند. شباهت بخش «الیگو» با الیگوساکارید، دلیلی برای انحصار بستر رشد به این قندها نیست. این راهبرد الزاماً به معنی بیشترین رشد مطلق در هر غلظت پایین نیست و باید در قیاس با فیزیولوژی همان سویه فهم شود.",
+      "key": {
+        "value": 2,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q138.png",
+      "sources": [
+        "R14-1404-15"
+      ],
+      "review_in": "جلد ۱۰؛ رشد و سازگاری با محدودیت مواد غذایی",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q139",
+      "year": 1404,
+      "number": 139,
+      "pdf_page": 20,
+      "printed_page": "20",
+      "track": "microbiology",
+      "topic": "تنش محیطی؛ مقاومت تابشی",
+      "stem": "کدام مورد، به تشعشع مقاوم‌تر است؟",
+      "options": [
+        "باکتری Deinococcus",
+        "اندوسپور باکتری‌ها",
+        "آرکی‌های هایپرترموفیل",
+        "باکتری Aquifex"
+      ],
+      "answer": 0,
+      "explanation": "گزینه ۱ به ویژگی شناخته‌شده Deinococcus، به‌ویژه D. radiodurans، اشاره دارد؛ این باکتری ظرفیت چشمگیری برای تحمل آسیب اکسیداتیو و بازسازی DNA پس از تابش دارد. اندوسپورها نیز مقاوم‌اند، اما انتخاب عمومی سؤال در قیاس این گزینه‌ها Deinococcus است. هایپرترموفیلی یا زیست در دمای بالای Aquifex، به‌تنهایی شاهد برتری در تحمل تابش نیست. رتبه کمی مقاومت در یک آزمایش واقعی به گونه، وضعیت رشد، نوع و دوز تابش وابسته است؛ سؤال نام یک گروه شاخص را می‌خواهد.",
+      "key": {
+        "value": 0,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q139.png",
+      "sources": [
+        "R14-1404-16"
+      ],
+      "review_in": "جلد ۵؛ تنوع باکتری‌ها؛ جلد ۱۰؛ پاسخ به تنش؛ جلد ۱۲؛ ترمیم DNA",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q159",
+      "year": 1404,
+      "number": 159,
+      "pdf_page": 23,
+      "printed_page": "23",
+      "track": "microbiology",
+      "topic": "متابولیسم آرکی‌ها؛ متانوژنز",
+      "stem": "کدام، درخصوص متانوژنز درست است؟",
+      "options": [
+        "در شرایط هوازی اتفاق می‌افتد.",
+        "فقط توسط آرکی‌ها انجام می‌شود.",
+        "توسط فتوتروف‌ها انجام می‌گیرد.",
+        "طی آن متان به کربن دی‌اکسید، اکسید می‌شود."
+      ],
+      "answer": 1,
+      "explanation": "گزینه ۲ درباره متانوژنز میکروبی کلاسیک و انرژی‌زا درست است: آرکی‌های متانوژن متان تولید می‌کنند و این فرایند با شرایط بی‌هوازی پیوند دارد. گزینه ۴ اکسایش متان یا متانوتروفی را توصیف می‌کند که جهت متابولیکی متفاوتی دارد. فتوتروف بودن تعریف متانوژن نیست و گزینه ۱ نیز شرایط معمول این مسیر را وارونه بیان می‌کند. همه آرکی‌ها متانوژن نیستند؛ تعلق متانوژن‌های کلاسیک به آرکی‌ها، به معنی یکسان بودن متابولیسم تمام آرکی‌ها نیست.",
+      "key": {
+        "value": 1,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q159.png",
+      "sources": [
+        "R14-1404-17"
+      ],
+      "review_in": "جلد ۱۱؛ متانوژنز و کوآنزیم‌ها؛ جلد ۱۲؛ تمایز آرکی و باکتری",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q164",
+      "year": 1404,
+      "number": 164,
+      "pdf_page": 23,
+      "printed_page": "23",
+      "track": "microbiology",
+      "topic": "بیان ژن؛ کارکرد خانه‌بان",
+      "stem": "پروتئین‌های کدام گروه از ژن‌های زیر، به‌طور منظم برای فعالیت سلولی مورد نیاز است؟",
+      "options": [
+        "عادی (Regular)",
+        "خانه‌بان (Housekeeping)",
+        "ساختاری (Structural)",
+        "هوشمند (Smart)"
+      ],
+      "answer": 1,
+      "explanation": "گزینه ۲. ژن‌های خانه‌بان برای کارکردهای پایه نگهداری سلول مانند بخش‌هایی از بیان ژن، همانندسازی و متابولیسم مرکزی لازم‌اند. «ساختاری» در اصطلاح ژنتیکی می‌تواند به ژن رمزکننده محصول اشاره کند و ضرورتاً بیان پایه یا نیاز مداوم آن را مشخص نمی‌کند. عادی و هوشمند نیز نام رده کارکردی استاندارد این سؤال نیستند. خانه‌بان بودن را با ثبات مطلق میزان RNA در همه محیط‌ها اشتباه نگیرید؛ انتخاب ژن مرجع برای آزمایش بیان همچنان به کنترل وابسته است.",
+      "key": {
+        "value": 1,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q164.png",
+      "sources": [
+        "R14-1404-18"
+      ],
+      "review_in": "جلد ۱۲؛ تنظیم بیان و کنترل گزارشگر؛ جلد ۸؛ سنجش بیان ژن",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q165",
+      "year": 1404,
+      "number": 165,
+      "pdf_page": 23,
+      "printed_page": "23",
+      "track": "microbiology",
+      "topic": "ویروس‌شناسی؛ خروج RNA هسته‌ای HIV",
+      "stem": "کدام پروتئین، در عفونت HIV در فرایند انتقال mRNA به سیتوپلاسم ایفای نقش می‌کند؟",
+      "options": [
+        "Rev",
+        "Tat",
+        "Vpr",
+        "Nef"
+      ],
+      "answer": 0,
+      "explanation": "گزینه ۱. Rev به عنصر RRE روی RNAهای ویروسی مناسب متصل می‌شود و با استفاده از مسیر خروج هسته‌ای Crm1، افزایش دسترسی سیتوپلاسمی RNAهای بدون پیرایش یا تک‌پیرایش‌یافته را ممکن می‌کند. Tat عمدتاً با تقویت طویل‌شدن رونویسی و Vpr و Nef با کارکردهای تنظیمی دیگری شناخته می‌شوند. فعالیت Rev به خروج همه mRNAهای سلول تعمیم ندارد؛ همچنین مقاله منبع نشان می‌دهد اثرهای مرتبط با ترجمه و بسته‌بندی RNA، مانع از تقلیل نقش آن به یک انتقال ساده می‌شود.",
+      "key": {
+        "value": 0,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q165.png",
+      "sources": [
+        "R14-1404-19"
+      ],
+      "review_in": "جلد ۱۳؛ فصل ۶، رتروویروس و ادغام؛ تنظیم بیان HIV",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    },
+    {
+      "id": "Y1404-Q167",
+      "year": 1404,
+      "number": 167,
+      "pdf_page": 23,
+      "printed_page": "23",
+      "track": "microbiology",
+      "topic": "ژنوم ویروسی و عفونتزایی RNA",
+      "stem": "ژنوم خالص کدام ویروس‌ها، عفونی است؟",
+      "options": [
+        "اکوویروس - آفتوویروس",
+        "رابدوویروس - روتاویروس",
+        "سرخک - اوریون",
+        "سرخجه - RSV"
+      ],
+      "answer": 0,
+      "explanation": "گزینه ۱. اکوویروس‌ها و آفتوویروس‌ها پیکورناویروس‌هایی با RNA تک‌رشته‌ای مثبت‌اند و ژنوم سالم آن‌ها، پس از رساندن آزمایشی به سلول مناسب، می‌تواند مستقیماً ترجمه شود و چرخه را آغاز کند. ویروس‌های RNA منفی مانند رابدوویروس، سرخک، اوریون و RSV برای آغاز رونویسی به پلیمراز ویریونی نیاز دارند؛ روتاویروس دورشته‌ای نیز صرف RNA خالص برای آغاز چرخه کافی نیست. در گزینه ۴ حتی اگر ژنوم سرخجه قابلیت آغازگری داشته باشد، RSV این شرط را ندارد. «ژنوم عفونی» در اینجا به آزمایش اسیدنوکلئیک اشاره دارد و معادل انتقال طبیعی RNA برهنه یا مثبت بودن PCR نیست.",
+      "key": {
+        "value": 0,
+        "status": "transcribed-unverified",
+        "source": "archive/exams/1404.jpg",
+        "note": "کلید بازنشرشده TheEnglishToday برای سال ۱۴۰۴ و مجموعه سلولی‌مولکولی، از تصویر رونویسی شد؛ تصویر نام کد کنترل 887A و اولیه/نهایی بودن کلید را تصریح نمی‌کند."
+      },
+      "image": "volumes/14/images/1404/q167.png",
+      "sources": [
+        "R14-1404-20",
+        "R14-1404-21"
+      ],
+      "review_in": "جلد ۱۳؛ فصل ۱، بالتیمور؛ فصل ۴، ژنوم RNA مثبت",
+      "verification": {
+        "transcription": "visually-matched",
+        "options_order": "original",
+        "answer_kind": "independent-educational",
+        "key_agrees": true
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "R14-1404-1",
+      "title": "Thermo Fisher Scientific — Protein Denaturing and Reducing Agents",
+      "url": "https://www.thermofisher.com/us/en/home/life-science/protein-biology/protein-labeling-crosslinking/protein-modification/reducing-agents-protein-disulfides.html",
+      "section": "What are protein reducing agents?",
+      "accessed": "2026-11-20",
+      "coverage": "بخش تعریف عوامل احیاکننده و نام DTT خوانده شد؛ فهرست محصول مبنای توصیه آزمایشگاهی نیست."
+    },
+    {
+      "id": "R14-1404-2",
+      "title": "Hunter & Ferreira — 5-Aminolevulinate synthase: catalysis of the first step of heme biosynthesis",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2864774/",
+      "section": "Abstract; Introduction",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه، شامل واکنش گلیسین/سوکسینیل‌کوآ، وابستگی به PLP و استثنای مسیر گلوتامات خوانده شد."
+    },
+    {
+      "id": "R14-1404-3",
+      "title": "OpenStax Biology 2e — 6.2 Potential, Kinetic, Free, and Activation Energy",
+      "url": "https://openstax.org/books/biology-2e/pages/6-2-potential-kinetic-free-and-activation-energy",
+      "section": "Endergonic Reactions and Exergonic Reactions",
+      "accessed": "2026-11-20",
+      "coverage": "بخش تعریف علامت ΔG و واکنش انرژی‌زا/انرژی‌خواه خوانده شد."
+    },
+    {
+      "id": "R14-1404-4",
+      "title": "OpenStax Biology 2e — 3.4 Proteins",
+      "url": "https://openstax.org/books/biology-2e/pages/3-4-proteins",
+      "section": "Amino Acids; Protein Structure",
+      "accessed": "2026-11-20",
+      "coverage": "بخش زنجیره جانبی آب‌گریز، پرولین و ساختار پروتئین خوانده شد."
+    },
+    {
+      "id": "R14-1404-5",
+      "title": "OpenStax Biology 2e — 16.5 Eukaryotic Post-transcriptional Gene Regulation",
+      "url": "https://openstax.org/books/biology-2e/pages/16-5-eukaryotic-post-transcriptional-gene-regulation",
+      "section": "RNA Stability and microRNAs",
+      "accessed": "2026-11-20",
+      "coverage": "تمام زیربخش پایداری RNA و miRNA خوانده شد."
+    },
+    {
+      "id": "R14-1404-6",
+      "title": "Humphries et al. — Vinculin controls focal adhesion formation by direct interactions with talin and actin",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2099183/",
+      "section": "Abstract; Introduction",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه، شامل اتصال وینکولین/تالین و اسکلت اکتینی خوانده شد؛ داده‌های تمام شکل‌های مقاله بازتحلیل نشده‌اند."
+    },
+    {
+      "id": "R14-1404-7",
+      "title": "OpenStax Biology 2e — 9.1 Signaling Molecules and Cellular Receptors",
+      "url": "https://openstax.org/books/biology-2e/pages/9-1-signaling-molecules-and-cellular-receptors",
+      "section": "Cell-Surface Receptors; G-protein-linked receptors; Figure 9.7",
+      "accessed": "2026-11-20",
+      "coverage": "زیربخش گیرنده‌های متصل به پروتئین G، مسیر آنزیم غشایی و آدنیلیل سیکلاز خوانده شد."
+    },
+    {
+      "id": "R14-1404-8",
+      "title": "OpenStax Biology 2e — 10.4 Cancer and the Cell Cycle",
+      "url": "https://openstax.org/books/biology-2e/pages/10-4-cancer-and-the-cell-cycle",
+      "section": "Tumor Suppressor Genes; Figure 10.16",
+      "accessed": "2026-11-20",
+      "coverage": "بخش p53، آسیب DNA و آغاز آپوپتوز خوانده شد."
+    },
+    {
+      "id": "R14-1404-9",
+      "title": "Czech et al. — piRNA-Guided Genome Defense: From Biogenesis to Silencing",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10784713/",
+      "section": "PIRNA-GUIDED SILENCING; Concepts in Cotranscriptional Gene Silencing",
+      "accessed": "2026-11-20",
+      "coverage": "بخش خاموش‌سازی رونویسی و پسارونویسی و شرح شکل ۳ خوانده شد؛ تمام متن طولانی مرور خوانده نشده است."
+    },
+    {
+      "id": "R14-1404-10",
+      "title": "Xu et al. — Functions and Regulation of Translation Elongation Factors",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8807479/",
+      "section": "Factors Involved in Ribosome Translocation; eEF2",
+      "accessed": "2026-11-20",
+      "coverage": "زیربخش eEF2 و همتایی آن با EF-G خوانده شد."
+    },
+    {
+      "id": "R14-1404-11",
+      "title": "Jones et al. — How Pol α-primase is targeted to replisomes to prime eukaryotic DNA replication",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10501992/",
+      "section": "Introduction; Figure 1A",
+      "accessed": "2026-11-20",
+      "coverage": "مقدمه، ساختمان چهارزیرواحدی و تفکیک فعالیت پریماز از پلیمراز خوانده شد."
+    },
+    {
+      "id": "R14-1404-12",
+      "title": "Tian, Kang & Benovic — β-arrestins and G Protein-Coupled Receptor Trafficking",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4513654/",
+      "section": "Abstract; β-arrestins and GPCR trafficking; Figure 1",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و بخش آغازین تنظیم و ترافیک گیرنده خوانده شد."
+    },
+    {
+      "id": "R14-1404-13",
+      "title": "OpenStax Biology 2e — 9.2 Propagation of the Signal",
+      "url": "https://openstax.org/books/biology-2e/pages/9-2-propagation-of-the-signal",
+      "section": "Methods of Intracellular Signaling; Phosphorylation",
+      "accessed": "2026-11-20",
+      "coverage": "زیربخش فسفریلاسیون سرین، ترئونین و تیروزین و پیام‌رسان دوم خوانده شد."
+    },
+    {
+      "id": "R14-1404-14",
+      "title": "Lillo & Beuve — NO- and S-nitrosothiols-dependent relaxation in large and small resistance blood vessels",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13111478/",
+      "section": "Introduction; Different endothelium-dependent relaxations in blood vessels",
+      "accessed": "2026-11-20",
+      "coverage": "مقدمه و تفکیک مسیر NO–sGC–cGMP در عروق بزرگ از مسیرهای عروق مقاومتی خوانده شد."
+    },
+    {
+      "id": "R14-1404-15",
+      "title": "Noell et al. — A Reduction of Transcriptional Regulation in Aquatic Oligotrophic Microorganisms Enhances Fitness in Nutrient-Poor Environments",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10304753/",
+      "section": "Summary; Introduction",
+      "accessed": "2026-11-20",
+      "coverage": "خلاصه و آغاز مقدمه، شامل تعریف الیگوتروف و تفکیک آن از کوپیوتروف خوانده شد."
+    },
+    {
+      "id": "R14-1404-16",
+      "title": "OpenStax Biology 2e — 22.1 Prokaryotic Diversity",
+      "url": "https://openstax.org/books/biology-2e/pages/22-1-prokaryotic-diversity",
+      "section": "Microbes Are Adaptable: Life in Moderate and Extreme Environments; Figure 22.5",
+      "accessed": "2026-11-20",
+      "coverage": "بخش تنوع شرایط زیست و شرح Deinococcus radiodurans و مقاومت تابشی خوانده شد."
+    },
+    {
+      "id": "R14-1404-17",
+      "title": "OpenStax Microbiology — 4.6 Archaea",
+      "url": "https://openstax.org/books/microbiology/pages/4-6-archaea",
+      "section": "Introduction; Euryarchaeota",
+      "accessed": "2026-11-20",
+      "coverage": "بخش تمایز آرکی و باکتری و متانوژنز خوانده شد؛ رده‌بندی قدیمی این فصل به عنوان طبقه‌بندی روز نقل نمی‌شود."
+    },
+    {
+      "id": "R14-1404-18",
+      "title": "OpenStax Microbiology — 11.7 Gene Regulation: Operon Theory",
+      "url": "https://openstax.org/books/microbiology/pages/11-7-gene-regulation-operon-theory",
+      "section": "Prokaryotic Gene Regulation; constitutively expressed housekeeping functions",
+      "accessed": "2026-11-20",
+      "coverage": "پاراگراف بیان پایه، کارکردهای خانه‌بان و تمایز با بیان القایی خوانده شد."
+    },
+    {
+      "id": "R14-1404-19",
+      "title": "Blissenbach et al. — Nuclear RNA Export and Packaging Functions of HIV-1 Rev Revisited",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2903257/",
+      "section": "Abstract; Introduction before Materials and Methods",
+      "accessed": "2026-11-20",
+      "coverage": "چکیده و مقدمه درباره RRE، Rev، Crm1 و افزایش RNA سیتوپلاسمی خوانده شد؛ روش‌های ساخت وکتور مبنای متن آموزشی نیستند."
+    },
+    {
+      "id": "R14-1404-20",
+      "title": "OpenStax Microbiology — 6.2 The Viral Life Cycle",
+      "url": "https://openstax.org/books/microbiology/pages/6-2-the-viral-life-cycle",
+      "section": "Life Cycle of Viruses with Animal Hosts; Figure 6.11",
+      "accessed": "2026-11-20",
+      "coverage": "بخش تفاوت ژنوم RNA مثبت، منفی و دورشته‌ای و نیاز به RdRP خوانده شد."
+    },
+    {
+      "id": "R14-1404-21",
+      "title": "ICTV Report — Family Picornaviridae",
+      "url": "https://ictv.global/report/chapter/picornaviridae/picornaviridae",
+      "section": "Summary; Table 1; Nucleic acid",
+      "accessed": "2026-11-20",
+      "coverage": "خلاصه، جدول ویژگی‌ها و بخش اسیدنوکلئیک خوانده شد؛ ساختار ژنوم و ترجمه مستقیم مبناست، نه شمار روز گونه‌ها."
+    }
+  ]
+}

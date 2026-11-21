@@ -1,0 +1,20 @@
+{
+  "pages": [
+    {
+      "mirror": "heyva",
+      "pdf_page": 35,
+      "printed_page": 33,
+      "normalized_text_sha256": "22a4263a513ffbb4704d5d9d3953db9d63f20e75cf5738c587b33ff0e7d19eb5",
+      "declares_year": 1406
+    },
+    {
+      "mirror": "phdtest",
+      "pdf_page": 34,
+      "printed_page": 33,
+      "normalized_text_sha256": "22a4263a513ffbb4704d5d9d3953db9d63f20e75cf5738c587b33ff0e7d19eb5",
+      "declares_year": 1406
+    }
+  ],
+  "equal_normalized_text": true,
+  "official_origin_bytes_verified": false
+}

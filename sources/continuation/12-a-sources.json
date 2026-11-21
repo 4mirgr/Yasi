@@ -1,0 +1,122 @@
+{
+  "volume": 12,
+  "part": "a",
+  "accessed": "2026-11-20",
+  "sources": [
+    {
+      "id": "R12A1",
+      "title": "Parker et al. Microbiology, 10.4 Structure and Function of Cellular Genomes — OpenStax",
+      "url": "https://openstax.org/books/microbiology/pages/10-4-structure-and-function-of-cellular-genomes",
+      "section": "Organization of Prokaryotic Chromosomes; Extrachromosomal DNA",
+      "accessed": "2026-11-20",
+      "coverage": "Relevant complete web sections retrieved and read by parent; broad textbook generalizations limited with specialist sources."
+    },
+    {
+      "id": "R12A2",
+      "title": "Parker et al. Microbiology, 11.2 DNA Replication — OpenStax",
+      "url": "https://openstax.org/books/microbiology/pages/11-2-dna-replication",
+      "section": "DNA Replication in Bacteria: Initiation, Elongation, Termination; Rolling Circle Replication",
+      "accessed": "2026-11-20",
+      "coverage": "Relevant complete sections retrieved and read by parent; specific inconsistencies cross-checked, not copied."
+    },
+    {
+      "id": "R12A3",
+      "title": "Goodall et al. Interplay between chromosomal architecture and termination of DNA replication in bacteria (2023)",
+      "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1180848/full",
+      "section": "Abstract; Introduction; Chromosome structure and Tus-ter trap; fork trap systems in other bacterial species",
+      "accessed": "2026-11-20",
+      "coverage": "Full relevant introduction and fork-trap sections retrieved and read by parent; supports diversity and nonuniversality of Tus."
+    },
+    {
+      "id": "R12A4",
+      "title": "Peng and Marians. Decatenation activity of topoisomerase IV during oriC and pBR322 DNA replication in vitro (1993)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC47399/",
+      "section": "Abstract",
+      "accessed": "2026-11-20",
+      "coverage": "Abstract read by parent, not the scanned full article; used only for experimental role in decatenation."
+    },
+    {
+      "id": "R12A5",
+      "title": "Parker et al. Microbiology, 11.5 Mutations — OpenStax",
+      "url": "https://openstax.org/books/microbiology/pages/11-5-mutations",
+      "section": "Effects on DNA and protein; DNA Repair; Identifying Bacterial Mutants; Ames Test",
+      "accessed": "2026-11-20",
+      "coverage": "Full section retrieved; mutation classification, repair and Ames portions read; wording independently authored."
+    },
+    {
+      "id": "R12A6",
+      "title": "Foster. Methods for Determining Spontaneous Mutation Rates (2006)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2041832/",
+      "section": "Fluctuation Analysis: Experimental Design; Analyzing Results; Method 1: the p0 method",
+      "accessed": "2026-11-20",
+      "coverage": "Full web article retrieved; cited methodological sections read, including biological assumptions and p0 limitations."
+    },
+    {
+      "id": "R12A7",
+      "title": "Parker et al. Microbiology, 11.6 How Asexual Prokaryotes Achieve Genetic Diversity — OpenStax",
+      "url": "https://openstax.org/books/microbiology/pages/11-6-how-asexual-prokaryotes-achieve-genetic-diversity",
+      "section": "Transformation; Transduction; Conjugation of F Plasmid; Conjugation of F-prime and Hfr Cells",
+      "accessed": "2026-11-20",
+      "coverage": "Full section retrieved and relevant named sections read. Lysogenic conversion explicitly distinguished from transfer of bacterial genes."
+    },
+    {
+      "id": "R12A8",
+      "title": "Smith. How RecBCD Enzyme and Chi Promote DNA Break Repair and Recombination: a Molecular Biologist’s View (2012)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3372252/",
+      "section": "Overview; Genetic and biochemical features of Chi; RecBCD–Chi interaction; Figures 4 and 5 explanations",
+      "accessed": "2026-11-20",
+      "coverage": "Full web article retrieved; overview, Chi orientation, sequence, processing and D-loop relevant passages read. Biochemical-condition controversy retained as a limitation."
+    },
+    {
+      "id": "R12A9",
+      "title": "Castillo et al. Xer Site Specific Recombination: Double and Single Recombinase Systems (2017)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5357621/",
+      "section": "Abstract; Introduction; The Disadvantage of Having Circular DNA; Avoiding Dimer Formation",
+      "accessed": "2026-11-20",
+      "coverage": "Full web article retrieved; cited sections read. Overbroad organism statements not generalized beyond species-specific evidence."
+    },
+    {
+      "id": "R12A10",
+      "title": "Kuzminov. Homologous Recombination—Experimental Systems, Analysis and Significance (2011)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4190071/",
+      "section": "1.1–1.6: definition, rearrangements, bacterial co-inheritance and viable crossovers; RecA roles; 5.1–5.2 chromosomal lesions and recombinational repair",
+      "accessed": "2026-11-20",
+      "coverage": "Full web article retrieved; named sections and RecA/LexA passage read, including co-inheritance examples and limits of crossover models."
+    },
+    {
+      "id": "R12A11",
+      "title": "Seol and Neuman. The dynamic interplay between DNA topoisomerases and DNA topology (2016)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5418509/",
+      "section": "DNA topology; Figure 3; catalytic mechanisms of type I and II topoisomerases",
+      "accessed": "2026-11-20",
+      "coverage": "Relevant complete sections read by parent and supplied to this author; supports linking number conservation and double-strand gate distinction."
+    },
+    {
+      "id": "R12A12",
+      "title": "Lima-Noronha et al. Sending out an SOS — the bacterial DNA damage response (2022)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9578287/",
+      "section": "Abstract; Fundamentals of SOS response regulation; LexA—a self-cleaving repressor; RecA—a DNA damage sensor; SOS response in a nutshell",
+      "accessed": "2026-11-20",
+      "coverage": "Full web review retrieved; named sections read, verifying RecA-facilitated LexA autocleavage and repair versus error-prone damage tolerance."
+    },
+    {
+      "id": "R12A13",
+      "title": "Lenhart et al. DNA Repair and Genome Maintenance in Bacillus subtilis (2012)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3429619/",
+      "section": "Base Excision Repair: introductory mechanistic paragraph; Abstract",
+      "accessed": "2026-11-20",
+      "coverage": "Full web review retrieved; base-excision mechanism and general species-limit framing read. No claim to a full reading of the lengthy review."
+    }
+  ],
+  "notes": [
+    "All lessons, questions, solved examples and diagram specifications independently authored; no copied textbook figures or question banks.",
+    "NCBI Bookshelf NBK7908 retrieval failed through scraper; it is NOT claimed as a read source and is not used as evidence.",
+    "OpenStax11.2 topoIV table contains a single-strand wording inconsistent with type-II double-strand gate; specialist source R12A11 controls the authored explanation. Lagging-strand synthesis is explicitly five-prime to three-prime.",
+    "OpenStax11.6 wording can blur specialized transduction and lysogenic conversion; authored text explicitly separates bacterial-gene transfer from phenotype encoded by prophage genes.",
+    "R12A4 coverage is abstract only; conclusions confined to the abstract’s decatenation finding.",
+    "Bacterial mapping examples are hypothetical educational data, not recalled official examination questions. Co-transfer percentages are conditional and not converted to exact physical distances.",
+    "Exam questions are tagged by chapter for parent to redistribute into four balanced comprehensive examinations across all ten chapters.",
+    "No claim that official 1406 coefficients or subject list has been independently verified in this subtask.",
+    "Final source cross-check added dedicated SOS (R12A12) and BER (R12A13) reviews; named sections actually read. Numerical exercises varied between time, speed and fraction copied."
+  ]
+}

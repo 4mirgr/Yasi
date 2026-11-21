@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.2", nodesep="0.3", ranksep="0.2", size="7,3.5", ratio="compress"];
+node [shape=box, style="rounded,filled", fillcolor="#eaf5fa", color="#247c91", fontname="Vazirmatn", fontsize=16, margin="0.16,0.12"];
+edge [color="#7454a5", arrowsize=0.8, fontname="Vazirmatn", fontsize=12];
+n0 [label="حذف A در اپرون\nDeletion of A in operon"];
+n1 [label="کاهش محصول پایین‌دست\nReduced downstream product"];
+n2 [label="A کارا در ترانس\nFunctional A in trans"];
+n3 [label="بازگردانی ناحیه طبیعی\nNative-locus restoration"];
+n0 -> n1 [label="نقش مستقیم یا اثر قطبی؟"];
+n2 -> n1 [label="آزمون مکمل‌سازی"];
+n3 -> n1 [label="کنترل معماری سیس"];
+}

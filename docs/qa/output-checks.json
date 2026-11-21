@@ -1,0 +1,83 @@
+{
+  "pdfs": {
+    "12": {
+      "pages": 170,
+      "bytes": 6034494,
+      "sha256": "635f7c3a0f78b325c0118860fbffedca454799e67eb4aec81118214b49dacd88",
+      "empty_body_pages": [],
+      "text_outside_page": [],
+      "replacement_character_pages": [],
+      "outline_entries": 157,
+      "all_pages_rendered": true,
+      "contact_sheets": "work/qa/12/",
+      "internal_links": 532,
+      "internal_anchor_elements": 532,
+      "bad_link_targets": []
+    },
+    "13": {
+      "pages": 156,
+      "bytes": 5526895,
+      "sha256": "fd2bbfb40ce48c934d423bfea2b7eee0c6a7e6b6b79b3ee9202a6cbdd319a415",
+      "empty_body_pages": [],
+      "text_outside_page": [],
+      "replacement_character_pages": [],
+      "outline_entries": 157,
+      "all_pages_rendered": true,
+      "contact_sheets": "work/qa/13/",
+      "internal_links": 501,
+      "internal_anchor_elements": 501,
+      "bad_link_targets": []
+    },
+    "14": {
+      "pages": 55,
+      "bytes": 4736188,
+      "sha256": "aa038cd12cc85fad6deaff5bc3abe0075410719d61a62420b04c3001b3e8e08d",
+      "empty_body_pages": [],
+      "text_outside_page": [],
+      "replacement_character_pages": [],
+      "outline_entries": 11,
+      "all_pages_rendered": true,
+      "contact_sheets": "work/qa/14/",
+      "internal_links": 73,
+      "internal_anchor_elements": 73,
+      "bad_link_targets": []
+    }
+  },
+  "docx": {
+    "12": {
+      "bytes": 8389929,
+      "questions_checked": 270,
+      "missing_question_stems": [],
+      "internal_hyperlinks": 532,
+      "bookmarks": 88,
+      "embedded_images": 42,
+      "sha256": "cbf3ec28e409164f197dc369fcc4f555be375643dc820673a6ff4c3ff811cc4f"
+    },
+    "13": {
+      "bytes": 8115466,
+      "questions_checked": 270,
+      "missing_question_stems": [],
+      "internal_hyperlinks": 501,
+      "bookmarks": 81,
+      "embedded_images": 42,
+      "sha256": "5f5b77f9cea8e80f81fccfc6f7606ad954904a21583955c7ae9aa144a72b1448"
+    },
+    "14": {
+      "bytes": 5885722,
+      "questions_checked": 60,
+      "missing_question_stems": [],
+      "internal_hyperlinks": 73,
+      "bookmarks": 66,
+      "embedded_images": 3,
+      "sha256": "84da1a263820d6561437516279c8c4644d48e7f27922dfb7e15ce4cf7f034038"
+    }
+  },
+  "svg_geometry": {
+    "figures_checked": 80,
+    "clipping_failures": []
+  },
+  "limits": [
+    "Contact sheets require human inspection; machine checks alone do not establish visual or scientific correctness."
+  ],
+  "pymupdf_version": "1.28.2"
+}
